@@ -1,0 +1,47 @@
+{
+  "name": {
+    "en": "VOLT",
+    "ar": "فولت"
+  },
+  "tagline": {
+    "en": "Ideas. Connected.",
+    "ar": "أفكار تتصل."
+  },
+  "logo": "/images/logo.svg",
+  "description": {
+    "en": "For the curious. The tinkerers. The next generation of makers. Quality electronics to turn your ideas into something real.",
+    "ar": "للفضوليين، وللمبتكرين، ولجيل الصنّاع القادم. مكونات إلكترونية عالية الجودة لتحويل أفكارك إلى واقع."
+  },
+  "hero": {
+    "eyebrow": {
+      "en": "SMALL COMPONENTS. BIG POSSIBILITIES.",
+      "ar": "مكونات صغيرة. إمكانات كبيرة."
+    },
+    "title": {
+      "en": "Great ideas start\nwith a little spark.",
+      "ar": "الأفكار الكبيرة تبدأ\nبشرارة صغيرة."
+    },
+    "description": {
+      "en": "From your first circuit to your next breakthrough. Discover the components, boards, and kits that bring your ideas to life.",
+      "ar": "من دائرتك الأولى إلى ابتكارك القادم. اكتشف المكونات واللوحات والأطقم التي تمنح أفكارك الحياة."
+    },
+    "productIds": ["arduino-uno", "esp32", "motor-12v", "leds"],
+    "kitProductId": "arduino-kit"
+  },
+  "about": {
+    "en": "Built for people who build. We believe electronics should be accessible, inspiring, and a little bit exciting. From a first-time maker to an experienced engineer, find your next possibility at VOLT.",
+    "ar": "صُنع لمن يحبون الابتكار. نؤمن بأن الإلكترونيات يجب أن تكون متاحة وملهمة وممتعة. سواء كنت تخطو أولى خطواتك أو كنت مهندساً متمرساً، ستجد فرصتك القادمة في فولت."
+  },
+  "whatsapp": "",
+  "email": "hello@example.com",
+  "contactNote": {
+    "en": "Demo store · Sample products and prices. Add your real contact details before accepting orders.",
+    "ar": "متجر تجريبي · المنتجات والأسعار للعرض. أضف بيانات التواصل الحقيقية قبل استقبال الطلبات."
+  },
+  "socials": [],
+  "currency": "USD",
+  "copyright": {
+    "en": "All rights reserved. Made for makers.",
+    "ar": "جميع الحقوق محفوظة. صُنع للمبتكرين."
+  }
+}
