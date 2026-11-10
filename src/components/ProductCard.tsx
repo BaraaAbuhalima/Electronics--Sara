@@ -1,16 +1,16 @@
 "use client";
-import { Plus, ArrowUpRight } from "lucide-react";
-import { getAllCategories, unitPrice } from "@/services/catalog";
+import { MessageCircle, Plus } from "lucide-react";
+import { unitPrice } from "@/services/catalog";
 import type { Product, Language } from "@/types";
 import type { Translate } from "@/types/i18n";
 import SafeImage from "./SafeImage";
-const categories = getAllCategories();
 export default function ProductCard({
   product: p,
   lang,
   t,
   money,
   add,
+  order,
   openProduct,
 }: {
   product: Product;
@@ -18,38 +18,48 @@ export default function ProductCard({
   t: Translate;
   money: (amount: number) => string;
   add: (product: Product) => void;
+  order: (product: Product) => void;
   openProduct: (id: string) => void;
 }) {
   return (
-    <article className="product-card">
+    <article
+      className="product-card"
+      role="link"
+      tabIndex={0}
+      onClick={() => openProduct(p.id)}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openProduct(p.id);
+        }
+      }}
+      aria-label={`${t("details")}: ${p.name[lang]}`}
+    >
       <div className="product-image-wrap">
         <button
           className="product-image-button"
-          onClick={() => openProduct(p.id)}
+          onClick={(event) => {
+            event.stopPropagation();
+            openProduct(p.id);
+          }}
           aria-label={`${t("details")}: ${p.name[lang]}`}
         >
           <SafeImage src={p.images[0]} alt={p.name[lang]} loading="lazy" />
         </button>
-        <span className={`product-type ${p.type}`}>{t(p.type)}</span>
         {p.discountPrice != null && p.discountPrice < p.price && (
           <span className="discount-badge">
             −{Math.round((1 - p.discountPrice / p.price) * 100)}%
           </span>
         )}
-        <button
-          className="quick-add"
-          disabled={!p.stock}
-          onClick={() => add(p)}
-          aria-label={`${t("add")}: ${p.name[lang]}`}
-        >
-          <Plus size={20} />
-        </button>
       </div>
       <div className="product-content">
-        <div className="product-category">
-          {categories.find((c) => c.id === p.categoryId)?.name[lang]}
-        </div>
-        <button className="product-name" onClick={() => openProduct(p.id)}>
+        <button
+          className="product-name"
+          onClick={(event) => {
+            event.stopPropagation();
+            openProduct(p.id);
+          }}
+        >
           {p.name[lang]}
         </button>
         <p>{p.description[lang]}</p>
@@ -68,11 +78,25 @@ export default function ProductCard({
           </span>
         </div>
         <div className="product-actions">
-          <button onClick={() => openProduct(p.id)}>
-            {t("details")}
-            <ArrowUpRight size={15} />
+          <button
+            className="product-action order-action"
+            onClick={(event) => {
+              event.stopPropagation();
+              order(p);
+            }}
+            disabled={!p.stock}
+          >
+            <MessageCircle size={15} />
+            {t("orderNow")}
           </button>
-          <button disabled={!p.stock} onClick={() => add(p)}>
+          <button
+            className="product-action cart-action"
+            disabled={!p.stock}
+            onClick={(event) => {
+              event.stopPropagation();
+              add(p);
+            }}
+          >
             {t("add")}
             <Plus size={15} />
           </button>

@@ -1,98 +1,14 @@
 [
   {
-    "id": "motors",
-    "name": {
-      "en": "Motors & Actuators",
-      "ar": "المحركات والمشغلات"
-    },
-    "description": {
-      "en": "Bring your ideas to life.",
-      "ar": "حرّك أفكارك نحو الحياة."
-    },
-    "image": "/images/categories/motor.svg"
-  },
-  {
-    "id": "microcontrollers",
-    "name": {
-      "en": "Microcontrollers",
-      "ar": "المتحكمات الدقيقة"
-    },
-    "description": {
-      "en": "Small boards. Big possibilities.",
-      "ar": "لوحات صغيرة، وإمكانات كبيرة."
-    },
-    "image": "/images/categories/uno.svg"
-  },
-  {
-    "id": "computing",
-    "name": {
-      "en": "CPUs & Computing",
-      "ar": "المعالجات والحوسبة"
-    },
-    "description": {
-      "en": "Power your next big idea.",
-      "ar": "قوة تدعم فكرتك القادمة."
-    },
-    "image": "/images/categories/cpu.svg"
-  },
-  {
-    "id": "sensors",
-    "name": {
-      "en": "Sensors & Modules",
-      "ar": "الحساسات والوحدات"
-    },
-    "description": {
-      "en": "Connect to the world around you.",
-      "ar": "تواصل مع العالم من حولك."
-    },
-    "image": "/images/categories/sensor.svg"
-  },
-  {
-    "id": "components",
-    "name": {
-      "en": "Electronic Components",
-      "ar": "المكونات الإلكترونية"
-    },
-    "description": {
-      "en": "The essentials for every workbench.",
-      "ar": "أساسيات كل طاولة عمل."
-    },
-    "image": "/images/categories/led.svg"
-  },
-  {
     "id": "kits",
     "name": {
-      "en": "Development Kits",
-      "ar": "أطقم التطوير"
+      "en": "CPU Lab Components",
+      "ar": "مكونات مختبر المعالج"
     },
     "description": {
-      "en": "Your next project starts here.",
-      "ar": "مشروعك القادم يبدأ هنا."
+      "en": "Parts for CPU and digital logic projects.",
+      "ar": "مكونات لمشاريع المعالج والمنطق الرقمي."
     },
     "image": "/images/categories/kit.svg"
-  },
-  {
-    "id": "power",
-    "name": {
-      "en": "Power Supplies",
-      "ar": "مزودات الطاقة"
-    },
-    "description": {
-      "en": "Reliable power for every project.",
-      "ar": "طاقة موثوقة لكل مشروع."
-    },
-    "image": "/images/categories/power.svg"
-  },
-  {
-    "id": "accessories",
-    "name": {
-      "en": "Cables & Accessories",
-      "ar": "الكابلات والملحقات"
-    },
-    "description": {
-      "en": "Make every connection count.",
-      "ar": "كل توصيلة تصنع فرقاً."
-    },
-    "image": "/images/categories/cable.svg"
   }
 ]

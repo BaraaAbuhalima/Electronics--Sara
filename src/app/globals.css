@@ -158,6 +158,19 @@ input::placeholder {
   align-items: center;
   gap: 55px;
 }
+.simple-header {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.simple-header .header-actions {
+  gap: 18px;
+}
+.simple-header .brand > span {
+  font-size: 24px;
+}
 .brand {
   display: flex;
   gap: 10px;
@@ -214,6 +227,13 @@ input::placeholder {
   display: flex;
   gap: 22px;
   align-items: center;
+}
+.product-page-content {
+  padding-block: 32px 64px;
+}
+.product-page-content .detail {
+  max-width: 1080px;
+  margin-inline: auto;
 }
 .language-switch {
   display: flex;
@@ -748,6 +768,11 @@ input::placeholder {
   transition:
     transform 0.2s,
     box-shadow 0.2s;
+  cursor: pointer;
+}
+.product-card:focus-visible {
+  outline: 3px solid #85b0ff;
+  outline-offset: 4px;
 }
 .product-card:hover {
   transform: translateY(-4px);
@@ -909,21 +934,46 @@ input::placeholder {
 }
 .product-actions {
   border-top: 1px solid #eef1f4;
-  padding: 12px 0;
+  padding: 14px 0 2px;
   display: flex;
-  justify-content: space-between;
-  gap: 5px;
+  gap: 8px;
 }
 .product-actions button {
-  font-size: 9px;
+  flex: 1;
+  justify-content: center;
+  min-height: 36px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 10px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 0;
-  color: #718094;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
-.product-actions button:last-child {
+.product-actions .order-action {
+  color: #fff;
+  background: #25a56a;
+}
+.product-actions .order-action:hover:not(:disabled) {
+  background: #1d8957;
+}
+.product-actions .cart-action {
   color: var(--blue);
+  border-color: #b9ccef;
+  background: #f5f8ff;
+}
+.product-actions .cart-action:hover:not(:disabled) {
+  border-color: var(--blue);
+  background: #eaf1ff;
+}
+.product-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
 }
 .kit-banner {
   border: 1px solid #dfe8f6;
@@ -1603,36 +1653,53 @@ footer {
   font-size: 11px;
   color: #7b8ba1;
 }
-.component-list > div {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+.component-table-wrap {
+  overflow-x: auto;
+}
+.component-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.component-table th,
+.component-table td {
+  padding: 11px 14px;
   border-bottom: 1px solid var(--line);
-  padding: 10px 0;
-  font-size: 11px;
-}
-.component-list img {
-  width: 52px;
-  height: 45px;
-  object-fit: contain;
-  background: #f6f8fa;
-  border-radius: 5px;
-  mix-blend-mode: multiply;
-}
-.component-list button {
-  display: flex;
-  align-items: center;
-  gap: 6px;
   text-align: start;
-  flex: 1;
-  color: var(--blue);
 }
-.component-list > div > span:last-child {
-  min-width: 90px;
+.component-table th {
+  color: #7d899a;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.component-table th:first-child,
+.component-table td:first-child {
+  width: 42px;
+  color: #97a1af;
+  text-align: center;
+}
+.component-table th:last-child,
+.component-table td:last-child {
+  width: 90px;
   text-align: end;
 }
-.component-list small {
-  color: #97a1af;
+.component-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.component-image {
+  width: 46px;
+  height: 40px;
+  flex: 0 0 46px;
+  object-fit: contain;
+  border-radius: 5px;
+  background: #f6f8fa;
+}
+.component-table tbody tr:nth-child(odd) {
+  background: #f8fafc;
 }
 .drawer-backdrop {
   justify-content: flex-end;
@@ -1977,7 +2044,8 @@ html[dir="rtl"] .hero-info {
     font-size: 13px;
   }
   .product-actions button {
-    font-size: 8px;
+    font-size: 9px;
+    padding-inline: 7px;
   }
   .kit-banner-copy {
     padding: 35px;
@@ -2842,24 +2910,24 @@ html[dir="rtl"] .hero-info {
     gap: 12px;
     padding: 10px;
   }
-  .component-list > div {
-    gap: 9px;
+  .component-table {
     font-size: 10px;
-    flex-wrap: wrap;
   }
-  .component-list img {
-    width: 40px;
-    height: 40px;
+  .component-table th,
+  .component-table td {
+    padding: 9px 8px;
   }
-  .component-list button {
-    min-width: 100px;
+  .component-table th:last-child,
+  .component-table td:last-child {
+    width: 64px;
   }
-  .component-list > div > span:last-child {
-    min-width: 55px;
-    font-size: 9px;
+  .component-name {
+    gap: 8px;
   }
-  .component-list small {
-    display: none;
+  .component-image {
+    width: 34px;
+    height: 32px;
+    flex-basis: 34px;
   }
   .cart-drawer {
     border-radius: 0;

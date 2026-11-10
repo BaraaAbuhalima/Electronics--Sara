@@ -21,7 +21,8 @@ const products: Product[] = (productsJSON as unknown[])
       ? p.components.filter(
           (c) =>
             c &&
-            typeof c.productId === "string" &&
+            (typeof c.productId === "string" ||
+              (c.name?.en && c.name?.ar)) &&
             Number.isInteger(c.quantity) &&
             c.quantity > 0,
         )
@@ -37,7 +38,7 @@ export const getStoreInfo = () => storeJSON as Store;
 export const getKitComponents = (id: string) =>
   (getProductById(id)?.components ?? []).map((c) => ({
     ...c,
-    product: getProductById(c.productId),
+    product: c.productId ? getProductById(c.productId) : undefined,
   }));
 export const unitPrice = (p: Product) =>
   p.discountPrice != null && p.discountPrice >= 0 && p.discountPrice <= p.price

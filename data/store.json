@@ -4,42 +4,42 @@
     "ar": "فولت"
   },
   "tagline": {
-    "en": "Ideas. Connected.",
-    "ar": "أفكار تتصل."
+    "en": "Electronics for your projects.",
+    "ar": "إلكترونيات لمشاريعك."
   },
   "logo": "/images/logo.svg",
   "description": {
-    "en": "For the curious. The tinkerers. The next generation of makers. Quality electronics to turn your ideas into something real.",
-    "ar": "للفضوليين، وللمبتكرين، ولجيل الصنّاع القادم. مكونات إلكترونية عالية الجودة لتحويل أفكارك إلى واقع."
+    "en": "Electronics parts for every project.",
+    "ar": "مكونات إلكترونية لكل مشروع."
   },
   "hero": {
     "eyebrow": {
-      "en": "SMALL COMPONENTS. BIG POSSIBILITIES.",
-      "ar": "مكونات صغيرة. إمكانات كبيرة."
+      "en": "Build your next project.",
+      "ar": "ابنِ مشروعك القادم."
     },
     "title": {
-      "en": "Great ideas start\nwith a little spark.",
-      "ar": "الأفكار الكبيرة تبدأ\nبشرارة صغيرة."
+      "en": "Learn. Build. Understand.",
+      "ar": "ابنِ مختبر\nالمعالج الخاص بك."
     },
     "description": {
-      "en": "From your first circuit to your next breakthrough. Discover the components, boards, and kits that bring your ideas to life.",
-      "ar": "من دائرتك الأولى إلى ابتكارك القادم. اكتشف المكونات واللوحات والأطقم التي تمنح أفكارك الحياة."
+      "en": "",
+      "ar": ""
     },
-    "productIds": ["arduino-uno", "esp32", "motor-12v", "leds"],
-    "kitProductId": "arduino-kit"
+    "productIds": ["cpu-lab-kit"],
+    "kitProductId": "cpu-lab-kit"
   },
   "about": {
-    "en": "Built for people who build. We believe electronics should be accessible, inspiring, and a little bit exciting. From a first-time maker to an experienced engineer, find your next possibility at VOLT.",
-    "ar": "صُنع لمن يحبون الابتكار. نؤمن بأن الإلكترونيات يجب أن تكون متاحة وملهمة وممتعة. سواء كنت تخطو أولى خطواتك أو كنت مهندساً متمرساً، ستجد فرصتك القادمة في فولت."
+    "en": "VOLT sells electronics parts for every project.",
+    "ar": "تبيع فولت المكونات الإلكترونية لكل مشروع."
   },
-  "whatsapp": "",
+  "whatsapp": "970592746795",
   "email": "hello@example.com",
   "contactNote": {
-    "en": "Demo store · Sample products and prices. Add your real contact details before accepting orders.",
-    "ar": "متجر تجريبي · المنتجات والأسعار للعرض. أضف بيانات التواصل الحقيقية قبل استقبال الطلبات."
+    "en": "Demo store. Replace these contact details before taking orders.",
+    "ar": "متجر تجريبي. استبدل بيانات التواصل قبل استقبال الطلبات."
   },
   "socials": [],
-  "currency": "USD",
+  "currency": "NIS",
   "copyright": {
     "en": "All rights reserved. Made for makers.",
     "ar": "جميع الحقوق محفوظة. صُنع للمبتكرين."

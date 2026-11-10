@@ -6,7 +6,9 @@ export interface Specification {
   value: Localized;
 }
 export interface KitComponent {
-  productId: string;
+  productId?: string;
+  name?: Localized;
+  image?: string;
   quantity: number;
 }
 export interface Product {

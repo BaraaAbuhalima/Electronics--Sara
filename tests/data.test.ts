@@ -15,11 +15,14 @@ const all = getAllProducts();
 test("all bilingual sample data and references are valid", () => {
   assert.deepEqual(validateData(products, categories, store), []);
   for (const p of all.filter((p) => p.type !== "component"))
-    assert.ok(getKitComponents(p.id).every((c) => c.product && c.quantity > 0));
+    assert.ok(
+      getKitComponents(p.id).every((c) => (c.product || c.name) && c.quantity > 0),
+    );
+  assert.equal(getKitComponents("cpu-lab-kit").length, 17);
 });
 test("validator catches duplicates, missing fields, categories, types, prices, images and component references", () => {
   const cases = [
-    { id: products[1].id },
+    { id: "" },
     { name: { en: "", ar: "" } },
     { price: -1 },
     { discountPrice: 1000 },
@@ -51,35 +54,28 @@ test("cart rejects malformed data, removes missing/out-of-stock products, merges
   assert.deepEqual(
     sanitizeCart(
       [
-        { productId: "esp32", quantity: 500 },
-        { productId: "esp32", quantity: 2 },
-        { productId: "pir", quantity: 1 },
+        { productId: "cpu-lab-kit", quantity: 500 },
+        { productId: "cpu-lab-kit", quantity: 2 },
         { productId: "missing", quantity: 1 },
-        { productId: "cpu", quantity: -2 },
+        { productId: "cpu-lab-kit", quantity: -2 },
       ],
       all,
     ),
-    [{ productId: "esp32", quantity: 65 }],
+    [{ productId: "cpu-lab-kit", quantity: 100 }],
   );
   assert.deepEqual(sanitizeCart(null, all), []);
 });
-test("discounted cart uses cents with exact quantity totals", () => {
+test("cart uses cents with exact quantity totals", () => {
   assert.equal(
-    cartTotalCents(
-      [
-        { productId: "arduino-uno", quantity: 3 },
-        { productId: "ultrasonic", quantity: 2 },
-      ],
-      all,
-    ),
-    7350,
+    cartTotalCents([{ productId: "cpu-lab-kit", quantity: 3 }], all),
+    24000,
   );
 });
 test("WhatsApp URLs include store phone, SKU, names, unit/line totals and quantities in both languages", () => {
   const configured = { ...store, whatsapp: "15551234567" } as Store;
   for (const lang of ["en", "ar"] as const) {
     const url = whatsappOrder(
-      [{ productId: "arduino-uno", quantity: 2 }],
+      [{ productId: "cpu-lab-kit", quantity: 2 }],
       all,
       configured,
       lang,
@@ -87,17 +83,17 @@ test("WhatsApp URLs include store phone, SKU, names, unit/line totals and quanti
     assert.ok(url.startsWith("https://wa.me/15551234567?text="));
     const text = new URL(url).searchParams.get("text")!;
     assert.ok(
-      text.includes(all.find((p) => p.id === "arduino-uno")!.name[lang]),
+      text.includes(all.find((p) => p.id === "cpu-lab-kit")!.name[lang]),
     );
-    assert.ok(text.includes("VLT-ARDUINO-UNO"));
+    assert.ok(text.includes("VLT-CPU-LAB-KIT"));
     assert.ok(text.includes(lang === "en" ? "Total" : "الإجمالي"));
-    assert.ok(text.includes(lang === "en" ? "43.80" : "٤٣٫٨٠"));
+    assert.ok(text.includes(lang === "en" ? "160.00" : "١٦٠٫٠٠"));
   }
   assert.equal(
     whatsappOrder(
-      [{ productId: "cpu", quantity: 1 }],
+      [{ productId: "missing", quantity: 1 }],
       all,
-      store as Store,
+      { ...store, whatsapp: "" } as Store,
       "en",
     ),
     null,

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ArrowUpRight, ShoppingBag, Package } from "lucide-react";
+import { MessageCircle, ShoppingBag } from "lucide-react";
 import {
   getAllCategories,
   getKitComponents,
@@ -18,6 +18,7 @@ export default function ProductDetail({
   t,
   money,
   add,
+  order,
   openProduct,
 }: {
   product: Product;
@@ -25,6 +26,7 @@ export default function ProductDetail({
   t: Translate;
   money: (n: number) => string;
   add: (p: Product, n: number) => void;
+  order: (p: Product, n: number) => void;
   openProduct: (id: string) => void;
 }) {
   const [quantity, setQuantity] = useState(1),
@@ -53,7 +55,6 @@ export default function ProductDetail({
           )}
         </div>
         <div className="detail-copy">
-          <span className="product-type">{t(p.type)}</span>
           <h2>{p.name[lang]}</h2>
           <p>{p.description[lang]}</p>
           <div className="price detail-price">
@@ -67,12 +68,6 @@ export default function ProductDetail({
           <span className={`stock ${!p.stock ? "unavailable" : ""}`}>
             <i />
             {t(p.stock ? "inStock" : "outStock")}
-            {p.stock > 0 && (
-              <>
-                {" "}
-                · <bdi>{p.stock}</bdi>
-              </>
-            )}
           </span>
           <dl className="detail-meta">
             <div>
@@ -94,6 +89,14 @@ export default function ProductDetail({
               onChange={setQuantity}
               t={t}
             />
+            <button
+              className="button secondary"
+              disabled={!p.stock}
+              onClick={() => order(p, quantity)}
+            >
+              <MessageCircle size={18} />
+              {t("orderNow")}
+            </button>
             <button
               className="button primary"
               disabled={!p.stock}
@@ -128,36 +131,43 @@ export default function ProductDetail({
               {p.components?.reduce((n, c) => n + c.quantity, 0)} {t("items")}
             </span>
           </div>
-          <div className="component-list">
-            {getKitComponents(p.id).map((c, i) => (
-              <div key={`${c.productId}-${i}`}>
-                {c.product ? (
-                  <>
-                    <SafeImage
-                      src={c.product.images[0]}
-                      alt={c.product.name[lang]}
-                    />
-                    <button onClick={() => openProduct(c.product!.id)}>
-                      {c.product.name[lang]}
-                      <ArrowUpRight size={14} />
-                    </button>
-                    <span>
+          <div className="component-table-wrap">
+            <table className="component-table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">{t("component")}</th>
+                  <th scope="col">{t("quantity")}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {getKitComponents(p.id).map((c, i) => (
+                  <tr key={`${c.productId ?? c.name?.en}-${i}`}>
+                    <td>{i + 1}</td>
+                    <td>
+                      <div className="component-name">
+                        {c.image && (
+                          <SafeImage
+                            src={c.image}
+                            alt=""
+                            className="component-image"
+                            loading="lazy"
+                          />
+                        )}
+                        <span>
+                          {c.product?.name[lang] ??
+                            c.name?.[lang] ??
+                            t("missingComponent")}
+                        </span>
+                      </div>
+                    </td>
+                    <td>
                       <bdi>× {c.quantity}</bdi>
-                    </span>
-                    <span>
-                      <bdi>{money(unitPrice(c.product))}</bdi>{" "}
-                      <small>{t("unit")}</small>
-                    </span>
-                  </>
-                ) : (
-                  <>
-                    <Package size={24} />
-                    <span>{t("missingComponent")}</span>
-                    <bdi>× {c.quantity}</bdi>
-                  </>
-                )}
-              </div>
-            ))}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </section>
       )}

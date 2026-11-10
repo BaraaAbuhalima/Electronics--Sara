@@ -95,13 +95,20 @@ export function validateData(
       p.components.forEach((c) => {
         if (
           !object(c) ||
-          !ids.has(c.productId as string) ||
-          c.productId === p.id
+          (!(
+            typeof c.productId === "string" &&
+            ids.has(c.productId) &&
+            c.productId !== p.id
+          ) &&
+            !localized(c.name))
         )
           errors.push(`${p.id}: missing or invalid component reference.`);
+        else if (c.image !== undefined && !image(c.image))
+          errors.push(`${p.id}: invalid component image.`);
         else if (!Number.isInteger(c.quantity) || (c.quantity as number) < 1)
           errors.push(`${p.id}: invalid component quantity.`);
         else if (
+          c.productId &&
           products.find((x) => object(x) && x.id === c.productId)?.type !==
           "component"
         )
@@ -124,7 +131,7 @@ export function validateData(
       if (!image(store.logo)) errors.push("Store: invalid logo.");
       if (
         !object(store.hero) ||
-        !["eyebrow", "title", "description"].every((k) =>
+        !["eyebrow", "title"].every((k) =>
           localized((store.hero as Record<string, unknown>)[k]),
         )
       )

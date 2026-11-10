@@ -10,6 +10,10 @@ try {
   const errors = validateData(products, categories, store);
   const images = [
     ...products.flatMap((p: { images?: string[] }) => p.images ?? []),
+    ...products.flatMap(
+      (p: { components?: { image?: string }[] }) =>
+        p.components?.map((c) => c.image).filter(Boolean) ?? [],
+    ),
     ...categories.map((c: { image: string }) => c.image),
     store.logo,
   ];

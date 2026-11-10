@@ -9,8 +9,6 @@ import {
   Check,
   Menu,
   X,
-  ChevronDown,
-  SlidersHorizontal,
   Zap,
   ShieldCheck,
   Headphones,
@@ -21,13 +19,11 @@ import {
   MessageCircle,
   ExternalLink,
   CheckCircle2,
-  HeartHandshake,
   Sparkles,
 } from "lucide-react";
 import dictionary from "../../data/translations.json";
 import {
   dataErrors,
-  getAllCategories,
   getAllProducts,
   getProductById,
   getStoreInfo,
@@ -41,10 +37,8 @@ import ProductCard from "./ProductCard";
 import ProductDetail from "./ProductDetail";
 import Quantity from "./Quantity";
 const allProducts = getAllProducts(),
-  categories = getAllCategories(),
   store = getStoreInfo();
 const heroProducts = (store.hero.productIds ?? []).map(getProductById);
-const heroKit = getProductById(store.hero.kitProductId ?? "");
 import type { TranslationKey } from "@/types/i18n";
 function readHash() {
   if (typeof window === "undefined") return "";
@@ -63,22 +57,18 @@ export default function Storefront() {
     [view, setView] = useState<"home" | "catalog">("home"),
     [selectedId, setSelectedId] = useState<string | null>(null),
     [query, setQuery] = useState(""),
-    [category, setCategory] = useState("all"),
-    [type, setType] = useState("all"),
-    [sort, setSort] = useState("recommended"),
-    [tab, setTab] = useState<"featured" | "newArrival" | "bestSeller">(
-      "featured",
-    ),
     [toast, setToast] = useState(""),
-    [storageWarning, setStorageWarning] = useState(false),
-    [mailReady, setMailReady] = useState(false);
+    [storageWarning, setStorageWarning] = useState(false);
   const t = useCallback((key: TranslationKey) => dictionary[lang][key], [lang]);
   const money = useCallback(
     (amount: number) =>
-      new Intl.NumberFormat(lang === "ar" ? "ar-EG" : "en-US", {
+      new Intl.NumberFormat(lang === "ar" ? "ar-EG-u-nu-latn" : "en-US", {
         style: "currency",
         currency: store.currency,
-      }).format(amount),
+        maximumFractionDigits: 0,
+      })
+        .format(amount)
+        .replace("NIS", lang === "ar" ? "شيكل" : "NIS"),
     [lang],
   );
   useEffect(() => {
@@ -116,9 +106,8 @@ export default function Storefront() {
     const sync = () => {
       const hash = readHash();
       setSelectedId(hash.startsWith("product/") ? hash.slice(8) : null);
-      if (hash === "products" || hash === "kits") {
+      if (hash === "products") {
         setView("catalog");
-        if (hash === "kits") setType("grouped");
       } else if (!hash.startsWith("product/")) {
         setView("home");
         if (hash)
@@ -138,10 +127,8 @@ export default function Storefront() {
   const navigate = useCallback((target: string) => {
     setMobileOpen(false);
     setSelectedId(null);
-    if (target === "products" || target === "kits") {
+    if (target === "products") {
       setView("catalog");
-      setType(target === "kits" ? "grouped" : "all");
-      setCategory("all");
       setQuery("");
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
@@ -164,8 +151,7 @@ export default function Storefront() {
   }, [view]);
   const closeCart = useCallback(() => setCartOpen(false), []);
   const openProduct = (id: string) => {
-    window.location.hash = `product/${encodeURIComponent(id)}`;
-    setSelectedId(id);
+    window.location.assign(`/product/${encodeURIComponent(id)}`);
   };
   const add = (product: Product, quantity = 1) => {
     const current = cart.find((c) => c.productId === product.id)?.quantity ?? 0;
@@ -181,6 +167,19 @@ export default function Storefront() {
     );
     setToast(t("added"));
   };
+  const order = (product: Product) => {
+    const url = whatsappOrder(
+      [{ productId: product.id, quantity: 1 }],
+      allProducts,
+      store,
+      lang,
+    );
+    if (!url) {
+      setToast(t("unconfigured"));
+      return;
+    }
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   const update = (id: string, quantity: number) =>
     setCart((items) =>
       sanitizeCart(
@@ -195,32 +194,15 @@ export default function Storefront() {
       (p) =>
         (p.name.en + " " + p.name.ar + " " + p.sku)
           .toLowerCase()
-          .includes(query.toLowerCase().trim()) &&
-        (category === "all" || p.categoryId === category) &&
-        (type === "all" ||
-          (type === "grouped" ? p.type !== "component" : p.type === type)),
+          .includes(query.toLowerCase().trim()),
     );
-    return [...result].sort((a, b) =>
-      sort === "priceLow"
-        ? unitPrice(a) - unitPrice(b)
-        : sort === "priceHigh"
-          ? unitPrice(b) - unitPrice(a)
-          : sort === "alphabetical"
-            ? a.name[lang].localeCompare(b.name[lang], lang)
-            : Number(!!b.featured) - Number(!!a.featured),
+    return [...result].sort(
+      (a, b) => Number(!!b.featured) - Number(!!a.featured),
     );
-  }, [query, category, type, sort, lang]);
-  const shopCategory = (id: string) => {
-    navigate("products");
-    setCategory(id);
-  };
+  }, [query]);
   const navItems: [string, TranslationKey][] = [
     ["home", "home"],
     ["products", "products"],
-    ["categories", "categories"],
-    ["kits", "kits"],
-    ["about", "about"],
-    ["contact", "contact"],
   ];
   const selected = selectedId ? getProductById(selectedId) : null;
   return (
@@ -256,8 +238,6 @@ export default function Storefront() {
             onSubmit={(e) => {
               e.preventDefault();
               setView("catalog");
-              setType("all");
-              setCategory("all");
               window.location.hash = "products";
               window.scrollTo(0, 0);
             }}
@@ -322,7 +302,6 @@ export default function Storefront() {
                   key={id}
                 >
                   {t(key)}
-                  {id === "categories" && <ChevronDown size={12} />}
                 </a>
               ))}
             </div>
@@ -358,7 +337,9 @@ export default function Storefront() {
                       </span>
                     ))}
                   </h1>
-                  <p>{store.hero.description[lang]}</p>
+                  {store.hero.description[lang] && (
+                    <p>{store.hero.description[lang]}</p>
+                  )}
                   <div className="hero-buttons">
                     <button
                       className="button primary"
@@ -366,13 +347,6 @@ export default function Storefront() {
                     >
                       {t("explore")}
                       <ArrowRight size={18} />
-                    </button>
-                    <button
-                      className="button secondary"
-                      onClick={() => navigate("kits")}
-                    >
-                      {t("discover")}
-                      <ArrowUpRight size={18} />
                     </button>
                   </div>
                   <div className="hero-small">
@@ -401,24 +375,6 @@ export default function Storefront() {
                       loading="eager"
                     />
                   </div>
-                  <div className="floating-component floating-esp">
-                    <SafeImage
-                      src={heroProducts[1]?.images[0] ?? "/images/fallback.svg"}
-                      alt={heroProducts[1]?.name[lang] ?? t("image")}
-                    />
-                  </div>
-                  <div className="floating-component floating-motor">
-                    <SafeImage
-                      src={heroProducts[2]?.images[0] ?? "/images/fallback.svg"}
-                      alt={heroProducts[2]?.name[lang] ?? t("image")}
-                    />
-                  </div>
-                  <div className="floating-component floating-led">
-                    <SafeImage
-                      src={heroProducts[3]?.images[0] ?? "/images/fallback.svg"}
-                      alt={heroProducts[3]?.name[lang] ?? t("image")}
-                    />
-                  </div>
                   <div className="hero-info">
                     <span className="info-icon">
                       <Zap size={22} />
@@ -433,64 +389,6 @@ export default function Storefront() {
                 </div>
               </div>
             </section>
-            <section className="trust-strip">
-              <div className="container">
-                <span>
-                  <ShieldCheck />
-                  {t("quality")}
-                </span>
-                <span>
-                  <Headphones />
-                  {t("support")}
-                </span>
-                <span>
-                  <Package />
-                  {t("makers")}
-                </span>
-                <span className="trust-last">
-                  <Layers />
-                  {t("heroTag")}
-                </span>
-              </div>
-            </section>
-            <section className="section container" id="categories">
-              <div className="section-heading">
-                <div>
-                  <div className="eyebrow">{t("categoryEyebrow")}</div>
-                  <h2>{t("categoryTitle")}</h2>
-                  <p>{t("categoryDescription")}</p>
-                </div>
-                <button
-                  className="text-link"
-                  onClick={() => navigate("products")}
-                >
-                  {t("browseAll")}
-                  <ArrowUpRight size={17} />
-                </button>
-              </div>
-              <div className="category-grid">
-                {categories.map((c) => (
-                  <button
-                    className="category-card"
-                    onClick={() => shopCategory(c.id)}
-                    key={c.id}
-                  >
-                    <div className="category-image">
-                      <SafeImage
-                        src={c.image}
-                        alt={c.name[lang]}
-                        loading="lazy"
-                      />
-                    </div>
-                    <div>
-                      <h3>{c.name[lang]}</h3>
-                      <p>{c.description[lang]}</p>
-                    </div>
-                    <ArrowUpRight size={17} />
-                  </button>
-                ))}
-              </div>
-            </section>
             <section className="section featured-section" id="featured">
               <div className="container">
                 <div className="section-heading">
@@ -499,274 +397,21 @@ export default function Storefront() {
                     <h2>{t("featuredTitle")}</h2>
                     <p>{t("featuredDescription")}</p>
                   </div>
-                  <button
-                    className="text-link"
-                    onClick={() => navigate("products")}
-                  >
-                    {t("viewAll")}
-                    <ArrowUpRight size={17} />
-                  </button>
-                </div>
-                <div
-                  className="product-tabs"
-                  role="tablist"
-                  aria-label={t("products")}
-                >
-                  {(
-                    [
-                      ["featured", "featured"],
-                      ["newArrival", "new"],
-                      ["bestSeller", "best"],
-                    ] as const
-                  )
-                    .filter(([flag]) => allProducts.some((p) => p[flag]))
-                    .map(([flag, key]) => (
-                      <button
-                        role="tab"
-                        aria-selected={tab === flag}
-                        key={flag}
-                        onClick={() => setTab(flag)}
-                        className={tab === flag ? "active" : ""}
-                      >
-                        {t(key)}
-                        {tab === flag && (
-                          <span>
-                            {allProducts.filter((p) => p[flag]).length}
-                          </span>
-                        )}
-                      </button>
-                    ))}
                 </div>
                 <div className="product-grid">
-                  {allProducts
-                    .filter((p) => p[tab])
-                    .slice(0, 4)
-                    .map((p) => (
-                      <ProductCard
-                        key={p.id}
-                        product={p}
-                        lang={lang}
-                        t={t}
-                        money={money}
-                        add={add}
-                        openProduct={openProduct}
-                      />
-                    ))}
-                </div>
-              </div>
-            </section>
-            <section className="section container" id="kits-section">
-              <div className="kit-banner">
-                <div className="kit-banner-copy">
-                  <div className="eyebrow">{t("kitsEyebrow")}</div>
-                  <h2>{t("kitsTitle")}</h2>
-                  <p>{t("kitsDescription")}</p>
-                  <button
-                    className="button primary"
-                    onClick={() => navigate("kits")}
-                  >
-                    {t("discover")}
-                    <ArrowRight size={18} />
-                  </button>
-                  <div className="kit-checks">
-                    <span>
-                      <Check size={14} />
-                      {t("quality")}
-                    </span>
-                    <span>
-                      <Check size={14} />
-                      {t("makers")}
-                    </span>
-                  </div>
-                </div>
-                <div className="kit-banner-art">
-                  <div className="kit-box">
-                    <SafeImage
-                      src={heroKit?.images[0] ?? "/images/fallback.svg"}
-                      alt={heroKit?.name[lang] ?? t("image")}
-                    />
-                    <span>
-                      {store.name[lang]}
-                      <small>{t("heroTag")}</small>
-                    </span>
-                  </div>
-                  <div className="kit-floating-tag">
-                    <Package size={18} />
-                    {t("kitCount")}
-                  </div>
-                </div>
-              </div>
-              <div className="mini-kit-grid">
-                {allProducts
-                  .filter((p) => p.type !== "component")
-                  .map((p) => (
-                    <button
-                      className="mini-kit"
+                  {allProducts.map((p) => (
+                    <ProductCard
                       key={p.id}
-                      onClick={() => openProduct(p.id)}
-                    >
-                      <SafeImage
-                        src={p.images[0]}
-                        alt={p.name[lang]}
-                        loading="lazy"
-                      />
-                      <div>
-                        <span className="micro-label">
-                          {t(p.type)} ·{" "}
-                          {p.components?.reduce((s, c) => s + c.quantity, 0)}{" "}
-                          {t("items")}
-                        </span>
-                        <h3>{p.name[lang]}</h3>
-                        <span className="mini-price">
-                          <bdi>{money(unitPrice(p))}</bdi>
-                          {p.discountPrice != null && (
-                            <del>
-                              <bdi>{money(p.price)}</bdi>
-                            </del>
-                          )}
-                        </span>
-                      </div>
-                      <ArrowUpRight size={18} />
-                    </button>
-                  ))}
-              </div>
-            </section>
-            <section className="section why-section">
-              <div className="container">
-                <div className="center-heading">
-                  <div className="eyebrow">{t("whyEyebrow")}</div>
-                  <h2>{t("whyTitle")}</h2>
-                </div>
-                <div className="why-grid">
-                  {[
-                    [ShieldCheck, "qualityTitle", "qualityDescription"],
-                    [Zap, "priceTitle", "priceDescription"],
-                    [HeartHandshake, "supportTitle", "supportDescription"],
-                    [Layers, "allTitle", "allDescription"],
-                  ].map(([Icon, title, description]) => {
-                    const I = Icon as typeof ShieldCheck;
-                    return (
-                      <article key={title as string}>
-                        <div className="why-icon">
-                          <I size={24} />
-                        </div>
-                        <h3>{t(title as TranslationKey)}</h3>
-                        <p>{t(description as TranslationKey)}</p>
-                      </article>
-                    );
-                  })}
-                </div>
-              </div>
-            </section>
-            <section className="section container about-section" id="about">
-              <div className="about-art">
-                <div className="about-dots" />
-                <Zap size={110} strokeWidth={1.1} />
-                <span>{store.tagline[lang]}</span>
-              </div>
-              <div>
-                <div className="eyebrow">{t("aboutEyebrow")}</div>
-                <h2>{t("aboutTitle")}</h2>
-                <p>{store.about[lang]}</p>
-                <button
-                  className="text-link"
-                  onClick={() => navigate("contact")}
-                >
-                  {t("contact")}
-                  <ArrowUpRight size={18} />
-                </button>
-              </div>
-            </section>
-            <section className="contact-section" id="contact">
-              <div className="container contact-grid">
-                <div>
-                  <div className="eyebrow">{t("contactEyebrow")}</div>
-                  <h2>{t("contactTitle")}</h2>
-                  <p>{t("contactDescription")}</p>
-                  {/^\d{7,15}$/.test(store.whatsapp) ? (
-                    <a
-                      className="contact-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={`https://wa.me/${store.whatsapp}`}
-                    >
-                      <MessageCircle />
-                      {t("whatsapp")}
-                      <ArrowUpRight size={17} />
-                    </a>
-                  ) : (
-                    <p className="contact-config-note">{t("unconfigured")}</p>
-                  )}
-                  <a className="contact-link" href={`mailto:${store.email}`}>
-                    <Mail />
-                    <bdi>{store.email}</bdi>
-                    <ArrowUpRight size={17} />
-                  </a>
-                  <p className="demo-note">{store.contactNote[lang]}</p>
-                  {store.socials.map((s) => (
-                    <a
-                      className="contact-link"
-                      key={s.name}
-                      href={s.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {s.name}
-                      <ExternalLink size={16} />
-                    </a>
-                  ))}
-                </div>
-                <form
-                  className="contact-form"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    const form = new FormData(e.currentTarget);
-                    const subject = `${store.name[lang]} — ${form.get("name")}`;
-                    const body = `${form.get("message")}\n\n${form.get("name")}\n${form.get("email")}`;
-                    window.location.href = `mailto:${store.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                    setMailReady(true);
-                  }}
-                >
-                  <div className="form-row">
-                    <label>
-                      {t("name")}
-                      <input
-                        name="name"
-                        required
-                        maxLength={100}
-                        autoComplete="name"
-                      />
-                    </label>
-                    <label>
-                      {t("emailLabel")}
-                      <input
-                        name="email"
-                        type="email"
-                        required
-                        maxLength={200}
-                        autoComplete="email"
-                        dir="ltr"
-                      />
-                    </label>
-                  </div>
-                  <label>
-                    {t("message")}
-                    <textarea
-                      name="message"
-                      required
-                      rows={4}
-                      maxLength={3000}
+                      product={p}
+                      lang={lang}
+                      t={t}
+                      money={money}
+                      add={add}
+                      order={order}
+                      openProduct={openProduct}
                     />
-                  </label>
-                  <div className="form-bottom">
-                    <p>{t("formNote")}</p>
-                    <button type="submit" className="button primary">
-                      {t("send")}
-                      <ArrowUpRight size={17} />
-                    </button>
-                  </div>
-                  {mailReady && <p role="status">{t("emailReady")}</p>}
-                </form>
+                  ))}
+                </div>
               </div>
             </section>
           </>
@@ -795,61 +440,6 @@ export default function Storefront() {
                 </button>
               )}
             </div>
-            <div className="catalog-filters">
-              <SlidersHorizontal size={18} />
-              <label>
-                <span className="sr-only">{t("category")}</span>
-                <select
-                  value={category}
-                  onChange={(e) => setCategory(e.target.value)}
-                >
-                  <option value="all">{t("allCategories")}</option>
-                  {categories.map((c) => (
-                    <option key={c.id} value={c.id}>
-                      {c.name[lang]}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label>
-                <span className="sr-only">{t("allTypes")}</span>
-                <select value={type} onChange={(e) => setType(e.target.value)}>
-                  <option value="all">{t("allTypes")}</option>
-                  <option value="component">{t("component")}</option>
-                  <option value="kit">{t("kit")}</option>
-                  <option value="bundle">{t("bundle")}</option>
-                  <option value="grouped">{t("kits")}</option>
-                </select>
-              </label>
-              <button
-                className="clear-filter"
-                onClick={() => {
-                  setQuery("");
-                  setCategory("all");
-                  setType("all");
-                  setSort("recommended");
-                }}
-              >
-                {t("clearFilters")}
-              </button>
-              <label className="sort-control">
-                <span>{t("sort")}</span>
-                <select value={sort} onChange={(e) => setSort(e.target.value)}>
-                  {(
-                    [
-                      "recommended",
-                      "priceLow",
-                      "priceHigh",
-                      "alphabetical",
-                    ] as const
-                  ).map((k) => (
-                    <option key={k} value={k}>
-                      {t(k)}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            </div>
             <div className="results-count">
               <b>{filtered.length}</b> {t("results")}
             </div>
@@ -863,6 +453,7 @@ export default function Storefront() {
                     t={t}
                     money={money}
                     add={add}
+                    order={order}
                     openProduct={openProduct}
                   />
                 ))}
@@ -912,21 +503,6 @@ export default function Storefront() {
             ))}
           </div>
           <div>
-            <h3>{t("categories")}</h3>
-            {categories.map((c) => (
-              <a
-                href="#products"
-                key={c.id}
-                onClick={(e) => {
-                  e.preventDefault();
-                  shopCategory(c.id);
-                }}
-              >
-                {c.name[lang]}
-              </a>
-            ))}
-          </div>
-          <div>
             <h3>{t("connect")}</h3>
             <a href={`mailto:${store.email}`}>
               <bdi>{store.email}</bdi>
@@ -971,6 +547,7 @@ export default function Storefront() {
               t={t}
               money={money}
               add={add}
+              order={order}
               openProduct={openProduct}
             />
           ) : (

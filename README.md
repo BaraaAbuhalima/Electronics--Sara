@@ -2,6 +2,8 @@
 
 A bilingual English/Arabic electronics storefront built with Next.js 16, React 19, TypeScript, Tailwind CSS 4, and Lucide. English is the default; Arabic switches the whole page to RTL with a locally hosted Tajawal font. Language and cart persist in your browser. Includes a landing page, searchable catalog, product detail dialogs, kits/bundles, stock-aware cart, and WhatsApp order links. No backend, database, accounts, or payment processing.
 
+The current catalog contains only the CPU Lab Kit. Its customer-facing price is 80 NIS, and its included lab items are stored inline in `data/products.json`.
+
 ## Run the website
 
 Install Node.js 20.9 or newer (Node 24 was used for development). Open a terminal in the `Electronics-Website` project folder:

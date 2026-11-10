@@ -34,18 +34,24 @@ export function whatsappOrder(
   store: Store,
   lang: Language,
 ): string | null {
-  if (!/^\d{7,15}$/.test(store.whatsapp) || !items.length) return null;
+  const validItems = items.filter((item) =>
+    products.some((product) => product.id === item.productId),
+  );
+  if (!/^\d{7,15}$/.test(store.whatsapp) || !validItems.length) return null;
   const money = (cents: number) =>
-    new Intl.NumberFormat(lang === "ar" ? "ar-EG" : "en-US", {
+    new Intl.NumberFormat(lang === "ar" ? "ar-EG-u-nu-latn" : "en-US", {
       style: "currency",
       currency: store.currency,
-    }).format(cents / 100);
+      maximumFractionDigits: 0,
+    })
+      .format(cents / 100)
+      .replace("NIS", lang === "ar" ? "شيكل" : "NIS");
   const lines = [
     lang === "en"
       ? `Hello ${store.name.en}, I would like to order:`
       : `مرحباً ${store.name.ar}، أود طلب:`,
   ];
-  for (const item of items) {
+  for (const item of validItems) {
     const p = products.find((p) => p.id === item.productId);
     if (p)
       lines.push(
@@ -53,7 +59,7 @@ export function whatsappOrder(
       );
   }
   lines.push(
-    `${lang === "en" ? "Total" : "الإجمالي"}: ${money(cartTotalCents(items, products))}`,
+    `${lang === "en" ? "Total" : "الإجمالي"}: ${money(cartTotalCents(validItems, products))}`,
   );
   return `https://wa.me/${store.whatsapp}?text=${encodeURIComponent(lines.join("\n"))}`;
 }
