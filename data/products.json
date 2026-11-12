@@ -303,8 +303,8 @@
       "ar": "SG90 9g Servo Motor"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "SG90 9g Servo Motor",
+      "ar": "SG90 9g Servo Motor"
     },
     "price": 4,
     "discountPrice": null,
@@ -314,19 +314,7 @@
     "images": [
       "/images/excel/row-39.jpeg"
     ],
-    "stock": 20,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 20
   },
   {
     "id": "13kg-270-degree-high-torque-digital-servo-motor-",
@@ -336,8 +324,8 @@
       "ar": "13kg 270 Degree High Torque Digital Servo Motor DS3218 PRO 4.8-6.8V"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "13kg 270 Degree High Torque Digital Servo Motor DS3218 PRO 4.8-6.8V",
+      "ar": "13kg 270 Degree High Torque Digital Servo Motor DS3218 PRO 4.8-6.8V"
     },
     "price": 18,
     "discountPrice": null,
@@ -347,19 +335,7 @@
     "images": [
       "/images/excel/row-40.jpeg"
     ],
-    "stock": 10,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 10
   },
   {
     "id": "ds3225-25kg-servo-motor",
@@ -412,8 +388,8 @@
       "ar": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft",
+      "ar": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft"
     },
     "price": 15,
     "discountPrice": null,
@@ -423,19 +399,7 @@
     "images": [
       "/images/excel/row-45.jpeg"
     ],
-    "stock": 5,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 5
   },
   {
     "id": "stepper-motor-tb6600-upgrade-version",
@@ -445,8 +409,8 @@
       "ar": "Stepper MotorDriver TB6600 UpgradeVersion"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "Stepper MotorDriver TB6600 UpgradeVersion",
+      "ar": "Stepper MotorDriver TB6600 UpgradeVersion"
     },
     "price": 12,
     "discountPrice": null,
@@ -456,19 +420,7 @@
     "images": [
       "/images/excel/row-41.jpeg"
     ],
-    "stock": 10,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 10
   },
   {
     "id": "12vdc-1-channel-relay-module-active-low",
@@ -478,8 +430,8 @@
       "ar": "12VDC 1-Channel Relay Module Active Low"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "12VDC 1-Channel Relay Module Active Low",
+      "ar": "12VDC 1-Channel Relay Module Active Low"
     },
     "price": 2,
     "discountPrice": null,
@@ -489,19 +441,7 @@
     "images": [
       "/images/excel/row-43.jpeg"
     ],
-    "stock": 20,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 20
   },
   {
     "id": "5vdc-1-channel-relay-module-active-low",
@@ -511,8 +451,8 @@
       "ar": "5VDC 1-Channel Relay Module Active Low"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "5VDC 1-Channel Relay Module Active Low",
+      "ar": "5VDC 1-Channel Relay Module Active Low"
     },
     "price": 2,
     "discountPrice": null,
@@ -522,19 +462,7 @@
     "images": [
       "/images/products/power.svg"
     ],
-    "stock": 20,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 20
   },
   {
     "id": "ultrasonic-sensor-module-hc-sr04-4-6v",
@@ -544,8 +472,8 @@
       "ar": "Ultrasonic Sensor Module HC-SR04 4-6V"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "Ultrasonic Sensor Module HC-SR04 4-6V",
+      "ar": "Ultrasonic Sensor Module HC-SR04 4-6V"
     },
     "price": 2,
     "discountPrice": null,
@@ -555,19 +483,7 @@
     "images": [
       "/images/excel/row-42.png"
     ],
-    "stock": 10,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 10
   },
   {
     "id": "lcd-module-16x2-1602-with-soldered-headers",
@@ -577,8 +493,8 @@
       "ar": "LCD Module 16x2 1602 With Soldered Headers"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "LCD Module 16x2 1602 With Soldered Headers",
+      "ar": "LCD Module 16x2 1602 With Soldered Headers"
     },
     "price": 4,
     "discountPrice": null,
@@ -588,19 +504,7 @@
     "images": [
       "/images/excel/row-4.png"
     ],
-    "stock": 45,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 45
   },
   {
     "id": "prototype-pcb-boards",
@@ -762,8 +666,8 @@
       "ar": "USB To TTL Converter (FTDI) CP2102"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "USB To TTL Converter (FTDI) CP2102",
+      "ar": "USB To TTL Converter (FTDI) CP2102"
     },
     "price": 4,
     "discountPrice": null,
@@ -773,19 +677,7 @@
     "images": [
       "/images/excel/row-7.jpeg"
     ],
-    "stock": 35,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 35
   },
   {
     "id": "pic18f4620-i-p-microcontroller",
@@ -795,8 +687,8 @@
       "ar": "PIC18F4620-I/P Microcontroller"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "PIC18F4620-I/P Microcontroller",
+      "ar": "PIC18F4620-I/P Microcontroller"
     },
     "price": 8,
     "discountPrice": null,
@@ -806,19 +698,7 @@
     "images": [
       "/images/excel/row-2.png"
     ],
-    "stock": 35,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 35
   },
   {
     "id": "l7805-voltage-regulator-5v-1-5a",
@@ -828,8 +708,8 @@
       "ar": "L7805 Voltage Regulator 5V 1.5A"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "L7805 Voltage Regulator 5V 1.5A",
+      "ar": "L7805 Voltage Regulator 5V 1.5A"
     },
     "price": 1,
     "discountPrice": null,
@@ -839,19 +719,7 @@
     "images": [
       "/images/excel/row-5.png"
     ],
-    "stock": 40,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 40
   },
   {
     "id": "4mhz-quartz-crystal-oscillator",
@@ -861,8 +729,8 @@
       "ar": "4MHz Quartz Crystal Oscillator"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "4MHz Quartz Crystal Oscillator",
+      "ar": "4MHz Quartz Crystal Oscillator"
     },
     "price": 0.5,
     "discountPrice": null,
@@ -872,19 +740,7 @@
     "images": [
       "/images/excel/row-8.jpeg"
     ],
-    "stock": 100,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 100
   },
   {
     "id": "10k-ohm-potentiometer-wh148-b10k-0-125w-3pin-15m",
@@ -894,8 +750,8 @@
       "ar": "10K Ohm Potentiometer WH148 B10K 0.125W 3Pin 15mm"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "10K Ohm Potentiometer WH148 B10K 0.125W 3Pin 15mm",
+      "ar": "10K Ohm Potentiometer WH148 B10K 0.125W 3Pin 15mm"
     },
     "price": 1,
     "discountPrice": null,
@@ -905,19 +761,7 @@
     "images": [
       "/images/excel/row-13.jpeg"
     ],
-    "stock": 100,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "2",
-          "ar": "2"
-        }
-      }
-    ]
+    "stock": 100
   },
   {
     "id": "lm35-temperature-sensor",
@@ -927,8 +771,8 @@
       "ar": "LM35 Temperature Sensor"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "LM35 Temperature Sensor",
+      "ar": "LM35 Temperature Sensor"
     },
     "price": 2,
     "discountPrice": null,
@@ -938,19 +782,7 @@
     "images": [
       "/images/excel/row-14.jpeg"
     ],
-    "stock": 50,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 50
   },
   {
     "id": "40-pin-long-centered-header-pin-male-2-54mm-pitc",
@@ -960,8 +792,8 @@
       "ar": "40 Pin Long Centered Header Pin Male 2.54mm Pitch 20mm Length"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "40 Pin Long Centered Header Pin Male 2.54mm Pitch 20mm Length",
+      "ar": "40 Pin Long Centered Header Pin Male 2.54mm Pitch 20mm Length"
     },
     "price": 0.5,
     "discountPrice": null,
@@ -971,19 +803,7 @@
     "images": [
       "/images/excel/row-15.png"
     ],
-    "stock": 50,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 50
   },
   {
     "id": "mini-push-button-tactile-switch-6x6x6-5mm-2pins",
@@ -993,8 +813,8 @@
       "ar": "Mini Push Button Tactile Switch 6x6x6.5mm - 2pins"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "Mini Push Button Tactile Switch 6x6x6.5mm - 2pins",
+      "ar": "Mini Push Button Tactile Switch 6x6x6.5mm - 2pins"
     },
     "price": 0.1,
     "discountPrice": null,
@@ -1004,19 +824,7 @@
     "images": [
       "/images/excel/row-17.png"
     ],
-    "stock": 200,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "2",
-          "ar": "2"
-        }
-      }
-    ]
+    "stock": 200
   },
   {
     "id": "74ls374-dip-20-ic-octal-d-type-flip-flop-3-state",
@@ -1026,8 +834,8 @@
       "ar": "74LS374 DIP-20 IC Octal D-Type Flip Flop 3 State"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "74LS374 DIP-20 IC Octal D-Type Flip Flop 3 State",
+      "ar": "74LS374 DIP-20 IC Octal D-Type Flip Flop 3 State"
     },
     "price": 2,
     "discountPrice": null,
@@ -1037,19 +845,7 @@
     "images": [
       "/images/excel/row-24.jpeg"
     ],
-    "stock": 164,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "4",
-          "ar": "4"
-        }
-      }
-    ]
+    "stock": 164
   },
   {
     "id": "74ls157-dip-16-ic-quadruple-2-input-multiplexer",
@@ -1059,8 +855,8 @@
       "ar": "74LS157 DIP-16 IC Quadruple 2-Input Multiplexer"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "74LS157 DIP-16 IC Quadruple 2-Input Multiplexer",
+      "ar": "74LS157 DIP-16 IC Quadruple 2-Input Multiplexer"
     },
     "price": 2,
     "discountPrice": null,
@@ -1070,19 +866,7 @@
     "images": [
       "/images/excel/row-25.jpeg"
     ],
-    "stock": 164,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "4",
-          "ar": "4"
-        }
-      }
-    ]
+    "stock": 164
   },
   {
     "id": "74ls74-dip-14-ic-dual-d-flip-flop",
@@ -1092,8 +876,8 @@
       "ar": "74LS74 DIP-14 IC Dual D Flip Flop"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "74LS74 DIP-14 IC Dual D Flip Flop",
+      "ar": "74LS74 DIP-14 IC Dual D Flip Flop"
     },
     "price": 1,
     "discountPrice": null,
@@ -1103,19 +887,7 @@
     "images": [
       "/images/excel/row-26.png"
     ],
-    "stock": 41,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 41
   },
   {
     "id": "74ls193-sn74ls193n-dip-16-ic-4-bit-binary-counte",
@@ -1125,8 +897,8 @@
       "ar": "74LS193 SN74LS193N DIP-16 IC 4-Bit Binary Counter"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "74LS193 SN74LS193N DIP-16 IC 4-Bit Binary Counter",
+      "ar": "74LS193 SN74LS193N DIP-16 IC 4-Bit Binary Counter"
     },
     "price": 2,
     "discountPrice": null,
@@ -1136,19 +908,7 @@
     "images": [
       "/images/excel/row-29.jpeg"
     ],
-    "stock": 120,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "3",
-          "ar": "3"
-        }
-      }
-    ]
+    "stock": 120
   },
   {
     "id": "8-pin-long-single-row-female-header",
@@ -1158,8 +918,8 @@
       "ar": "8 Pin Long Single Row Female Header"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "8 Pin Long Single Row Female Header",
+      "ar": "8 Pin Long Single Row Female Header"
     },
     "price": 0.5,
     "discountPrice": null,
@@ -1169,19 +929,7 @@
     "images": [
       "/images/excel/row-30.jpeg"
     ],
-    "stock": 100,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "2",
-          "ar": "2"
-        }
-      }
-    ]
+    "stock": 100
   },
   {
     "id": "10-pin-long-single-row-female-header",
@@ -1191,8 +939,8 @@
       "ar": "10 Pin Long Single Row Female Header"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "10 Pin Long Single Row Female Header",
+      "ar": "10 Pin Long Single Row Female Header"
     },
     "price": 0.5,
     "discountPrice": null,
@@ -1202,19 +950,7 @@
     "images": [
       "/images/excel/row-31.jpeg"
     ],
-    "stock": 100,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "2",
-          "ar": "2"
-        }
-      }
-    ]
+    "stock": 100
   },
   {
     "id": "40-pin-long-male-header-pin-2-54mm-pitch-20mm-le",
@@ -1224,8 +960,8 @@
       "ar": "40 Pin Long Male Header Pin 2.54mm Pitch 20mm Length"
     },
     "description": {
-      "en": "Quality electronics component for prototyping and repair.",
-      "ar": "Quality electronics component for prototyping and repair."
+      "en": "40 Pin Long Male Header Pin 2.54mm Pitch 20mm Length",
+      "ar": "40 Pin Long Male Header Pin 2.54mm Pitch 20mm Length"
     },
     "price": 0.5,
     "discountPrice": null,
@@ -1235,18 +971,6 @@
     "images": [
       "/images/excel/row-34.png"
     ],
-    "stock": 50,
-    "specifications": [
-      {
-        "label": {
-          "en": "Stock per kit",
-          "ar": "Stock per kit"
-        },
-        "value": {
-          "en": "1",
-          "ar": "1"
-        }
-      }
-    ]
+    "stock": 50
   }
 ]
