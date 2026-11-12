@@ -461,6 +461,27 @@
     ]
   },
   {
+    "id": "mg996r-servo-motor-13kg",
+    "type": "component",
+    "name": {
+      "en": "MG996R Servo Motor 13kg",
+      "ar": "محرك سيرفو MG996R بقوة 13 كجم"
+    },
+    "description": {
+      "en": "MG996R 13kg high-torque servo motor for robotics and automation.",
+      "ar": "محرك سيرفو MG996R عالي العزم بقوة 13 كجم للروبوتات والأتمتة."
+    },
+    "price": 23,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-MG996R-SERVO-13KG",
+    "categoryId": "motors",
+    "images": [
+      "/images/products/mg996r-servo-motor-13kg.png"
+    ],
+    "stock": 1
+  },
+  {
     "id": "37mm-dc-gear-motor-12vdc-100rpm-all-steel-gear-6",
     "type": "component",
     "name": {
