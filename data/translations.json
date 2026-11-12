@@ -104,7 +104,6 @@
     "items": "items",
     "image": "Product image",
     "dataWarning": "Some store data needs attention.",
-    "demo": "DEMO STORE",
     "heroCard": "FEATURED KIT",
     "heroCardSub": "Build with the right parts.",
     "heroTag": "Build. Test. Learn.",
@@ -115,7 +114,7 @@
     "unavailableDescription": "This product is unavailable.",
     "stockLimit": "You have all available stock in your cart.",
     "storageWarning": "Your browser cannot save preferences.",
-    "terms": "Demo store",
+    "terms": "VOLT Electronics store",
     "unit": "each"
   },
   "ar": {
@@ -223,7 +222,6 @@
     "items": "قطع",
     "image": "صورة المنتج",
     "dataWarning": "بعض بيانات المتجر تحتاج إلى مراجعة.",
-    "demo": "متجر تجريبي",
     "heroCard": "طقم مميز",
     "heroCardSub": "ابنِ بالمكونات المناسبة.",
     "heroTag": "ابنِ. اختبر. تعلّم.",
@@ -234,7 +232,7 @@
     "unavailableDescription": "هذا المنتج غير متاح.",
     "stockLimit": "كل الكمية المتاحة في سلتك.",
     "storageWarning": "لا يستطيع المتصفح حفظ التفضيلات.",
-    "terms": "متجر تجريبي",
+    "terms": "متجر إلكترونيات فولت",
     "unit": "للقطعة"
   }
 }

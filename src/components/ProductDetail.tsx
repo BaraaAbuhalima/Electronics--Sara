@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { MessageCircle, ShoppingBag } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageCircle, ShoppingBag } from "lucide-react";
 import {
   getAllCategories,
   getKitComponents,
@@ -10,6 +10,7 @@ import type { Language, Product } from "@/types";
 import type { Translate } from "@/types/i18n";
 import SafeImage from "./SafeImage";
 import Quantity from "./Quantity";
+import Modal from "./Modal";
 const categories = getAllCategories();
 
 export default function ProductDetail({
@@ -31,6 +32,8 @@ export default function ProductDetail({
 }) {
   const [quantity, setQuantity] = useState(1),
     [image, setImage] = useState(0),
+    [galleryOpen, setGalleryOpen] = useState(false),
+    [galleryImage, setGalleryImage] = useState(0),
     [selectedOptions, setSelectedOptions] = useState<Record<string, string>>(
       {},
     );
@@ -43,12 +46,58 @@ export default function ProductDetail({
   const availableStock = selectedOption?.stock ?? p.stock;
   const selectedPrice = selectedOption?.price ?? unitPrice(p);
   const selectedImage = selectedOption?.image ?? p.images[image];
+  const galleryImages = Array.from(
+    new Set([
+      ...p.images,
+      ...(p.optionGroups?.flatMap((group) =>
+        group.options.map((option) => option.image),
+      ) ?? []),
+    ]),
+  );
+  const currentImage = galleryImages[galleryImage] ?? selectedImage;
+  const showGallery = (src: string) => {
+    setGalleryImage(Math.max(0, galleryImages.indexOf(src)));
+    setGalleryOpen(true);
+  };
+  const moveGallery = (direction: -1 | 1) =>
+    setGalleryImage(
+      (current) =>
+        (current + direction + galleryImages.length) % galleryImages.length,
+    );
   return (
     <div className="detail">
       <div className="detail-top">
         <div className="detail-gallery">
-          <div className="detail-image">
-            <SafeImage src={selectedImage} alt={p.name[lang]} />
+          <div className="detail-image-wrap">
+            <button
+              className="detail-image"
+              onClick={() => showGallery(currentImage)}
+              aria-label={t("thumbnail")}
+            >
+              <SafeImage src={currentImage} alt={p.name[lang]} />
+            </button>
+            {galleryImages.length > 1 && (
+              <>
+                <button
+                  className="detail-gallery-nav detail-gallery-prev"
+                  onClick={() => {
+                    moveGallery(-1);
+                  }}
+                  aria-label={t("thumbnail")}
+                >
+                  <ChevronLeft size={20} />
+                </button>
+                <button
+                  className="detail-gallery-nav detail-gallery-next"
+                  onClick={() => {
+                    moveGallery(1);
+                  }}
+                  aria-label={t("thumbnail")}
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </>
+            )}
           </div>
           {p.images.length > 1 && (
             <div className="thumbnails">
@@ -56,7 +105,10 @@ export default function ProductDetail({
                 <button
                   className={i === image ? "active" : ""}
                   key={src}
-                  onClick={() => setImage(i)}
+                  onClick={() => {
+                    setImage(i);
+                    setGalleryImage(galleryImages.indexOf(src));
+                  }}
                   aria-label={`${t("thumbnail")} ${i + 1}`}
                 >
                   <SafeImage src={src} alt={p.name[lang]} />
@@ -104,6 +156,10 @@ export default function ProductDetail({
                     [group.id]: event.target.value,
                   }));
                   setImage(0);
+                  const optionImage = group.options.find(
+                    (option) => option.id === event.target.value,
+                  )?.image;
+                  if (optionImage) setGalleryImage(galleryImages.indexOf(optionImage));
                 }}
               >
                 {group.options.map((option) => (
@@ -207,6 +263,52 @@ export default function ProductDetail({
             </table>
           </div>
         </section>
+      )}
+      {galleryOpen && (
+        <Modal
+          title={p.name[lang]}
+          closeLabel={t("close")}
+          onClose={() => setGalleryOpen(false)}
+        >
+          <div className="gallery-viewer">
+            <div className="gallery-main">
+              {galleryImages.length > 1 && (
+                <button
+                  className="gallery-nav gallery-prev"
+                  onClick={() => moveGallery(-1)}
+                  aria-label={t("thumbnail")}
+                >
+                  <ChevronLeft size={24} />
+                </button>
+              )}
+              <SafeImage
+                src={galleryImages[galleryImage]}
+                alt={`${p.name[lang]} ${galleryImage + 1}`}
+              />
+              {galleryImages.length > 1 && (
+                <button
+                  className="gallery-nav gallery-next"
+                  onClick={() => moveGallery(1)}
+                  aria-label={t("thumbnail")}
+                >
+                  <ChevronRight size={24} />
+                </button>
+              )}
+            </div>
+            <div className="gallery-thumbnails">
+              {galleryImages.map((src, index) => (
+                <button
+                  className={index === galleryImage ? "active" : ""}
+                  key={src}
+                  onClick={() => setGalleryImage(index)}
+                  aria-label={`${t("thumbnail")} ${index + 1}`}
+                >
+                  <SafeImage src={src} alt="" />
+                </button>
+              ))}
+            </div>
+          </div>
+        </Modal>
       )}
     </div>
   );

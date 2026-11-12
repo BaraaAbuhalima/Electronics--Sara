@@ -414,10 +414,10 @@ Open `data/categories.json` and add an object with a unique `id`, both names and
 Edit `data/store.json`:
 
 - `name.en` / `name.ar`: store names; `logo`: local logo image path.
-- `tagline`, `description`, `about`, `copyright`, `contactNote`: English/Arabic objects. `contactNote` is the visible demo/contact note.
+- `tagline`, `description`, `about`, `copyright`, `contactNote`: English/Arabic objects. `contactNote` is the visible contact note.
 - `hero.eyebrow`, `hero.title`, `hero.description`: bilingual landing copy. Use `\n` inside the title string to add a line break.
 - `whatsapp`: your international phone number as digits only, including country code; no plus, spaces, or punctuation. Leave `""` to disable WhatsApp links. Set it before accepting orders. Never use a random third party's number.
-- `email`: your real email. The default `hello@example.com` is demo data and must be replaced. The contact form opens a prefilled draft in the visitor's email app; it does not submit to a server or guarantee delivery.
+- `email`: your real email. The contact form opens a prefilled draft in the visitor's email app; it does not submit to a server or guarantee delivery.
 - `socials`: array such as `[{"name":"Instagram","url":"https://www.instagram.com/your_store/"}]`, using your own real profile. Empty `[]` hides social links.
 - `currency`: three-letter code. Change every product's `currency` to match. Prices are not converted automatically.
 

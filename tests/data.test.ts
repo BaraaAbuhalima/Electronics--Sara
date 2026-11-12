@@ -18,7 +18,7 @@ test("all bilingual sample data and references are valid", () => {
     assert.ok(
       getKitComponents(p.id).every((c) => (c.product || c.name) && c.quantity > 0),
     );
-  assert.equal(getKitComponents("cpu-lab-kit").length, 17);
+  assert.equal(getKitComponents("cpu-lab-kit").length, 21);
 });
 test("validator catches duplicates, missing fields, categories, types, prices, images and component references", () => {
   const cases = [

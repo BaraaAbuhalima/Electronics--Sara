@@ -156,6 +156,38 @@
         },
         "image": "/images/cpu-kit/component-17.png",
         "quantity": 1
+      },
+      {
+        "name": {
+          "en": "1m 30AWG Black Wire Wrapping Wire",
+          "ar": "??? ?? ???? 30AWG ???? 1 ???"
+        },
+        "image": "/images/excel/row-35.png",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "1m 30AWG Orange Wire Wrapping Wire",
+          "ar": "??? ?? ??????? 30AWG ???? 1 ???"
+        },
+        "image": "/images/excel/row-36.png",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "1m 30AWG Green Wire Wrapping Wire",
+          "ar": "??? ?? ???? 30AWG ???? 1 ???"
+        },
+        "image": "/images/excel/row-37.png",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "1m 30AWG Blue Wire Wrapping Wire",
+          "ar": "??? ?? ???? 30AWG ???? 1 ???"
+        },
+        "image": "/images/excel/row-38.png",
+        "quantity": 2
       }
     ]
   },
@@ -186,13 +218,15 @@
           "en": "PIC18F4620-I/P Microcontroller",
           "ar": "متحكم PIC18F4620-I/P"
         },
-        "quantity": 1
+        "quantity": 1,
+        "image": "/images/products/pic18f4620-ip.png"
       },
       {
         "name": {
           "en": "40 Pin Wirewrap IC Socket, 15.24mm Width",
           "ar": "قاعدة IC Wirewrap ذات 40 دبوساً وعرض 15.24 مم"
         },
+        "image": "/images/excel/row-3.png",
         "quantity": 1
       },
       {
@@ -200,6 +234,7 @@
           "en": "LCD Module 16x2 1602",
           "ar": "شاشة LCD 16x2 موديل 1602"
         },
+        "image": "/images/excel/row-4.png",
         "quantity": 1
       },
       {
@@ -207,6 +242,7 @@
           "en": "L7805 5V 1.5A Voltage Regulator",
           "ar": "منظم جهد L7805 بجهد 5 فولت وتيار 1.5 أمبير"
         },
+        "image": "/images/excel/row-5.png",
         "quantity": 1
       },
       {
@@ -214,6 +250,7 @@
           "en": "10x22cm DIY Prototype PCB Board",
           "ar": "لوحة PCB تجريبية DIY مقاس 10x22 سم"
         },
+        "image": "/images/excel/row-6.png",
         "quantity": 1
       },
       {
@@ -221,6 +258,7 @@
           "en": "USB to TTL CP2102 Converter",
           "ar": "محول USB إلى TTL موديل CP2102"
         },
+        "image": "/images/excel/row-7.jpeg",
         "quantity": 1
       },
       {
@@ -228,6 +266,7 @@
           "en": "4MHz Quartz Crystal Oscillator",
           "ar": "بلورة كوارتز 4 ميجاهرتز"
         },
+        "image": "/images/excel/row-8.jpeg",
         "quantity": 1
       },
       {
@@ -235,6 +274,7 @@
           "en": "10uF 50V Electrolytic Capacitor",
           "ar": "مكثف إلكتروليتي 10uF و50 فولت"
         },
+        "image": "/images/excel/row-9.jpeg",
         "quantity": 1
       },
       {
@@ -242,6 +282,7 @@
           "en": "15pF 50V Ceramic Capacitor",
           "ar": "مكثف سيراميكي 15pF و50 فولت"
         },
+        "image": "/images/excel/row-10.jpeg",
         "quantity": 2
       },
       {
@@ -249,6 +290,7 @@
           "en": "100uF 25V Electrolytic Capacitor",
           "ar": "مكثف إلكتروليتي 100uF و25 فولت"
         },
+        "image": "/images/excel/row-11.jpeg",
         "quantity": 1
       },
       {
@@ -256,6 +298,7 @@
           "en": "100nF 50V Ceramic Capacitor",
           "ar": "مكثف سيراميكي 100nF و50 فولت"
         },
+        "image": "/images/excel/row-12.jpeg",
         "quantity": 1
       },
       {
@@ -263,6 +306,7 @@
           "en": "10K Ohm B10K Potentiometer",
           "ar": "مقاومة متغيرة 10K أوم من نوع B10K"
         },
+        "image": "/images/excel/row-13.jpeg",
         "quantity": 2
       },
       {
@@ -270,6 +314,7 @@
           "en": "LM35 Temperature Sensor",
           "ar": "حساس حرارة LM35"
         },
+        "image": "/images/excel/row-14.jpeg",
         "quantity": 1
       },
       {
@@ -277,6 +322,7 @@
           "en": "40 Pin Long Male Header",
           "ar": "رأس توصيل ذكر طويل ذو 40 دبوساً"
         },
+        "image": "/images/excel/row-34.png",
         "quantity": 1
       },
       {
@@ -291,6 +337,39 @@
           "en": "6x6x6.5mm Mini Push Button",
           "ar": "زر ضغط صغير 6x6x6.5 مم"
         },
+        "image": "/images/excel/row-17.png",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "1m 30AWG Black Wire Wrapping Wire",
+          "ar": "??? ?? ???? 30AWG ???? 1 ???"
+        },
+        "image": "/images/excel/row-35.png",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "1m 30AWG Orange Wire Wrapping Wire",
+          "ar": "??? ?? ??????? 30AWG ???? 1 ???"
+        },
+        "image": "/images/excel/row-36.png",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "1m 30AWG Green Wire Wrapping Wire",
+          "ar": "??? ?? ???? 30AWG ???? 1 ???"
+        },
+        "image": "/images/excel/row-37.png",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "1m 30AWG Blue Wire Wrapping Wire",
+          "ar": "??? ?? ???? 30AWG ???? 1 ???"
+        },
+        "image": "/images/excel/row-38.png",
         "quantity": 2
       }
     ]
@@ -312,7 +391,8 @@
     "sku": "VLT-SG90-9G-SERVO-MOTOR",
     "categoryId": "motors",
     "images": [
-      "/images/excel/row-39.jpeg"
+      "/images/products/sg90-servo-front.jpg",
+      "/images/products/sg90-servo-side.jpg"
     ],
     "stock": 20
   },
@@ -696,7 +776,7 @@
     "sku": "VLT-PIC18F4620-I-P-MICROCONT",
     "categoryId": "microcontrollers",
     "images": [
-      "/images/excel/row-2.png"
+      "/images/products/pic18f4620-ip.png"
     ],
     "stock": 35
   },

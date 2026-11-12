@@ -1,7 +1,7 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
-import { ShoppingBag } from "lucide-react";
+import { ArrowUpRight, ExternalLink, ShoppingBag, Sparkles } from "lucide-react";
 import dictionary from "../../data/translations.json";
 import {
   getAllProducts,
@@ -109,6 +109,18 @@ export default function ProductPage({ product }: { product: Product }) {
             </Link>
           </div>
         </div>
+        <div className="navigation-wrap">
+          <nav className="container navigation" aria-label={t("navigation")}>
+            <div>
+              <Link href="/#home">{t("home")}</Link>
+              <Link href="/#products">{t("products")}</Link>
+            </div>
+            <span className="nav-note">
+              <Sparkles size={14} />
+              {t("makers")}
+            </span>
+          </nav>
+        </div>
       </header>
       <div className="container product-page-content">
         <Link href="/" className="text-link product-back-link">
@@ -124,6 +136,54 @@ export default function ProductPage({ product }: { product: Product }) {
           openProduct={openProduct}
         />
       </div>
+      <footer>
+        <div className="container footer-grid">
+          <div className="footer-brand">
+            <Link href="/" className="brand">
+              <img src={store.logo} alt="" />
+              <span>{store.name[lang]}</span>
+            </Link>
+            <p>{store.description[lang]}</p>
+            <span className="footer-spark">
+              <Sparkles size={15} />
+              {t("footerLine")}
+            </span>
+          </div>
+          <div>
+            <h3>{t("shop")}</h3>
+            <Link href="/#products">{t("products")}</Link>
+          </div>
+          <div>
+            <h3>{t("connect")}</h3>
+            <a href={`mailto:${store.email}`}>
+              <bdi>{store.email}</bdi>
+              <ArrowUpRight size={14} />
+            </a>
+            {store.socials.map((s) => (
+              <a
+                key={s.name}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {s.name}
+                <ExternalLink size={14} />
+              </a>
+            ))}
+            <p className="footer-contact-note">{store.contactNote[lang]}</p>
+          </div>
+        </div>
+        <div className="container footer-bottom">
+          <span>
+            © {new Date().getFullYear()} {store.name[lang]}.{" "}
+            {store.copyright[lang]}
+          </span>
+          <span>
+            <span className="pulse-dot" />
+            {store.tagline[lang]}
+          </span>
+        </div>
+      </footer>
     </main>
   );
 }

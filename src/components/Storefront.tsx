@@ -217,16 +217,6 @@ export default function Storefront() {
   const selected = selectedId ? getProductById(selectedId) : null;
   return (
     <>
-      <div className="announcement">
-        <span>
-          <Zap size={13} />
-          {t("demo")}
-        </span>
-        <span className="announcement-right">
-          {store.tagline[lang]}
-          <ArrowUpRight size={13} />
-        </span>
-      </div>
       <header className="site-header">
         <div className="header-main container">
           <a
@@ -544,7 +534,7 @@ export default function Storefront() {
                 <ExternalLink size={14} />
               </a>
             ))}
-            <p className="footer-demo">{store.contactNote[lang]}</p>
+            <p className="footer-contact-note">{store.contactNote[lang]}</p>
           </div>
         </div>
         <div className="container footer-bottom">
