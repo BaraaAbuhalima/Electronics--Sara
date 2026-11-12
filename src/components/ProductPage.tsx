@@ -50,7 +50,10 @@ export default function ProductPage({ product }: { product: Product }) {
       setCart([]);
     }
   }, []);
-  const add = (item: Product, quantity: number) => {
+  const add = (item: Product, quantity: number, optionId?: string) => {
+    const option = item.optionGroups
+      ?.flatMap((group) => group.options)
+      .find((candidate) => candidate.id === optionId);
     setCart((items) => {
       const current = items.find((i) => i.productId === item.id)?.quantity ?? 0;
       const next = sanitizeCart(
@@ -58,7 +61,8 @@ export default function ProductPage({ product }: { product: Product }) {
           ...items.filter((i) => i.productId !== item.id),
           {
             productId: item.id,
-            quantity: Math.min(item.stock, current + quantity),
+            quantity: Math.min(option?.stock ?? item.stock, current + quantity),
+            ...(optionId ? { optionId } : {}),
           },
         ],
         allProducts,
@@ -67,9 +71,9 @@ export default function ProductPage({ product }: { product: Product }) {
       return next;
     });
   };
-  const order = (item: Product, quantity: number) => {
+  const order = (item: Product, quantity: number, optionId?: string) => {
     const url = whatsappOrder(
-      [{ productId: item.id, quantity }],
+      [{ productId: item.id, quantity, ...(optionId ? { optionId } : {}) }],
       allProducts,
       store,
       lang,

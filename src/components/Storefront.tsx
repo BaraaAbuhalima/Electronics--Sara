@@ -27,6 +27,7 @@ import {
   getAllProducts,
   getProductById,
   getStoreInfo,
+  getAllCategories,
   unitPrice,
 } from "@/services/catalog";
 import { cartTotalCents, sanitizeCart, whatsappOrder } from "@/services/cart";
@@ -37,7 +38,8 @@ import ProductCard from "./ProductCard";
 import ProductDetail from "./ProductDetail";
 import Quantity from "./Quantity";
 const allProducts = getAllProducts(),
-  store = getStoreInfo();
+  store = getStoreInfo(),
+  categories = getAllCategories();
 const heroProducts = (store.hero.productIds ?? []).map(getProductById);
 import type { TranslationKey } from "@/types/i18n";
 function readHash() {
@@ -57,6 +59,7 @@ export default function Storefront() {
     [view, setView] = useState<"home" | "catalog">("home"),
     [selectedId, setSelectedId] = useState<string | null>(null),
     [query, setQuery] = useState(""),
+    [categoryId, setCategoryId] = useState("all"),
     [toast, setToast] = useState(""),
     [storageWarning, setStorageWarning] = useState(false);
   const t = useCallback((key: TranslationKey) => dictionary[lang][key], [lang]);
@@ -153,23 +156,29 @@ export default function Storefront() {
   const openProduct = (id: string) => {
     window.location.assign(`/product/${encodeURIComponent(id)}`);
   };
-  const add = (product: Product, quantity = 1) => {
-    const current = cart.find((c) => c.productId === product.id)?.quantity ?? 0;
-    if (product.stock <= current) {
+  const add = (product: Product, quantity = 1, optionId?: string) => {
+    const option = product.optionGroups
+      ?.flatMap((group) => group.options)
+      .find((candidate) => candidate.id === optionId);
+    const current =
+      cart.find(
+        (c) => c.productId === product.id && c.optionId === optionId,
+      )?.quantity ?? 0;
+    if ((option?.stock ?? product.stock) <= current) {
       setToast(t("stockLimit"));
       return;
     }
     setCart((items) =>
       sanitizeCart(
-        [...items, { productId: product.id, quantity }],
+        [...items, { productId: product.id, quantity, ...(optionId ? { optionId } : {}) }],
         allProducts,
       ),
     );
     setToast(t("added"));
   };
-  const order = (product: Product) => {
+  const order = (product: Product, quantity = 1, optionId?: string) => {
     const url = whatsappOrder(
-      [{ productId: product.id, quantity: 1 }],
+      [{ productId: product.id, quantity, ...(optionId ? { optionId } : {}) }],
       allProducts,
       store,
       lang,
@@ -192,6 +201,7 @@ export default function Storefront() {
   const filtered = useMemo(() => {
     const result = allProducts.filter(
       (p) =>
+        (categoryId === "all" || p.categoryId === categoryId) &&
         (p.name.en + " " + p.name.ar + " " + p.sku)
           .toLowerCase()
           .includes(query.toLowerCase().trim()),
@@ -199,7 +209,7 @@ export default function Storefront() {
     return [...result].sort(
       (a, b) => Number(!!b.featured) - Number(!!a.featured),
     );
-  }, [query]);
+  }, [query, categoryId]);
   const navItems: [string, TranslationKey][] = [
     ["home", "home"],
     ["products", "products"],
@@ -440,6 +450,21 @@ export default function Storefront() {
                 </button>
               )}
             </div>
+            <div className="catalog-filters">
+              <label htmlFor="category-filter">{t("category")}</label>
+              <select
+                id="category-filter"
+                value={categoryId}
+                onChange={(event) => setCategoryId(event.target.value)}
+              >
+                <option value="all">{t("allCategories")}</option>
+                {categories.map((category) => (
+                  <option key={category.id} value={category.id}>
+                    {category.name[lang]}
+                  </option>
+                ))}
+              </select>
+            </div>
             <div className="results-count">
               <b>{filtered.length}</b> {t("results")}
             </div>
@@ -583,8 +608,11 @@ export default function Storefront() {
               <div className="cart-items">
                 {cart.map((item) => {
                   const p = getProductById(item.productId)!;
+                  const option = p.optionGroups
+                    ?.flatMap((group) => group.options)
+                    .find((candidate) => candidate.id === item.optionId);
                   return (
-                    <div className="cart-item" key={p.id}>
+                    <div className="cart-item" key={`${p.id}-${item.optionId ?? ""}`}>
                       <SafeImage src={p.images[0]} alt={p.name[lang]} />
                       <div>
                         <button
@@ -594,7 +622,7 @@ export default function Storefront() {
                             openProduct(p.id);
                           }}
                         >
-                          {p.name[lang]}
+                          {p.name[lang]}{option ? ` — ${option.label[lang]}` : ""}
                         </button>
                         <div className="cart-sku">
                           <bdi>{p.sku}</bdi>
@@ -608,18 +636,33 @@ export default function Storefront() {
                         <div className="cart-item-bottom">
                           <Quantity
                             value={item.quantity}
-                            max={p.stock}
-                            onChange={(n) => update(p.id, n)}
+                            max={option?.stock ?? p.stock}
+                            onChange={(n) =>
+                              setCart((items) =>
+                                items.map((current) =>
+                                  current.productId === p.id &&
+                                  current.optionId === item.optionId
+                                    ? { ...current, quantity: n }
+                                    : current,
+                                ),
+                              )
+                            }
                             t={t}
                           />
-                          <bdi>{money(unitPrice(p) * item.quantity)}</bdi>
+                          <bdi>{money((option?.price ?? unitPrice(p)) * item.quantity)}</bdi>
                         </div>
                       </div>
                       <button
                         className="icon-button remove-item"
                         onClick={() =>
                           setCart((items) =>
-                            items.filter((i) => i.productId !== p.id),
+                            items.filter(
+                              (i) =>
+                                !(
+                                  i.productId === p.id &&
+                                  i.optionId === item.optionId
+                                ),
+                            ),
                           )
                         }
                         aria-label={`${t("remove")}: ${p.name[lang]}`}

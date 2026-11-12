@@ -78,6 +78,31 @@ export function validateData(
         ))
     )
       errors.push(`${id}: invalid specifications.`);
+    if (
+    p.optionGroups !== undefined &&
+    (!Array.isArray(p.optionGroups) ||
+      !p.optionGroups.length ||
+      !p.optionGroups.every(
+        (group) =>
+          object(group) &&
+          typeof group.id === "string" &&
+          localized(group.label) &&
+          Array.isArray(group.options) &&
+          group.options.length > 0 &&
+          group.options.every(
+            (option) =>
+              object(option) &&
+              typeof option.id === "string" &&
+              localized(option.label) &&
+              image(option.image) &&
+              typeof option.sku === "string" &&
+              price(option.price) &&
+              Number.isInteger(option.stock) &&
+              (option.stock as number) >= 0,
+          ),
+      ))
+    )
+    errors.push(`${id}: invalid option groups.`);
     for (const flag of ["featured", "newArrival", "bestSeller"])
       if (p[flag] !== undefined && typeof p[flag] !== "boolean")
         errors.push(`${id}: ${flag} must be boolean.`);

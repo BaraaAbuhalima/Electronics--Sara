@@ -5,6 +5,19 @@ export interface Specification {
   label: Localized;
   value: Localized;
 }
+export interface ProductOption {
+  id: string;
+  label: Localized;
+  image: string;
+  sku: string;
+  price: number;
+  stock: number;
+}
+export interface ProductOptionGroup {
+  id: string;
+  label: Localized;
+  options: ProductOption[];
+}
 export interface KitComponent {
   productId?: string;
   name?: Localized;
@@ -28,6 +41,7 @@ export interface Product {
   newArrival?: boolean;
   bestSeller?: boolean;
   components?: KitComponent[];
+  optionGroups?: ProductOptionGroup[];
 }
 export interface Category {
   id: string;
@@ -58,4 +72,5 @@ export interface Store {
 export interface CartItem {
   productId: string;
   quantity: number;
+  optionId?: string;
 }

@@ -25,19 +25,30 @@ export default function ProductDetail({
   lang: Language;
   t: Translate;
   money: (n: number) => string;
-  add: (p: Product, n: number) => void;
-  order: (p: Product, n: number) => void;
+  add: (p: Product, n: number, optionId?: string) => void;
+  order: (p: Product, n: number, optionId?: string) => void;
   openProduct: (id: string) => void;
 }) {
   const [quantity, setQuantity] = useState(1),
-    [image, setImage] = useState(0);
+    [image, setImage] = useState(0),
+    [selectedOptions, setSelectedOptions] = useState<Record<string, string>>(
+      {},
+    );
   const category = categories.find((c) => c.id === p.categoryId);
+  const selectedOption = p.optionGroups?.[0]
+    ? p.optionGroups[0].options.find(
+        (option) => option.id === selectedOptions[p.optionGroups![0].id],
+      ) ?? p.optionGroups[0].options[0]
+    : undefined;
+  const availableStock = selectedOption?.stock ?? p.stock;
+  const selectedPrice = selectedOption?.price ?? unitPrice(p);
+  const selectedImage = selectedOption?.image ?? p.images[image];
   return (
     <div className="detail">
       <div className="detail-top">
         <div className="detail-gallery">
           <div className="detail-image">
-            <SafeImage src={p.images[image]} alt={p.name[lang]} />
+            <SafeImage src={selectedImage} alt={p.name[lang]} />
           </div>
           {p.images.length > 1 && (
             <div className="thumbnails">
@@ -58,22 +69,22 @@ export default function ProductDetail({
           <h2>{p.name[lang]}</h2>
           <p>{p.description[lang]}</p>
           <div className="price detail-price">
-            <bdi>{money(unitPrice(p))}</bdi>
-            {p.discountPrice != null && (
+            <bdi>{money(selectedPrice)}</bdi>
+            {!selectedOption && p.discountPrice != null && (
               <del>
                 <bdi>{money(p.price)}</bdi>
               </del>
             )}
           </div>
-          <span className={`stock ${!p.stock ? "unavailable" : ""}`}>
+          <span className={`stock ${!availableStock ? "unavailable" : ""}`}>
             <i />
-            {t(p.stock ? "inStock" : "outStock")}
+            {t(availableStock ? "inStock" : "outStock")}
           </span>
           <dl className="detail-meta">
             <div>
               <dt>{t("sku")}</dt>
               <dd>
-                <bdi>{p.sku}</bdi>
+                <bdi>{selectedOption?.sku ?? p.sku}</bdi>
               </dd>
             </div>
             <div>
@@ -81,26 +92,52 @@ export default function ProductDetail({
               <dd>{category?.name[lang] ?? "—"}</dd>
             </div>
           </dl>
+          {p.optionGroups?.map((group) => (
+            <div className="product-options" key={group.id}>
+              <label htmlFor={`option-${group.id}`}>{group.label[lang]}</label>
+              <select
+                id={`option-${group.id}`}
+                value={selectedOptions[group.id] ?? group.options[0]?.id}
+                onChange={(event) => {
+                  setSelectedOptions((current) => ({
+                    ...current,
+                    [group.id]: event.target.value,
+                  }));
+                  setImage(0);
+                }}
+              >
+                {group.options.map((option) => (
+                  <option
+                    key={option.id}
+                    value={option.id}
+                    disabled={!option.stock}
+                  >
+                    {option.label[lang]} — {money(option.price)}
+                  </option>
+                ))}
+              </select>
+            </div>
+          ))}
           <label className="quantity-label">{t("quantity")}</label>
           <div className="detail-purchase">
             <Quantity
               value={quantity}
-              max={p.stock}
+              max={availableStock}
               onChange={setQuantity}
               t={t}
             />
             <button
               className="button secondary"
-              disabled={!p.stock}
-              onClick={() => order(p, quantity)}
+              disabled={!availableStock}
+              onClick={() => order(p, quantity, selectedOption?.id)}
             >
               <MessageCircle size={18} />
               {t("orderNow")}
             </button>
             <button
               className="button primary"
-              disabled={!p.stock}
-              onClick={() => add(p, quantity)}
+              disabled={!availableStock}
+              onClick={() => add(p, quantity, selectedOption?.id)}
             >
               <ShoppingBag size={18} />
               {t("add")}

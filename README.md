@@ -2,7 +2,7 @@
 
 A bilingual English/Arabic electronics storefront built with Next.js 16, React 19, TypeScript, Tailwind CSS 4, and Lucide. English is the default; Arabic switches the whole page to RTL with a locally hosted Tajawal font. Language and cart persist in your browser. Includes a landing page, searchable catalog, product detail dialogs, kits/bundles, stock-aware cart, and WhatsApp order links. No backend, database, accounts, or payment processing.
 
-The current catalog contains only the CPU Lab Kit. Its customer-facing price is 80 NIS, and its included lab items are stored inline in `data/products.json`.
+The catalog includes the CPU Lab Kit plus the stocked components from the September 2026 combined-kit inventory.
 
 ## Run the website
 
@@ -70,7 +70,7 @@ These files are read-only in the browser: there is no pretend admin editor. Save
 4. Choose `type`: `component`, `kit`, or `bundle`.
 5. Fill `name.en` and `description.en` in English.
 6. Fill `name.ar` and `description.ar` in Arabic.
-7. Set `price`, optional `discountPrice`, and the same `currency` as `store.json` (initially `USD`). Prices are numbers, without currency symbols.
+7. Set `price`, optional `discountPrice`, and the same `currency` as `store.json` (initially `NIS`). Prices are numbers, without currency symbols.
 8. Set a unique stock code in `sku` and a whole-number `stock`. Zero displays out of stock and disables purchase.
 9. Choose an existing `categoryId` from `categories.json`.
 10. Put images in `public/images/products/` and list their paths in `images`.

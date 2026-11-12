@@ -13,20 +13,33 @@ export function sanitizeCart(value: unknown, products: Product[]): CartItem[] {
       continue;
     const p = products.find((p) => p.id === item.productId);
     if (!p || p.stock < 1) continue;
+    const option = item.optionId
+      ? p.optionGroups
+          ?.flatMap((group) => group.options)
+          .find((candidate) => candidate.id === item.optionId)
+      : undefined;
+    if (item.optionId && (!option || option.stock < 1)) continue;
+    const key = `${p.id}:${item.optionId ?? ""}`;
     merged.set(
-      p.id,
-      Math.min(p.stock, (merged.get(p.id) ?? 0) + item.quantity),
+      key,
+      Math.min(option?.stock ?? p.stock, (merged.get(key) ?? 0) + item.quantity),
     );
   }
-  return Array.from(merged, ([productId, quantity]) => ({
+  return Array.from(merged, ([key, quantity]) => {
+    const [productId, optionId] = key.split(":");
+    return {
     productId,
     quantity,
-  }));
+    ...(optionId ? { optionId } : {}),
+  };});
 }
 export const cartTotalCents = (items: CartItem[], products: Product[]) =>
   items.reduce((sum, item) => {
     const p = products.find((p) => p.id === item.productId);
-    return sum + (p ? Math.round(unitPrice(p) * 100) * item.quantity : 0);
+    const option = p?.optionGroups
+      ?.flatMap((group) => group.options)
+      .find((candidate) => candidate.id === item.optionId);
+    return sum + (p ? Math.round((option?.price ?? unitPrice(p)) * 100) * item.quantity : 0);
   }, 0);
 export function whatsappOrder(
   items: CartItem[],
@@ -39,10 +52,11 @@ export function whatsappOrder(
   );
   if (!/^\d{7,15}$/.test(store.whatsapp) || !validItems.length) return null;
   const money = (cents: number) =>
-    new Intl.NumberFormat(lang === "ar" ? "ar-EG-u-nu-latn" : "en-US", {
+    new Intl.NumberFormat(lang === "ar" ? "ar-EG" : "en-US", {
       style: "currency",
       currency: store.currency,
-      maximumFractionDigits: 0,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
     })
       .format(cents / 100)
       .replace("NIS", lang === "ar" ? "شيكل" : "NIS");
@@ -53,10 +67,14 @@ export function whatsappOrder(
   ];
   for (const item of validItems) {
     const p = products.find((p) => p.id === item.productId);
-    if (p)
+    if (p) {
+      const option = p.optionGroups
+        ?.flatMap((group) => group.options)
+        .find((candidate) => candidate.id === item.optionId);
       lines.push(
-        `${p.name[lang]} | SKU: ${p.sku} | ${lang === "en" ? "Quantity" : "الكمية"}: ${item.quantity} | ${lang === "en" ? "Unit price" : "سعر الوحدة"}: ${money(Math.round(unitPrice(p) * 100))} | ${lang === "en" ? "Line total" : "المجموع"}: ${money(Math.round(unitPrice(p) * 100) * item.quantity)}`,
+        `${p.name[lang]}${option ? ` (${option.label[lang]})` : ""} | SKU: ${option?.sku ?? p.sku} | ${lang === "en" ? "Quantity" : "الكمية"}: ${item.quantity} | ${lang === "en" ? "Unit price" : "سعر الوحدة"}: ${money(Math.round((option?.price ?? unitPrice(p)) * 100))} | ${lang === "en" ? "Line total" : "المجموع"}: ${money(Math.round((option?.price ?? unitPrice(p)) * 100) * item.quantity)}`,
       );
+    }
   }
   lines.push(
     `${lang === "en" ? "Total" : "الإجمالي"}: ${money(cartTotalCents(validItems, products))}`,

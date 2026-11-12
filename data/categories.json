@@ -2,13 +2,181 @@
   {
     "id": "kits",
     "name": {
-      "en": "CPU Lab Components",
-      "ar": "مكونات مختبر المعالج"
+      "en": "Kits",
+      "ar": "??????"
     },
     "description": {
-      "en": "Parts for CPU and digital logic projects.",
-      "ar": "مكونات لمشاريع المعالج والمنطق الرقمي."
+      "en": "Complete project kits",
+      "ar": "???? ?????? ???????"
     },
     "image": "/images/categories/kit.svg"
+  },
+  {
+    "id": "microcontrollers",
+    "name": {
+      "en": "Microcontrollers",
+      "ar": "????????? ???????"
+    },
+    "description": {
+      "en": "MCUs and programmable boards",
+      "ar": "??????? ?????? ????? ???????"
+    },
+    "image": "/images/categories/cpu.svg"
+  },
+  {
+    "id": "sockets",
+    "name": {
+      "en": "IC Sockets",
+      "ar": "????? ???????"
+    },
+    "description": {
+      "en": "Wirewrap and DIP sockets",
+      "ar": "????? Wirewrap ?DIP"
+    },
+    "image": "/images/categories/kit.svg"
+  },
+  {
+    "id": "displays",
+    "name": {
+      "en": "Displays",
+      "ar": "???????"
+    },
+    "description": {
+      "en": "LCD and visual modules",
+      "ar": "????? LCD ?????? ???"
+    },
+    "image": "/images/categories/kit.svg"
+  },
+  {
+    "id": "power",
+    "name": {
+      "en": "Power",
+      "ar": "??????"
+    },
+    "description": {
+      "en": "Regulators and power parts",
+      "ar": "?????? ???? ??????"
+    },
+    "image": "/images/categories/power.svg"
+  },
+  {
+    "id": "boards",
+    "name": {
+      "en": "Prototype Boards",
+      "ar": "????? ???????"
+    },
+    "description": {
+      "en": "PCB boards for building",
+      "ar": "????? PCB ??????"
+    },
+    "image": "/images/categories/kit.svg"
+  },
+  {
+    "id": "converters",
+    "name": {
+      "en": "Converters",
+      "ar": "?????????"
+    },
+    "description": {
+      "en": "USB, TTL and interface modules",
+      "ar": "????? USB ?TTL ?????????"
+    },
+    "image": "/images/categories/kit.svg"
+  },
+  {
+    "id": "components",
+    "name": {
+      "en": "Components",
+      "ar": "????????"
+    },
+    "description": {
+      "en": "Essential electronic parts",
+      "ar": "?????? ????????? ??????"
+    },
+    "image": "/images/categories/cpu.svg"
+  },
+  {
+    "id": "potentiometers",
+    "name": {
+      "en": "Potentiometers",
+      "ar": "????????? ????????"
+    },
+    "description": {
+      "en": "Adjustable resistors",
+      "ar": "??????? ????? ?????"
+    },
+    "image": "/images/categories/power.svg"
+  },
+  {
+    "id": "sensors",
+    "name": {
+      "en": "Sensors",
+      "ar": "????????"
+    },
+    "description": {
+      "en": "Measure the world around you",
+      "ar": "???? ?????? ?? ????"
+    },
+    "image": "/images/categories/sensor.svg"
+  },
+  {
+    "id": "headers",
+    "name": {
+      "en": "Headers",
+      "ar": "??????"
+    },
+    "description": {
+      "en": "Pin headers and connectors",
+      "ar": "???? ?????? ???????"
+    },
+    "image": "/images/categories/kit.svg"
+  },
+  {
+    "id": "switches",
+    "name": {
+      "en": "Switches",
+      "ar": "????????"
+    },
+    "description": {
+      "en": "Buttons and tactile switches",
+      "ar": "????? ??????? ?????"
+    },
+    "image": "/images/categories/kit.svg"
+  },
+  {
+    "id": "logic-ics",
+    "name": {
+      "en": "Logic ICs",
+      "ar": "??????? ????????"
+    },
+    "description": {
+      "en": "Digital logic integrated circuits",
+      "ar": "????? ??????? ?????? ??????"
+    },
+    "image": "/images/categories/cpu.svg"
+  },
+  {
+    "id": "motors",
+    "name": {
+      "en": "Motors",
+      "ar": "????????"
+    },
+    "description": {
+      "en": "DC, servo and stepper motors",
+      "ar": "?????? DC ?????? ??????"
+    },
+    "image": "/images/categories/motor.svg"
+  },
+  {
+    "id": "relays",
+    "name": {
+      "en": "Relays",
+      "ar": "????????"
+    },
+    "description": {
+      "en": "Relay modules for switching",
+      "ar": "????? ?????? ??????"
+    },
+    "image": "/images/categories/power.svg"
   }
 ]

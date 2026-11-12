@@ -4,7 +4,7 @@
     "type": "kit",
     "name": {
       "en": "CPU Lab Components",
-      "ar": "مكونات مختبر المعالج"
+      "ar": "CPU Lab Components"
     },
     "description": {
       "en": "A kit for building and testing a simple CPU.",
@@ -15,27 +15,148 @@
     "currency": "NIS",
     "sku": "VLT-CPU-LAB-KIT",
     "categoryId": "kits",
-    "images": ["/images/products/cpu-kit.svg"],
+    "images": [
+      "/images/products/cpu-kit.svg"
+    ],
     "stock": 100,
     "featured": true,
     "components": [
-      { "name": { "en": "13x25cm DIY Prototype PCB Board", "ar": "لوحة PCB تجريبية DIY مقاس 13×25 سم" }, "image": "/images/cpu-kit/component-01.png", "quantity": 1 },
-      { "name": { "en": "32 Pin Wirewrap IC Socket", "ar": "قاعدة IC Wirewrap ذات 32 دبوساً" }, "image": "/images/cpu-kit/component-02.png", "quantity": 5 },
-      { "name": { "en": "28 Pin Wirewrap IC Socket", "ar": "قاعدة IC Wirewrap ذات 28 دبوساً" }, "image": "/images/cpu-kit/component-03.png", "quantity": 1 },
-      { "name": { "en": "16 Pin Wirewrap IC Socket", "ar": "قاعدة IC Wirewrap ذات 16 دبوساً" }, "image": "/images/cpu-kit/component-04.png", "quantity": 7 },
-      { "name": { "en": "20 Pin Wirewrap IC Socket", "ar": "قاعدة IC Wirewrap ذات 20 دبوساً" }, "image": "/images/cpu-kit/component-05.png", "quantity": 4 },
-      { "name": { "en": "14 Pin Wirewrap IC Socket", "ar": "قاعدة IC Wirewrap ذات 14 دبوساً" }, "image": "/images/cpu-kit/component-06.png", "quantity": 1 },
-      { "name": { "en": "74LS374 Octal D-Type Flip Flop", "ar": "دارة 74LS374 قلاب D ثماني" }, "image": "/images/cpu-kit/component-07.jpeg", "quantity": 4 },
-      { "name": { "en": "74LS157 Quadruple Multiplexer", "ar": "دارة 74LS157 متعددة الإرسال رباعية" }, "image": "/images/cpu-kit/component-08.jpeg", "quantity": 4 },
-      { "name": { "en": "74LS74 Dual D Flip Flop", "ar": "دارة 74LS74 قلاب D مزدوج" }, "image": "/images/cpu-kit/component-09.png", "quantity": 1 },
-      { "name": { "en": "5mm Green LED", "ar": "مصباح LED أخضر 5 مم" }, "image": "/images/cpu-kit/component-10.png", "quantity": 8 },
-      { "name": { "en": "5mm Blue LED", "ar": "مصباح LED أزرق 5 مم" }, "image": "/images/cpu-kit/component-11.jpeg", "quantity": 1 },
-      { "name": { "en": "74LS193 4-Bit Binary Counter", "ar": "دارة 74LS193 عداد ثنائي 4 بت" }, "image": "/images/cpu-kit/component-12.jpeg", "quantity": 3 },
-      { "name": { "en": "8 Pin Long Female Header", "ar": "رأس توصيل أنثى طويل ذو 8 دبابيس" }, "image": "/images/cpu-kit/component-13.jpeg", "quantity": 2 },
-      { "name": { "en": "10 Pin Long Female Header", "ar": "رأس توصيل أنثى طويل ذو 10 دبابيس" }, "image": "/images/cpu-kit/component-14.jpeg", "quantity": 2 },
-      { "name": { "en": "5mm Red LED", "ar": "مصباح LED أحمر 5 مم" }, "image": "/images/cpu-kit/component-15.png", "quantity": 1 },
-      { "name": { "en": "220 Ohm Carbon Film Resistor", "ar": "مقاومة فيلم كربوني 220 أوم" }, "image": "/images/cpu-kit/component-16.png", "quantity": 10 },
-      { "name": { "en": "40 Pin Long Male Header", "ar": "رأس توصيل ذكر طويل ذو 40 دبوساً" }, "image": "/images/cpu-kit/component-17.png", "quantity": 1 }
+      {
+        "name": {
+          "en": "13x25cm DIY Prototype PCB Board",
+          "ar": "لوحة PCB تجريبية DIY مقاس 13×25 سم"
+        },
+        "image": "/images/cpu-kit/component-01.png",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "32 Pin Wirewrap IC Socket",
+          "ar": "قاعدة IC Wirewrap ذات 32 دبوساً"
+        },
+        "image": "/images/cpu-kit/component-02.png",
+        "quantity": 5
+      },
+      {
+        "name": {
+          "en": "28 Pin Wirewrap IC Socket",
+          "ar": "قاعدة IC Wirewrap ذات 28 دبوساً"
+        },
+        "image": "/images/cpu-kit/component-03.png",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "16 Pin Wirewrap IC Socket",
+          "ar": "قاعدة IC Wirewrap ذات 16 دبوساً"
+        },
+        "image": "/images/cpu-kit/component-04.png",
+        "quantity": 7
+      },
+      {
+        "name": {
+          "en": "20 Pin Wirewrap IC Socket",
+          "ar": "قاعدة IC Wirewrap ذات 20 دبوساً"
+        },
+        "image": "/images/cpu-kit/component-05.png",
+        "quantity": 4
+      },
+      {
+        "name": {
+          "en": "14 Pin Wirewrap IC Socket",
+          "ar": "قاعدة IC Wirewrap ذات 14 دبوساً"
+        },
+        "image": "/images/cpu-kit/component-06.png",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "74LS374 Octal D-Type Flip Flop",
+          "ar": "دارة 74LS374 قلاب D ثماني"
+        },
+        "image": "/images/cpu-kit/component-07.jpeg",
+        "quantity": 4
+      },
+      {
+        "name": {
+          "en": "74LS157 Quadruple Multiplexer",
+          "ar": "دارة 74LS157 متعددة الإرسال رباعية"
+        },
+        "image": "/images/cpu-kit/component-08.jpeg",
+        "quantity": 4
+      },
+      {
+        "name": {
+          "en": "74LS74 Dual D Flip Flop",
+          "ar": "دارة 74LS74 قلاب D مزدوج"
+        },
+        "image": "/images/cpu-kit/component-09.png",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "5mm Green LED",
+          "ar": "مصباح LED أخضر 5 مم"
+        },
+        "image": "/images/cpu-kit/component-10.png",
+        "quantity": 8
+      },
+      {
+        "name": {
+          "en": "5mm Blue LED",
+          "ar": "مصباح LED أزرق 5 مم"
+        },
+        "image": "/images/cpu-kit/component-11.jpeg",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "74LS193 4-Bit Binary Counter",
+          "ar": "دارة 74LS193 عداد ثنائي 4 بت"
+        },
+        "image": "/images/cpu-kit/component-12.jpeg",
+        "quantity": 3
+      },
+      {
+        "name": {
+          "en": "8 Pin Long Female Header",
+          "ar": "رأس توصيل أنثى طويل ذو 8 دبابيس"
+        },
+        "image": "/images/cpu-kit/component-13.jpeg",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "10 Pin Long Female Header",
+          "ar": "رأس توصيل أنثى طويل ذو 10 دبابيس"
+        },
+        "image": "/images/cpu-kit/component-14.jpeg",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "5mm Red LED",
+          "ar": "مصباح LED أحمر 5 مم"
+        },
+        "image": "/images/cpu-kit/component-15.png",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "220 Ohm Carbon Film Resistor",
+          "ar": "مقاومة فيلم كربوني 220 أوم"
+        },
+        "image": "/images/cpu-kit/component-16.png",
+        "quantity": 10
+      },
+      {
+        "name": {
+          "en": "40 Pin Long Male Header",
+          "ar": "رأس توصيل ذكر طويل ذو 40 دبوساً"
+        },
+        "image": "/images/cpu-kit/component-17.png",
+        "quantity": 1
+      }
     ]
   },
   {
@@ -43,7 +164,7 @@
     "type": "kit",
     "name": {
       "en": "PIC Kit",
-      "ar": "طقم PIC"
+      "ar": "PIC Kit"
     },
     "description": {
       "en": "A complete kit for building PIC microcontroller projects.",
@@ -54,26 +175,1078 @@
     "currency": "NIS",
     "sku": "VLT-PIC-KIT",
     "categoryId": "kits",
-    "images": ["/images/products/kit.svg"],
+    "images": [
+      "/images/products/kit.svg"
+    ],
     "stock": 100,
     "featured": true,
     "components": [
-      { "name": { "en": "PIC18F4620-I/P Microcontroller", "ar": "متحكم PIC18F4620-I/P" }, "quantity": 1 },
-      { "name": { "en": "40 Pin Wirewrap IC Socket, 15.24mm Width", "ar": "قاعدة IC Wirewrap ذات 40 دبوساً وعرض 15.24 مم" }, "quantity": 1 },
-      { "name": { "en": "LCD Module 16x2 1602", "ar": "شاشة LCD 16x2 موديل 1602" }, "quantity": 1 },
-      { "name": { "en": "L7805 5V 1.5A Voltage Regulator", "ar": "منظم جهد L7805 بجهد 5 فولت وتيار 1.5 أمبير" }, "quantity": 1 },
-      { "name": { "en": "10x22cm DIY Prototype PCB Board", "ar": "لوحة PCB تجريبية DIY مقاس 10x22 سم" }, "quantity": 1 },
-      { "name": { "en": "USB to TTL CP2102 Converter", "ar": "محول USB إلى TTL موديل CP2102" }, "quantity": 1 },
-      { "name": { "en": "4MHz Quartz Crystal Oscillator", "ar": "بلورة كوارتز 4 ميجاهرتز" }, "quantity": 1 },
-      { "name": { "en": "10uF 50V Electrolytic Capacitor", "ar": "مكثف إلكتروليتي 10uF و50 فولت" }, "quantity": 1 },
-      { "name": { "en": "15pF 50V Ceramic Capacitor", "ar": "مكثف سيراميكي 15pF و50 فولت" }, "quantity": 2 },
-      { "name": { "en": "100uF 25V Electrolytic Capacitor", "ar": "مكثف إلكتروليتي 100uF و25 فولت" }, "quantity": 1 },
-      { "name": { "en": "100nF 50V Ceramic Capacitor", "ar": "مكثف سيراميكي 100nF و50 فولت" }, "quantity": 1 },
-      { "name": { "en": "10K Ohm B10K Potentiometer", "ar": "مقاومة متغيرة 10K أوم من نوع B10K" }, "quantity": 2 },
-      { "name": { "en": "LM35 Temperature Sensor", "ar": "حساس حرارة LM35" }, "quantity": 1 },
-      { "name": { "en": "40 Pin Long Male Header", "ar": "رأس توصيل ذكر طويل ذو 40 دبوساً" }, "quantity": 1 },
-      { "name": { "en": "10K Ohm Carbon Film Resistor", "ar": "مقاومة فيلم كربوني 10K أوم" }, "quantity": 1 },
-      { "name": { "en": "6x6x6.5mm Mini Push Button", "ar": "زر ضغط صغير 6x6x6.5 مم" }, "quantity": 2 }
+      {
+        "name": {
+          "en": "PIC18F4620-I/P Microcontroller",
+          "ar": "متحكم PIC18F4620-I/P"
+        },
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "40 Pin Wirewrap IC Socket, 15.24mm Width",
+          "ar": "قاعدة IC Wirewrap ذات 40 دبوساً وعرض 15.24 مم"
+        },
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "LCD Module 16x2 1602",
+          "ar": "شاشة LCD 16x2 موديل 1602"
+        },
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "L7805 5V 1.5A Voltage Regulator",
+          "ar": "منظم جهد L7805 بجهد 5 فولت وتيار 1.5 أمبير"
+        },
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "10x22cm DIY Prototype PCB Board",
+          "ar": "لوحة PCB تجريبية DIY مقاس 10x22 سم"
+        },
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "USB to TTL CP2102 Converter",
+          "ar": "محول USB إلى TTL موديل CP2102"
+        },
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "4MHz Quartz Crystal Oscillator",
+          "ar": "بلورة كوارتز 4 ميجاهرتز"
+        },
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "10uF 50V Electrolytic Capacitor",
+          "ar": "مكثف إلكتروليتي 10uF و50 فولت"
+        },
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "15pF 50V Ceramic Capacitor",
+          "ar": "مكثف سيراميكي 15pF و50 فولت"
+        },
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "100uF 25V Electrolytic Capacitor",
+          "ar": "مكثف إلكتروليتي 100uF و25 فولت"
+        },
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "100nF 50V Ceramic Capacitor",
+          "ar": "مكثف سيراميكي 100nF و50 فولت"
+        },
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "10K Ohm B10K Potentiometer",
+          "ar": "مقاومة متغيرة 10K أوم من نوع B10K"
+        },
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "LM35 Temperature Sensor",
+          "ar": "حساس حرارة LM35"
+        },
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "40 Pin Long Male Header",
+          "ar": "رأس توصيل ذكر طويل ذو 40 دبوساً"
+        },
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "10K Ohm Carbon Film Resistor",
+          "ar": "مقاومة فيلم كربوني 10K أوم"
+        },
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "6x6x6.5mm Mini Push Button",
+          "ar": "زر ضغط صغير 6x6x6.5 مم"
+        },
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "id": "sg90-9g-servo-motor",
+    "type": "component",
+    "name": {
+      "en": "SG90 9g Servo Motor",
+      "ar": "SG90 9g Servo Motor"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 4,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-SG90-9G-SERVO-MOTOR",
+    "categoryId": "motors",
+    "images": [
+      "/images/excel/row-39.jpeg"
+    ],
+    "stock": 20,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "13kg-270-degree-high-torque-digital-servo-motor-",
+    "type": "component",
+    "name": {
+      "en": "13kg 270 Degree High Torque Digital Servo Motor DS3218 PRO 4.8-6.8V",
+      "ar": "13kg 270 Degree High Torque Digital Servo Motor DS3218 PRO 4.8-6.8V"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 18,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-13KG-270-DEGREE-HIGH-TOR",
+    "categoryId": "motors",
+    "images": [
+      "/images/excel/row-40.jpeg"
+    ],
+    "stock": 10,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ds3225-25kg-servo-motor",
+    "type": "component",
+    "name": {
+      "en": "DS3225 25kg Metal Gear High Torque Waterproof Digital Servo 270?",
+      "ar": "DS3225 25kg Metal Gear High Torque Waterproof Digital Servo 270?"
+    },
+    "description": {
+      "en": "High-torque waterproof digital servo motor for robotics and automation.",
+      "ar": "???? ????? ???? ????? ????? ????? ????? ????????? ????????."
+    },
+    "price": 35,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-DS3225-SERVO",
+    "categoryId": "motors",
+    "images": [
+      "/images/excel/ds3225-servo.png"
+    ],
+    "stock": 1,
+    "specifications": [
+      {
+        "label": {
+          "en": "Rotation",
+          "ar": "????? ???????"
+        },
+        "value": {
+          "en": "270?",
+          "ar": "270?"
+        }
+      },
+      {
+        "label": {
+          "en": "Torque",
+          "ar": "?????"
+        },
+        "value": {
+          "en": "25kg",
+          "ar": "25kg"
+        }
+      }
+    ]
+  },
+  {
+    "id": "37mm-dc-gear-motor-12vdc-100rpm-all-steel-gear-6",
+    "type": "component",
+    "name": {
+      "en": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft",
+      "ar": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 15,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-37MM-DC-GEAR-MOTOR-12VDC",
+    "categoryId": "motors",
+    "images": [
+      "/images/excel/row-45.jpeg"
+    ],
+    "stock": 5,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "stepper-motor-tb6600-upgrade-version",
+    "type": "component",
+    "name": {
+      "en": "Stepper MotorDriver TB6600 UpgradeVersion",
+      "ar": "Stepper MotorDriver TB6600 UpgradeVersion"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 12,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-STEPPER-MOTOR-TB6600-UPG",
+    "categoryId": "motors",
+    "images": [
+      "/images/excel/row-41.jpeg"
+    ],
+    "stock": 10,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "12vdc-1-channel-relay-module-active-low",
+    "type": "component",
+    "name": {
+      "en": "12VDC 1-Channel Relay Module Active Low",
+      "ar": "12VDC 1-Channel Relay Module Active Low"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 2,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-12VDC-1-CHANNEL-RELAY-MO",
+    "categoryId": "relays",
+    "images": [
+      "/images/excel/row-43.jpeg"
+    ],
+    "stock": 20,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5vdc-1-channel-relay-module-active-low",
+    "type": "component",
+    "name": {
+      "en": "5VDC 1-Channel Relay Module Active Low",
+      "ar": "5VDC 1-Channel Relay Module Active Low"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 2,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-5VDC-1-CHANNEL-RELAY-MOD",
+    "categoryId": "relays",
+    "images": [
+      "/images/products/power.svg"
+    ],
+    "stock": 20,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ultrasonic-sensor-module-hc-sr04-4-6v",
+    "type": "component",
+    "name": {
+      "en": "Ultrasonic Sensor Module HC-SR04 4-6V",
+      "ar": "Ultrasonic Sensor Module HC-SR04 4-6V"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 2,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-ULTRASONIC-SENSOR-MODULE",
+    "categoryId": "sensors",
+    "images": [
+      "/images/excel/row-42.png"
+    ],
+    "stock": 10,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "lcd-module-16x2-1602-with-soldered-headers",
+    "type": "component",
+    "name": {
+      "en": "LCD Module 16x2 1602 With Soldered Headers",
+      "ar": "LCD Module 16x2 1602 With Soldered Headers"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 4,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-LCD-MODULE-16X2-1602-WIT",
+    "categoryId": "displays",
+    "images": [
+      "/images/excel/row-4.png"
+    ],
+    "stock": 45,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "prototype-pcb-boards",
+    "type": "component",
+    "name": {
+      "en": "DIY Prototype PCB Boards",
+      "ar": "DIY Prototype PCB Boards"
+    },
+    "description": {
+      "en": "Choose the board size you need. Each board has its own photo, price, SKU, and stock.",
+      "ar": "???? ???? ?????? ???? ??????. ??? ???? ?????? ?????? ?????? ???????? ?????."
+    },
+    "price": 5,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-PROTOTYPE-PCB-BOARDS",
+    "categoryId": "boards",
+    "images": [
+      "/images/excel/row-6.png"
+    ],
+    "stock": 75,
+    "optionGroups": [
+      {
+        "id": "board-size",
+        "label": {
+          "en": "Board size",
+          "ar": "???? ??????"
+        },
+        "options": [
+          {
+            "id": "10x22cm",
+            "label": {
+              "en": "10x22cm DIY Prototype PCB Board",
+              "ar": "10x22cm DIY Prototype PCB Board"
+            },
+            "image": "/images/excel/row-6.png",
+            "sku": "VLT-10X22CM-DIY-PROTOTYPE-PC",
+            "price": 5,
+            "stock": 35
+          },
+          {
+            "id": "13x25cm",
+            "label": {
+              "en": "13x25cm DIY Prototype PCB Board",
+              "ar": "13x25cm DIY Prototype PCB Board"
+            },
+            "image": "/images/excel/row-18.png",
+            "sku": "VLT-13X25CM-DIY-PROTOTYPE-PC",
+            "price": 6,
+            "stock": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wirewrap-ic-sockets",
+    "type": "component",
+    "name": {
+      "en": "Wirewrap IC Sockets",
+      "ar": "Wirewrap IC Sockets"
+    },
+    "description": {
+      "en": "Choose the pin count you need. Each socket has its own photo, price, SKU, and stock.",
+      "ar": "???? ??? ???????? ???? ??????. ??? ????? ?????? ?????? ?????? ???????? ?????."
+    },
+    "price": 0.5,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-WIREWRAP-SOCKETS",
+    "categoryId": "sockets",
+    "images": [
+      "/images/excel/row-23.png"
+    ],
+    "stock": 730,
+    "optionGroups": [
+      {
+        "id": "pin-count",
+        "label": {
+          "en": "Pin count",
+          "ar": "??? ????????"
+        },
+        "options": [
+          {
+            "id": "14-pin",
+            "label": {
+              "en": "14 Pin Wirewrap IC Socket",
+              "ar": "14 Pin Wirewrap IC Socket"
+            },
+            "image": "/images/excel/row-23.png",
+            "sku": "VLT-14-PIN-WIREWRAP-IC-SOCKE",
+            "price": 0.5,
+            "stock": 35
+          },
+          {
+            "id": "16-pin",
+            "label": {
+              "en": "16 Pin Wirewrap IC Socket",
+              "ar": "16 Pin Wirewrap IC Socket"
+            },
+            "image": "/images/excel/row-21.png",
+            "sku": "VLT-16-PIN-WIREWRAP-IC-SOCKE",
+            "price": 0.5,
+            "stock": 245
+          },
+          {
+            "id": "20-pin",
+            "label": {
+              "en": "20 Pin Wirewrap IC Socket",
+              "ar": "20 Pin Wirewrap IC Socket"
+            },
+            "image": "/images/excel/row-22.png",
+            "sku": "VLT-20-PIN-WIREWRAP-IC-SOCKE",
+            "price": 0.75,
+            "stock": 140
+          },
+          {
+            "id": "28-pin",
+            "label": {
+              "en": "28 Pin Wirewrap IC Socket",
+              "ar": "28 Pin Wirewrap IC Socket"
+            },
+            "image": "/images/excel/row-20.png",
+            "sku": "VLT-28-PIN-WIREWRAP-IC-SOCKE",
+            "price": 1,
+            "stock": 100
+          },
+          {
+            "id": "32-pin",
+            "label": {
+              "en": "32 Pin Wirewrap IC Socket",
+              "ar": "32 Pin Wirewrap IC Socket"
+            },
+            "image": "/images/excel/row-19.png",
+            "sku": "VLT-32-PIN-WIREWRAP-IC-SOCKE",
+            "price": 1,
+            "stock": 175
+          },
+          {
+            "id": "40-pin",
+            "label": {
+              "en": "40 Pin Wirewrap IC Socket",
+              "ar": "40 Pin Wirewrap IC Socket"
+            },
+            "image": "/images/excel/row-3.png",
+            "sku": "VLT-40-PIN-WIREWRAP-IC-SOCKE",
+            "price": 1,
+            "stock": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "usb-to-ttl-converter-ftdi-cp2102",
+    "type": "component",
+    "name": {
+      "en": "USB To TTL Converter (FTDI) CP2102",
+      "ar": "USB To TTL Converter (FTDI) CP2102"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 4,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-USB-TO-TTL-CONVERTER-FTD",
+    "categoryId": "converters",
+    "images": [
+      "/images/excel/row-7.jpeg"
+    ],
+    "stock": 35,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pic18f4620-i-p-microcontroller",
+    "type": "component",
+    "name": {
+      "en": "PIC18F4620-I/P Microcontroller",
+      "ar": "PIC18F4620-I/P Microcontroller"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 8,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-PIC18F4620-I-P-MICROCONT",
+    "categoryId": "microcontrollers",
+    "images": [
+      "/images/excel/row-2.png"
+    ],
+    "stock": 35,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "l7805-voltage-regulator-5v-1-5a",
+    "type": "component",
+    "name": {
+      "en": "L7805 Voltage Regulator 5V 1.5A",
+      "ar": "L7805 Voltage Regulator 5V 1.5A"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 1,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-L7805-VOLTAGE-REGULATOR-",
+    "categoryId": "power",
+    "images": [
+      "/images/excel/row-5.png"
+    ],
+    "stock": 40,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "4mhz-quartz-crystal-oscillator",
+    "type": "component",
+    "name": {
+      "en": "4MHz Quartz Crystal Oscillator",
+      "ar": "4MHz Quartz Crystal Oscillator"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 0.5,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-4MHZ-QUARTZ-CRYSTAL-OSCI",
+    "categoryId": "components",
+    "images": [
+      "/images/excel/row-8.jpeg"
+    ],
+    "stock": 100,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "10k-ohm-potentiometer-wh148-b10k-0-125w-3pin-15m",
+    "type": "component",
+    "name": {
+      "en": "10K Ohm Potentiometer WH148 B10K 0.125W 3Pin 15mm",
+      "ar": "10K Ohm Potentiometer WH148 B10K 0.125W 3Pin 15mm"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 1,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-10K-OHM-POTENTIOMETER-WH",
+    "categoryId": "potentiometers",
+    "images": [
+      "/images/excel/row-13.jpeg"
+    ],
+    "stock": 100,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "2",
+          "ar": "2"
+        }
+      }
+    ]
+  },
+  {
+    "id": "lm35-temperature-sensor",
+    "type": "component",
+    "name": {
+      "en": "LM35 Temperature Sensor",
+      "ar": "LM35 Temperature Sensor"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 2,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-LM35-TEMPERATURE-SENSOR",
+    "categoryId": "sensors",
+    "images": [
+      "/images/excel/row-14.jpeg"
+    ],
+    "stock": 50,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "40-pin-long-centered-header-pin-male-2-54mm-pitc",
+    "type": "component",
+    "name": {
+      "en": "40 Pin Long Centered Header Pin Male 2.54mm Pitch 20mm Length",
+      "ar": "40 Pin Long Centered Header Pin Male 2.54mm Pitch 20mm Length"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 0.5,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-40-PIN-LONG-CENTERED-HEA",
+    "categoryId": "headers",
+    "images": [
+      "/images/excel/row-15.png"
+    ],
+    "stock": 50,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mini-push-button-tactile-switch-6x6x6-5mm-2pins",
+    "type": "component",
+    "name": {
+      "en": "Mini Push Button Tactile Switch 6x6x6.5mm - 2pins",
+      "ar": "Mini Push Button Tactile Switch 6x6x6.5mm - 2pins"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 0.1,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-MINI-PUSH-BUTTON-TACTILE",
+    "categoryId": "switches",
+    "images": [
+      "/images/excel/row-17.png"
+    ],
+    "stock": 200,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "2",
+          "ar": "2"
+        }
+      }
+    ]
+  },
+  {
+    "id": "74ls374-dip-20-ic-octal-d-type-flip-flop-3-state",
+    "type": "component",
+    "name": {
+      "en": "74LS374 DIP-20 IC Octal D-Type Flip Flop 3 State",
+      "ar": "74LS374 DIP-20 IC Octal D-Type Flip Flop 3 State"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 2,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-74LS374-DIP-20-IC-OCTAL-",
+    "categoryId": "logic-ics",
+    "images": [
+      "/images/excel/row-24.jpeg"
+    ],
+    "stock": 164,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "4",
+          "ar": "4"
+        }
+      }
+    ]
+  },
+  {
+    "id": "74ls157-dip-16-ic-quadruple-2-input-multiplexer",
+    "type": "component",
+    "name": {
+      "en": "74LS157 DIP-16 IC Quadruple 2-Input Multiplexer",
+      "ar": "74LS157 DIP-16 IC Quadruple 2-Input Multiplexer"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 2,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-74LS157-DIP-16-IC-QUADRU",
+    "categoryId": "logic-ics",
+    "images": [
+      "/images/excel/row-25.jpeg"
+    ],
+    "stock": 164,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "4",
+          "ar": "4"
+        }
+      }
+    ]
+  },
+  {
+    "id": "74ls74-dip-14-ic-dual-d-flip-flop",
+    "type": "component",
+    "name": {
+      "en": "74LS74 DIP-14 IC Dual D Flip Flop",
+      "ar": "74LS74 DIP-14 IC Dual D Flip Flop"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 1,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-74LS74-DIP-14-IC-DUAL-D-",
+    "categoryId": "logic-ics",
+    "images": [
+      "/images/excel/row-26.png"
+    ],
+    "stock": 41,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "74ls193-sn74ls193n-dip-16-ic-4-bit-binary-counte",
+    "type": "component",
+    "name": {
+      "en": "74LS193 SN74LS193N DIP-16 IC 4-Bit Binary Counter",
+      "ar": "74LS193 SN74LS193N DIP-16 IC 4-Bit Binary Counter"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 2,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-74LS193-SN74LS193N-DIP-1",
+    "categoryId": "logic-ics",
+    "images": [
+      "/images/excel/row-29.jpeg"
+    ],
+    "stock": 120,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "3",
+          "ar": "3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "8-pin-long-single-row-female-header",
+    "type": "component",
+    "name": {
+      "en": "8 Pin Long Single Row Female Header",
+      "ar": "8 Pin Long Single Row Female Header"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 0.5,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-8-PIN-LONG-SINGLE-ROW-FE",
+    "categoryId": "headers",
+    "images": [
+      "/images/excel/row-30.jpeg"
+    ],
+    "stock": 100,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "2",
+          "ar": "2"
+        }
+      }
+    ]
+  },
+  {
+    "id": "10-pin-long-single-row-female-header",
+    "type": "component",
+    "name": {
+      "en": "10 Pin Long Single Row Female Header",
+      "ar": "10 Pin Long Single Row Female Header"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 0.5,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-10-PIN-LONG-SINGLE-ROW-F",
+    "categoryId": "headers",
+    "images": [
+      "/images/excel/row-31.jpeg"
+    ],
+    "stock": 100,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "2",
+          "ar": "2"
+        }
+      }
+    ]
+  },
+  {
+    "id": "40-pin-long-male-header-pin-2-54mm-pitch-20mm-le",
+    "type": "component",
+    "name": {
+      "en": "40 Pin Long Male Header Pin 2.54mm Pitch 20mm Length",
+      "ar": "40 Pin Long Male Header Pin 2.54mm Pitch 20mm Length"
+    },
+    "description": {
+      "en": "Quality electronics component for prototyping and repair.",
+      "ar": "Quality electronics component for prototyping and repair."
+    },
+    "price": 0.5,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-40-PIN-LONG-MALE-HEADER-",
+    "categoryId": "headers",
+    "images": [
+      "/images/excel/row-34.png"
+    ],
+    "stock": 50,
+    "specifications": [
+      {
+        "label": {
+          "en": "Stock per kit",
+          "ar": "Stock per kit"
+        },
+        "value": {
+          "en": "1",
+          "ar": "1"
+        }
+      }
     ]
   }
 ]
