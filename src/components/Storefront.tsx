@@ -359,7 +359,7 @@ export default function Storefront() {
                     <span className="small-dash" />
                   </div>
                 </div>
-                <div className="hero-visual" aria-label={t("heroCard")}>
+                <div className="hero-visual" aria-label={t("heroTag")}>
                   <div className="orbit orbit-one" />
                   <div className="orbit orbit-two" />
                   <div className="visual-cross cross-one">+</div>
@@ -376,11 +376,7 @@ export default function Storefront() {
                     />
                   </div>
                   <div className="hero-info">
-                    <span className="info-icon">
-                      <Zap size={22} />
-                    </span>
                     <div>
-                      <strong>{t("heroCard")}</strong>
                       <span>{t("heroCardSub")}</span>
                     </div>
                     <ArrowUpRight size={19} />
