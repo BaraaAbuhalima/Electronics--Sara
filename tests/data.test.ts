@@ -26,7 +26,7 @@ test("validator catches duplicates, missing fields, categories, types, prices, i
     { name: { en: "", ar: "" } },
     { price: -1 },
     { discountPrice: 1000 },
-    { stock: 1.5 },
+    { inStock: "yes" },
     { categoryId: "missing" },
     { type: "unknown" },
     { images: ["/missing.jpg"] },
@@ -50,7 +50,7 @@ test("validator catches duplicates, missing fields, categories, types, prices, i
     assert.ok(validateData(copy, categories).length);
   }
 });
-test("cart rejects malformed data, removes missing/out-of-stock products, merges lines and clamps to stock", () => {
+test("cart rejects malformed data, removes missing/out-of-stock products, and merges lines", () => {
   assert.deepEqual(
     sanitizeCart(
       [
@@ -61,7 +61,7 @@ test("cart rejects malformed data, removes missing/out-of-stock products, merges
       ],
       all,
     ),
-    [{ productId: "cpu-lab-kit", quantity: 100 }],
+    [{ productId: "cpu-lab-kit", quantity: 502 }],
   );
   assert.deepEqual(sanitizeCart(null, all), []);
 });

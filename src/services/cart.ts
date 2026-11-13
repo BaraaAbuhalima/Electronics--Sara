@@ -12,18 +12,15 @@ export function sanitizeCart(value: unknown, products: Product[]): CartItem[] {
     )
       continue;
     const p = products.find((p) => p.id === item.productId);
-    if (!p || p.stock < 1) continue;
+    if (!p || !p.inStock) continue;
     const option = item.optionId
       ? p.optionGroups
           ?.flatMap((group) => group.options)
           .find((candidate) => candidate.id === item.optionId)
       : undefined;
-    if (item.optionId && (!option || option.stock < 1)) continue;
+    if (item.optionId && (!option || !option.inStock)) continue;
     const key = `${p.id}:${item.optionId ?? ""}`;
-    merged.set(
-      key,
-      Math.min(option?.stock ?? p.stock, (merged.get(key) ?? 0) + item.quantity),
-    );
+    merged.set(key, (merged.get(key) ?? 0) + item.quantity);
   }
   return Array.from(merged, ([key, quantity]) => {
     const [productId, optionId] = key.split(":");

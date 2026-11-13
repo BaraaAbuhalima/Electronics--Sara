@@ -71,7 +71,7 @@ These files are read-only in the browser: there is no pretend admin editor. Save
 5. Fill `name.en` and `description.en` in English.
 6. Fill `name.ar` and `description.ar` in Arabic.
 7. Set `price`, optional `discountPrice`, and the same `currency` as `store.json` (initially `NIS`). Prices are numbers, without currency symbols.
-8. Set a unique stock code in `sku` and a whole-number `stock`. Zero displays out of stock and disables purchase.
+8. Set a unique stock code in `sku` and a boolean `inStock`. Use `false` to disable purchase.
 9. Choose an existing `categoryId` from `categories.json`.
 10. Put images in `public/images/products/` and list their paths in `images`.
 11. Add optional translated `specifications` as shown below.
@@ -98,7 +98,7 @@ The examples below reproduce existing sample products. To ADD rather than edit t
   "sku": "VLT-MOTOR-12V",
   "categoryId": "motors",
   "images": ["/images/products/motor.svg"],
-  "stock": 32,
+  "inStock": true,
   "specifications": [
     {
       "label": {
@@ -153,7 +153,7 @@ The examples below reproduce existing sample products. To ADD rather than edit t
   "sku": "VLT-ARDUINO-UNO",
   "categoryId": "microcontrollers",
   "images": ["/images/products/uno.jpg", "/images/products/uno.svg"],
-  "stock": 40,
+  "inStock": true,
   "specifications": [
     {
       "label": {
@@ -229,7 +229,7 @@ The examples below reproduce existing sample products. To ADD rather than edit t
   "sku": "VLT-ULTRASONIC",
   "categoryId": "sensors",
   "images": ["/images/products/sensor.svg"],
-  "stock": 80,
+  "inStock": true,
   "specifications": [
     {
       "label": {
@@ -269,7 +269,7 @@ The examples below reproduce existing sample products. To ADD rather than edit t
 | `sku`            | Yes                       | Your inventory code.                                                                                     |
 | `categoryId`     | Yes                       | An existing category ID.                                                                                 |
 | `images`         | Yes                       | Array of one or more local image paths. The first is the main image; all are shown in detail thumbnails. |
-| `stock`          | Yes                       | Whole number, zero or greater.                                                                           |
+| `inStock`        | Yes                       | Boolean availability flag; `false` displays out of stock and disables purchase.                         |
 | `specifications` | No                        | Array of `{ "label": {"en":"…","ar":"…"}, "value": {"en":"…","ar":"…"} }` objects.                       |
 | `featured`       | No                        | `true` shows in Featured; omit/`false` otherwise. Home shows the first 4 matching products.              |
 | `newArrival`     | No                        | `true` shows in New arrivals.                                                                            |
@@ -282,7 +282,7 @@ Find its object by `id`, then edit it in place. To remove it, delete the complet
 
 ## Add a kit
 
-A kit is one purchasable product with its own price, stock, SKU, and image. Its contents reference individual `component` products already in the file. `quantity: 2` means two of that component are inside each kit; it does not create two cart lines. Package stock is managed independently: the browser does not decrement individual component stock when someone orders a kit. There is no server-side inventory reservation.
+A kit is one purchasable product with its own price, availability, SKU, and image. Its contents reference individual `component` products already in the file. `quantity: 2` means two of that component are inside each kit; it does not create two cart lines. Package availability is managed independently. There is no server-side inventory reservation.
 
 This complete sample already exists. It includes 1 CPU, 1 motherboard, 2 RAM modules, 1 CPU cooler, and 1 power supply. All five referenced IDs exist in the supplied catalog:
 
@@ -304,7 +304,7 @@ This complete sample already exists. It includes 1 CPU, 1 motherboard, 2 RAM mod
   "sku": "VLT-CPU-KIT",
   "categoryId": "kits",
   "images": ["/images/products/cpu-kit.svg"],
-  "stock": 12,
+  "inStock": true,
   "components": [
     {
       "productId": "cpu",
@@ -354,7 +354,7 @@ A bundle works like a kit but uses `type: "bundle"`. Set a regular `price` and a
   "sku": "VLT-ROBOTICS-BUNDLE",
   "categoryId": "kits",
   "images": ["/images/products/robotics-bundle.svg"],
-  "stock": 12,
+  "inStock": true,
   "components": [
     {
       "productId": "arduino-uno",
@@ -474,7 +474,7 @@ Specifications are an array because each item needs a translated label and trans
 | Duplicate IDs            | Give each product/category a unique ID. Keep referenced IDs stable.                                  |
 | Invalid category         | Copy an exact existing `id` from `categories.json`.                                                  |
 | Missing component        | Add the referenced individual product or correct/remove the `productId`.                             |
-| Invalid quantity         | Use positive whole numbers in components; stock can also be zero.                                    |
+| Invalid quantity         | Use positive whole numbers in components; use `inStock` for product availability.                   |
 | Incorrect price          | Use a nonnegative number and a discount no greater than the regular price.                           |
 | Broken image             | Check spelling, upper/lower case, file existence and the `/images/` prefix.                          |
 | Edits not visible        | Save the file; refresh in development. Rebuild and redeploy production.                              |

@@ -9,9 +9,10 @@ export interface ProductOption {
   id: string;
   label: Localized;
   image: string;
+  images?: string[];
   sku: string;
   price: number;
-  stock: number;
+  inStock: boolean;
 }
 export interface ProductOptionGroup {
   id: string;
@@ -35,7 +36,7 @@ export interface Product {
   sku: string;
   categoryId: string;
   images: string[];
-  stock: number;
+  inStock: boolean;
   specifications?: Specification[];
   featured?: boolean;
   newArrival?: boolean;

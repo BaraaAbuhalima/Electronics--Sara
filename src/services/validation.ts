@@ -66,8 +66,8 @@ export function validateData(
       errors.push(`${id}: missing SKU.`);
     if (!catIds.has(p.categoryId as string))
       errors.push(`${id}: invalid category reference.`);
-    if (!Number.isInteger(p.stock) || (p.stock as number) < 0)
-      errors.push(`${id}: stock must be a nonnegative integer.`);
+    if (typeof p.inStock !== "boolean")
+      errors.push(`${id}: inStock must be boolean.`);
     if (!Array.isArray(p.images) || !p.images.length || !p.images.every(image))
       errors.push(`${id}: invalid image paths.`);
     if (
@@ -95,10 +95,13 @@ export function validateData(
               typeof option.id === "string" &&
               localized(option.label) &&
               image(option.image) &&
+              (option.images === undefined ||
+                (Array.isArray(option.images) &&
+                  option.images.length > 0 &&
+                  option.images.every(image))) &&
               typeof option.sku === "string" &&
               price(option.price) &&
-              Number.isInteger(option.stock) &&
-              (option.stock as number) >= 0,
+              typeof option.inStock === "boolean",
           ),
       ))
     )
@@ -207,8 +210,7 @@ export function isProduct(value: unknown): value is Product {
     /^[A-Z]{3}$/.test(value.currency) &&
     price(value.price) &&
     Array.isArray(value.images) &&
-    Number.isInteger(value.stock) &&
-    (value.stock as number) >= 0
+    typeof value.inStock === "boolean"
   );
 }
 export function isCategory(value: unknown): value is Category {

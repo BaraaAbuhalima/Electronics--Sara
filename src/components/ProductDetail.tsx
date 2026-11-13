@@ -43,14 +43,15 @@ export default function ProductDetail({
         (option) => option.id === selectedOptions[p.optionGroups![0].id],
       ) ?? p.optionGroups[0].options[0]
     : undefined;
-  const availableStock = selectedOption?.stock ?? p.stock;
+  const inStock = selectedOption?.inStock ?? p.inStock;
   const selectedPrice = selectedOption?.price ?? unitPrice(p);
-  const selectedImage = selectedOption?.image ?? p.images[image];
+  const selectedImage =
+    selectedOption?.images?.[0] ?? selectedOption?.image ?? p.images[image];
   const galleryImages = Array.from(
     new Set([
       ...p.images,
       ...(p.optionGroups?.flatMap((group) =>
-        group.options.map((option) => option.image),
+        group.options.flatMap((option) => option.images ?? [option.image]),
       ) ?? []),
     ]),
   );
@@ -128,9 +129,9 @@ export default function ProductDetail({
               </del>
             )}
           </div>
-          <span className={`stock ${!availableStock ? "unavailable" : ""}`}>
+          <span className={`stock ${!inStock ? "unavailable" : ""}`}>
             <i />
-            {t(availableStock ? "inStock" : "outStock")}
+            {t(inStock ? "inStock" : "outStock")}
           </span>
           <dl className="detail-meta">
             <div>
@@ -158,15 +159,17 @@ export default function ProductDetail({
                   setImage(0);
                   const optionImage = group.options.find(
                     (option) => option.id === event.target.value,
-                  )?.image;
-                  if (optionImage) setGalleryImage(galleryImages.indexOf(optionImage));
+                  );
+                  const image =
+                    optionImage?.images?.[0] ?? optionImage?.image;
+                  if (image) setGalleryImage(galleryImages.indexOf(image));
                 }}
               >
                 {group.options.map((option) => (
                   <option
                     key={option.id}
                     value={option.id}
-                    disabled={!option.stock}
+                    disabled={!option.inStock}
                   >
                     {option.label[lang]} — {money(option.price)}
                   </option>
@@ -178,13 +181,12 @@ export default function ProductDetail({
           <div className="detail-purchase">
             <Quantity
               value={quantity}
-              max={availableStock}
               onChange={setQuantity}
               t={t}
             />
             <button
               className="button secondary"
-              disabled={!availableStock}
+              disabled={!inStock}
               onClick={() => order(p, quantity, selectedOption?.id)}
             >
               <MessageCircle size={18} />
@@ -192,7 +194,7 @@ export default function ProductDetail({
             </button>
             <button
               className="button primary"
-              disabled={!availableStock}
+              disabled={!inStock}
               onClick={() => add(p, quantity, selectedOption?.id)}
             >
               <ShoppingBag size={18} />

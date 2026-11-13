@@ -72,9 +72,9 @@ export default function ProductCard({
               </del>
             )}
           </div>
-          <span className={`stock ${!p.stock ? "unavailable" : ""}`}>
+          <span className={`stock ${!p.inStock ? "unavailable" : ""}`}>
             <i />
-            {t(p.stock ? "inStock" : "outStock")}
+            {t(p.inStock ? "inStock" : "outStock")}
           </span>
         </div>
         <div className="product-actions">
@@ -84,14 +84,14 @@ export default function ProductCard({
               event.stopPropagation();
               order(p);
             }}
-            disabled={!p.stock}
+            disabled={!p.inStock}
           >
             <MessageCircle size={15} />
             {t("orderNow")}
           </button>
           <button
             className="product-action cart-action"
-            disabled={!p.stock}
+            disabled={!p.inStock}
             onClick={(event) => {
               event.stopPropagation();
               add(p);

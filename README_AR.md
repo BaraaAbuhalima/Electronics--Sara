@@ -71,7 +71,7 @@ package-lock.json
 5. اكتب الاسم والوصف بالإنجليزية في `name.en` و`description.en`.
 6. اكتب الاسم والوصف بالعربية في `name.ar` و`description.ar`.
 7. أدخل `price` و`discountPrice` الاختياري، واجعل `currency` مطابقاً لعملة المتجر؛ العملة الأولية `NIS`. الأسعار أرقام دون رموز عملة.
-8. أدخل رمز المخزون `sku` والكمية المتوفرة `stock` كعدد صحيح. الصفر يعني نفاد المخزون ويعطّل الإضافة إلى السلة.
+8. أدخل رمز المنتج `sku` وقيمة منطقية `inStock`. استخدم `false` لعرض المنتج كغير متوفر وتعطيل الشراء.
 9. اختر `categoryId` مطابقاً لمعرّف موجود في ملف الفئات.
 10. ضع الصور في `public/images/products/` وأدرج مساراتها ضمن `images`.
 11. أضف المواصفات المترجمة في `specifications` عند الحاجة.
@@ -98,7 +98,7 @@ package-lock.json
   "sku": "VLT-MOTOR-12V",
   "categoryId": "motors",
   "images": ["/images/products/motor.svg"],
-  "stock": 32,
+  "inStock": true,
   "specifications": [
     {
       "label": {
@@ -153,7 +153,7 @@ package-lock.json
   "sku": "VLT-ARDUINO-UNO",
   "categoryId": "microcontrollers",
   "images": ["/images/products/uno.jpg", "/images/products/uno.svg"],
-  "stock": 40,
+  "inStock": true,
   "specifications": [
     {
       "label": {
@@ -229,7 +229,7 @@ package-lock.json
   "sku": "VLT-ULTRASONIC",
   "categoryId": "sensors",
   "images": ["/images/products/sensor.svg"],
-  "stock": 80,
+  "inStock": true,
   "specifications": [
     {
       "label": {
@@ -269,7 +269,7 @@ package-lock.json
 | `sku`            | نعم           | رمز المنتج المستخدم في المخزون.                                                      |
 | `categoryId`     | نعم           | معرّف فئة موجودة.                                                                    |
 | `images`         | نعم           | قائمة بمسار صورة واحدة على الأقل؛ الأولى رئيسية والبقية صور مصغرة في التفاصيل.       |
-| `stock`          | نعم           | عدد صحيح لا يقل عن الصفر.                                                            |
+| `inStock`        | نعم           | قيمة منطقية؛ `false` تعني أن المنتج غير متوفر وتعطّل الشراء.                         |
 | `specifications` | لا            | قائمة بكائنات `label` و`value`، ولكل منهما `en` و`ar`.                               |
 | `featured`       | لا            | القيمة `true` تُدرج المنتج في المختارات. تعرض الرئيسية أول أربعة منتجات مطابقة.      |
 | `newArrival`     | لا            | القيمة `true` تُدرجه ضمن «وصل حديثاً».                                               |
@@ -304,7 +304,7 @@ package-lock.json
   "sku": "VLT-CPU-KIT",
   "categoryId": "kits",
   "images": ["/images/products/cpu-kit.svg"],
-  "stock": 12,
+  "inStock": true,
   "components": [
     {
       "productId": "cpu",
@@ -354,7 +354,7 @@ package-lock.json
   "sku": "VLT-ROBOTICS-BUNDLE",
   "categoryId": "kits",
   "images": ["/images/products/robotics-bundle.svg"],
-  "stock": 12,
+  "inStock": true,
   "components": [
     {
       "productId": "arduino-uno",

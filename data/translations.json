@@ -111,7 +111,7 @@
     "thumbnail": "Show image",
     "unavailable": "Product unavailable",
     "unavailableDescription": "This product is unavailable.",
-    "stockLimit": "You have all available stock in your cart.",
+    "stockLimit": "This product is out of stock.",
     "storageWarning": "Your browser cannot save preferences.",
     "terms": "VOLT Electronics store",
     "unit": "each"
@@ -228,7 +228,7 @@
     "thumbnail": "عرض الصورة",
     "unavailable": "المنتج غير متاح",
     "unavailableDescription": "هذا المنتج غير متاح.",
-    "stockLimit": "كل الكمية المتاحة في سلتك.",
+    "stockLimit": "هذا المنتج غير متوفر.",
     "storageWarning": "لا يستطيع المتصفح حفظ التفضيلات.",
     "terms": "متجر إلكترونيات فولت",
     "unit": "للقطعة"

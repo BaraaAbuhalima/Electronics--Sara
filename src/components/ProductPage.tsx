@@ -51,9 +51,6 @@ export default function ProductPage({ product }: { product: Product }) {
     }
   }, []);
   const add = (item: Product, quantity: number, optionId?: string) => {
-    const option = item.optionGroups
-      ?.flatMap((group) => group.options)
-      .find((candidate) => candidate.id === optionId);
     setCart((items) => {
       const current = items.find((i) => i.productId === item.id)?.quantity ?? 0;
       const next = sanitizeCart(
@@ -61,7 +58,7 @@ export default function ProductPage({ product }: { product: Product }) {
           ...items.filter((i) => i.productId !== item.id),
           {
             productId: item.id,
-            quantity: Math.min(option?.stock ?? item.stock, current + quantity),
+            quantity: current + quantity,
             ...(optionId ? { optionId } : {}),
           },
         ],

@@ -160,11 +160,7 @@ export default function Storefront() {
     const option = product.optionGroups
       ?.flatMap((group) => group.options)
       .find((candidate) => candidate.id === optionId);
-    const current =
-      cart.find(
-        (c) => c.productId === product.id && c.optionId === optionId,
-      )?.quantity ?? 0;
-    if ((option?.stock ?? product.stock) <= current) {
+    if (!product.inStock || (optionId && (!option || !option.inStock))) {
       setToast(t("stockLimit"));
       return;
     }
@@ -622,7 +618,6 @@ export default function Storefront() {
                         <div className="cart-item-bottom">
                           <Quantity
                             value={item.quantity}
-                            max={option?.stock ?? p.stock}
                             onChange={(n) =>
                               setCart((items) =>
                                 items.map((current) =>

@@ -9,7 +9,7 @@ export default function Quantity({
   t,
 }: {
   value: number;
-  max: number;
+  max?: number;
   onChange: (n: number) => void;
   t: Translate;
 }) {
@@ -24,7 +24,7 @@ export default function Quantity({
       </button>
       <span aria-live="polite">{value}</span>
       <button
-        disabled={value >= max}
+        disabled={max !== undefined && value >= max}
         onClick={() => onChange(value + 1)}
         aria-label={t("increase")}
       >

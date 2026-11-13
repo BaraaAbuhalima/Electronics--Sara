@@ -10,7 +10,7 @@
       "en": "A kit for building and testing a simple CPU.",
       "ar": "طقم لبناء واختبار معالج بسيط."
     },
-    "price": 80,
+    "price": 110,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-CPU-LAB-KIT",
@@ -18,7 +18,6 @@
     "images": [
       "/images/products/cpu-kit.svg"
     ],
-    "stock": 100,
     "featured": true,
     "components": [
       {
@@ -90,7 +89,7 @@
           "en": "74LS74 Dual D Flip Flop",
           "ar": "دارة 74LS74 قلاب D مزدوج"
         },
-        "image": "/images/cpu-kit/component-09.png",
+        "image": "/images/products/74ls74-dip-14.jpg",
         "quantity": 1
       },
       {
@@ -146,7 +145,7 @@
           "en": "220 Ohm Carbon Film Resistor",
           "ar": "مقاومة فيلم كربوني 220 أوم"
         },
-        "image": "/images/cpu-kit/component-16.png",
+        "image": "/images/products/carbon-film-resistor.webp",
         "quantity": 10
       },
       {
@@ -160,49 +159,50 @@
       {
         "name": {
           "en": "1m 30AWG Black Wire Wrapping Wire",
-          "ar": "??? ?? ???? 30AWG ???? 1 ???"
+          "ar": "سلك لف 30AWG أسود بطول 1 متر"
         },
-        "image": "/images/excel/row-35.png",
+        "image": "/images/products/wire-wrapping-black.png",
         "quantity": 2
       },
       {
         "name": {
           "en": "1m 30AWG Orange Wire Wrapping Wire",
-          "ar": "??? ?? ??????? 30AWG ???? 1 ???"
+          "ar": "سلك لف 30AWG برتقالي بطول 1 متر"
         },
-        "image": "/images/excel/row-36.png",
+        "image": "/images/products/wire-wrapping-orange.jpg",
         "quantity": 2
       },
       {
         "name": {
           "en": "1m 30AWG Green Wire Wrapping Wire",
-          "ar": "??? ?? ???? 30AWG ???? 1 ???"
+          "ar": "سلك لف 30AWG أخضر بطول 1 متر"
         },
-        "image": "/images/excel/row-37.png",
+        "image": "/images/products/wire-wrapping-green.png",
         "quantity": 2
       },
       {
         "name": {
           "en": "1m 30AWG Blue Wire Wrapping Wire",
-          "ar": "??? ?? ???? 30AWG ???? 1 ???"
+          "ar": "سلك لف 30AWG أزرق بطول 1 متر"
         },
-        "image": "/images/excel/row-38.png",
+        "image": "/images/products/wire-wrapping-blue.png",
         "quantity": 2
       }
-    ]
+    ],
+    "inStock": true
   },
   {
     "id": "pic-kit",
     "type": "kit",
     "name": {
-      "en": "PIC Kit",
-      "ar": "PIC Kit"
+      "en": "PIC Kit (High Quality Components)",
+      "ar": "PIC Kit (High Quality Components)"
     },
     "description": {
       "en": "A complete kit for building PIC microcontroller projects.",
       "ar": "طقم متكامل لبناء مشاريع المتحكم PIC."
     },
-    "price": 80,
+    "price": 95,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-PIC-KIT",
@@ -210,7 +210,6 @@
     "images": [
       "/images/products/kit.svg"
     ],
-    "stock": 100,
     "featured": true,
     "components": [
       {
@@ -250,7 +249,7 @@
           "en": "10x22cm DIY Prototype PCB Board",
           "ar": "لوحة PCB تجريبية DIY مقاس 10x22 سم"
         },
-        "image": "/images/excel/row-6.png",
+        "image": "/images/products/prototype-pcb-10x22cm.jpeg",
         "quantity": 1
       },
       {
@@ -258,7 +257,7 @@
           "en": "USB to TTL CP2102 Converter",
           "ar": "محول USB إلى TTL موديل CP2102"
         },
-        "image": "/images/excel/row-7.jpeg",
+        "image": "/images/products/usb-ttl-cp2102-1.jpeg",
         "quantity": 1
       },
       {
@@ -330,6 +329,7 @@
           "en": "10K Ohm Carbon Film Resistor",
           "ar": "مقاومة فيلم كربوني 10K أوم"
         },
+        "image": "/images/products/carbon-film-resistor.webp",
         "quantity": 1
       },
       {
@@ -337,42 +337,43 @@
           "en": "6x6x6.5mm Mini Push Button",
           "ar": "زر ضغط صغير 6x6x6.5 مم"
         },
-        "image": "/images/excel/row-17.png",
+        "image": "/images/products/mini-push-button-6x6x6-5mm.avif",
         "quantity": 2
       },
       {
         "name": {
           "en": "1m 30AWG Black Wire Wrapping Wire",
-          "ar": "??? ?? ???? 30AWG ???? 1 ???"
+          "ar": "سلك لف 30AWG أسود بطول 1 متر"
         },
-        "image": "/images/excel/row-35.png",
+        "image": "/images/products/wire-wrapping-black.png",
         "quantity": 2
       },
       {
         "name": {
           "en": "1m 30AWG Orange Wire Wrapping Wire",
-          "ar": "??? ?? ??????? 30AWG ???? 1 ???"
+          "ar": "سلك لف 30AWG برتقالي بطول 1 متر"
         },
-        "image": "/images/excel/row-36.png",
+        "image": "/images/products/wire-wrapping-orange.jpg",
         "quantity": 2
       },
       {
         "name": {
           "en": "1m 30AWG Green Wire Wrapping Wire",
-          "ar": "??? ?? ???? 30AWG ???? 1 ???"
+          "ar": "سلك لف 30AWG أخضر بطول 1 متر"
         },
-        "image": "/images/excel/row-37.png",
+        "image": "/images/products/wire-wrapping-green.png",
         "quantity": 2
       },
       {
         "name": {
           "en": "1m 30AWG Blue Wire Wrapping Wire",
-          "ar": "??? ?? ???? 30AWG ???? 1 ???"
+          "ar": "سلك لف 30AWG أزرق بطول 1 متر"
         },
-        "image": "/images/excel/row-38.png",
+        "image": "/images/products/wire-wrapping-blue.png",
         "quantity": 2
       }
-    ]
+    ],
+    "inStock": true
   },
   {
     "id": "sg90-9g-servo-motor",
@@ -385,7 +386,7 @@
       "en": "SG90 9g Servo Motor",
       "ar": "SG90 9g Servo Motor"
     },
-    "price": 4,
+    "price": 9,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-SG90-9G-SERVO-MOTOR",
@@ -394,71 +395,29 @@
       "/images/products/sg90-servo-front.jpg",
       "/images/products/sg90-servo-side.jpg"
     ],
-    "stock": 20
+    "inStock": true
   },
   {
     "id": "13kg-270-degree-high-torque-digital-servo-motor-",
     "type": "component",
     "name": {
-      "en": "13kg 270 Degree High Torque Digital Servo Motor DS3218 PRO 4.8-6.8V",
-      "ar": "13kg 270 Degree High Torque Digital Servo Motor DS3218 PRO 4.8-6.8V"
+      "en": "DS3225 25kg metal gear high torque waterproof digital servo 270°",
+      "ar": "DS3225 25kg metal gear high torque waterproof digital servo 270°"
     },
     "description": {
       "en": "13kg 270 Degree High Torque Digital Servo Motor DS3218 PRO 4.8-6.8V",
       "ar": "13kg 270 Degree High Torque Digital Servo Motor DS3218 PRO 4.8-6.8V"
     },
-    "price": 18,
+    "price": 100,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-13KG-270-DEGREE-HIGH-TOR",
     "categoryId": "motors",
     "images": [
-      "/images/excel/row-40.jpeg"
+      "/images/products/ds3225-servo-2.jpg",
+      "/images/products/ds3225-servo-3.avif"
     ],
-    "stock": 10
-  },
-  {
-    "id": "ds3225-25kg-servo-motor",
-    "type": "component",
-    "name": {
-      "en": "DS3225 25kg Metal Gear High Torque Waterproof Digital Servo 270?",
-      "ar": "DS3225 25kg Metal Gear High Torque Waterproof Digital Servo 270?"
-    },
-    "description": {
-      "en": "High-torque waterproof digital servo motor for robotics and automation.",
-      "ar": "???? ????? ???? ????? ????? ????? ????? ????????? ????????."
-    },
-    "price": 35,
-    "discountPrice": null,
-    "currency": "NIS",
-    "sku": "VLT-DS3225-SERVO",
-    "categoryId": "motors",
-    "images": [
-      "/images/excel/ds3225-servo.png"
-    ],
-    "stock": 1,
-    "specifications": [
-      {
-        "label": {
-          "en": "Rotation",
-          "ar": "????? ???????"
-        },
-        "value": {
-          "en": "270?",
-          "ar": "270?"
-        }
-      },
-      {
-        "label": {
-          "en": "Torque",
-          "ar": "?????"
-        },
-        "value": {
-          "en": "25kg",
-          "ar": "25kg"
-        }
-      }
-    ]
+    "inStock": true
   },
   {
     "id": "mg996r-servo-motor-13kg",
@@ -471,7 +430,7 @@
       "en": "MG996R 13kg high-torque servo motor for robotics and automation.",
       "ar": "محرك سيرفو MG996R عالي العزم بقوة 13 كجم للروبوتات والأتمتة."
     },
-    "price": 23,
+    "price": 32,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-MG996R-SERVO-13KG",
@@ -479,7 +438,7 @@
     "images": [
       "/images/products/mg996r-servo-motor-13kg.png"
     ],
-    "stock": 1
+    "inStock": true
   },
   {
     "id": "37mm-dc-gear-motor-12vdc-100rpm-all-steel-gear-6",
@@ -492,7 +451,7 @@
       "en": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft",
       "ar": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft"
     },
-    "price": 15,
+    "price": 60,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-37MM-DC-GEAR-MOTOR-12VDC",
@@ -500,7 +459,7 @@
     "images": [
       "/images/excel/row-45.jpeg"
     ],
-    "stock": 5
+    "inStock": true
   },
   {
     "id": "stepper-motor-tb6600-upgrade-version",
@@ -513,15 +472,15 @@
       "en": "Stepper MotorDriver TB6600 UpgradeVersion",
       "ar": "Stepper MotorDriver TB6600 UpgradeVersion"
     },
-    "price": 12,
+    "price": 50,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-STEPPER-MOTOR-TB6600-UPG",
     "categoryId": "motors",
     "images": [
-      "/images/excel/row-41.jpeg"
+      "/images/products/stepper-tb6600.jpg"
     ],
-    "stock": 10
+    "inStock": true
   },
   {
     "id": "12vdc-1-channel-relay-module-active-low",
@@ -534,7 +493,7 @@
       "en": "12VDC 1-Channel Relay Module Active Low",
       "ar": "12VDC 1-Channel Relay Module Active Low"
     },
-    "price": 2,
+    "price": 7,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-12VDC-1-CHANNEL-RELAY-MO",
@@ -542,7 +501,7 @@
     "images": [
       "/images/excel/row-43.jpeg"
     ],
-    "stock": 20
+    "inStock": true
   },
   {
     "id": "5vdc-1-channel-relay-module-active-low",
@@ -555,15 +514,15 @@
       "en": "5VDC 1-Channel Relay Module Active Low",
       "ar": "5VDC 1-Channel Relay Module Active Low"
     },
-    "price": 2,
+    "price": 7,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-5VDC-1-CHANNEL-RELAY-MOD",
     "categoryId": "relays",
     "images": [
-      "/images/products/power.svg"
+      "/images/excel/row-43.jpeg"
     ],
-    "stock": 20
+    "inStock": true
   },
   {
     "id": "ultrasonic-sensor-module-hc-sr04-4-6v",
@@ -576,7 +535,7 @@
       "en": "Ultrasonic Sensor Module HC-SR04 4-6V",
       "ar": "Ultrasonic Sensor Module HC-SR04 4-6V"
     },
-    "price": 2,
+    "price": 13,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-ULTRASONIC-SENSOR-MODULE",
@@ -584,7 +543,7 @@
     "images": [
       "/images/excel/row-42.png"
     ],
-    "stock": 10
+    "inStock": true
   },
   {
     "id": "lcd-module-16x2-1602-with-soldered-headers",
@@ -597,167 +556,186 @@
       "en": "LCD Module 16x2 1602 With Soldered Headers",
       "ar": "LCD Module 16x2 1602 With Soldered Headers"
     },
-    "price": 4,
+    "price": 19,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-LCD-MODULE-16X2-1602-WIT",
     "categoryId": "displays",
     "images": [
-      "/images/excel/row-4.png"
+      "/images/excel/row-4.png",
+      "/images/products/lcd-module-16x2-2.png"
     ],
-    "stock": 45
+    "inStock": true
   },
   {
-    "id": "prototype-pcb-boards",
+    "id": "10x22cm-diy-prototype-pcb-board",
     "type": "component",
     "name": {
-      "en": "DIY Prototype PCB Boards",
-      "ar": "DIY Prototype PCB Boards"
+      "en": "10x22cm DIY Prototype PCB Board",
+      "ar": "لوحة PCB تجريبية DIY مقاس 10x22 سم"
     },
     "description": {
-      "en": "Choose the board size you need. Each board has its own photo, price, SKU, and stock.",
-      "ar": "???? ???? ?????? ???? ??????. ??? ???? ?????? ?????? ?????? ???????? ?????."
+      "en": "10x22cm DIY Prototype PCB Board",
+      "ar": "لوحة PCB تجريبية DIY مقاس 10x22 سم"
     },
-    "price": 5,
+    "price": 8,
     "discountPrice": null,
     "currency": "NIS",
-    "sku": "VLT-PROTOTYPE-PCB-BOARDS",
+    "sku": "VLT-10X22CM-DIY-PROTOTYPE-PC",
     "categoryId": "boards",
     "images": [
-      "/images/excel/row-6.png"
+      "/images/products/prototype-pcb-10x22cm.jpeg"
     ],
-    "stock": 75,
-    "optionGroups": [
-      {
-        "id": "board-size",
-        "label": {
-          "en": "Board size",
-          "ar": "???? ??????"
-        },
-        "options": [
-          {
-            "id": "10x22cm",
-            "label": {
-              "en": "10x22cm DIY Prototype PCB Board",
-              "ar": "10x22cm DIY Prototype PCB Board"
-            },
-            "image": "/images/excel/row-6.png",
-            "sku": "VLT-10X22CM-DIY-PROTOTYPE-PC",
-            "price": 5,
-            "stock": 35
-          },
-          {
-            "id": "13x25cm",
-            "label": {
-              "en": "13x25cm DIY Prototype PCB Board",
-              "ar": "13x25cm DIY Prototype PCB Board"
-            },
-            "image": "/images/excel/row-18.png",
-            "sku": "VLT-13X25CM-DIY-PROTOTYPE-PC",
-            "price": 6,
-            "stock": 40
-          }
-        ]
-      }
-    ]
+    "inStock": true
   },
   {
-    "id": "wirewrap-ic-sockets",
+    "id": "13x25cm-diy-prototype-pcb-board",
     "type": "component",
     "name": {
-      "en": "Wirewrap IC Sockets",
-      "ar": "Wirewrap IC Sockets"
+      "en": "13x25cm DIY Prototype PCB Board",
+      "ar": "لوحة PCB تجريبية DIY مقاس 13x25 سم"
     },
     "description": {
-      "en": "Choose the pin count you need. Each socket has its own photo, price, SKU, and stock.",
-      "ar": "???? ??? ???????? ???? ??????. ??? ????? ?????? ?????? ?????? ???????? ?????."
+      "en": "13x25cm DIY Prototype PCB Board",
+      "ar": "لوحة PCB تجريبية DIY مقاس 13x25 سم"
     },
-    "price": 0.5,
+    "price": 12,
     "discountPrice": null,
     "currency": "NIS",
-    "sku": "VLT-WIREWRAP-SOCKETS",
+    "sku": "VLT-13X25CM-DIY-PROTOTYPE-PC",
+    "categoryId": "boards",
+    "images": [
+      "/images/excel/row-18.png"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "14-pin-wirewrap-ic-socket",
+    "type": "component",
+    "name": {
+      "en": "14 Pin Wirewrap IC Socket",
+      "ar": "قاعدة IC Wirewrap ذات 14 دبوساً"
+    },
+    "description": {
+      "en": "14 Pin Wirewrap IC Socket",
+      "ar": "قاعدة IC Wirewrap ذات 14 دبوساً"
+    },
+    "price": 2.5,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-14-PIN-WIREWRAP-IC-SOCKE",
     "categoryId": "sockets",
     "images": [
       "/images/excel/row-23.png"
     ],
-    "stock": 730,
-    "optionGroups": [
-      {
-        "id": "pin-count",
-        "label": {
-          "en": "Pin count",
-          "ar": "??? ????????"
-        },
-        "options": [
-          {
-            "id": "14-pin",
-            "label": {
-              "en": "14 Pin Wirewrap IC Socket",
-              "ar": "14 Pin Wirewrap IC Socket"
-            },
-            "image": "/images/excel/row-23.png",
-            "sku": "VLT-14-PIN-WIREWRAP-IC-SOCKE",
-            "price": 0.5,
-            "stock": 35
-          },
-          {
-            "id": "16-pin",
-            "label": {
-              "en": "16 Pin Wirewrap IC Socket",
-              "ar": "16 Pin Wirewrap IC Socket"
-            },
-            "image": "/images/excel/row-21.png",
-            "sku": "VLT-16-PIN-WIREWRAP-IC-SOCKE",
-            "price": 0.5,
-            "stock": 245
-          },
-          {
-            "id": "20-pin",
-            "label": {
-              "en": "20 Pin Wirewrap IC Socket",
-              "ar": "20 Pin Wirewrap IC Socket"
-            },
-            "image": "/images/excel/row-22.png",
-            "sku": "VLT-20-PIN-WIREWRAP-IC-SOCKE",
-            "price": 0.75,
-            "stock": 140
-          },
-          {
-            "id": "28-pin",
-            "label": {
-              "en": "28 Pin Wirewrap IC Socket",
-              "ar": "28 Pin Wirewrap IC Socket"
-            },
-            "image": "/images/excel/row-20.png",
-            "sku": "VLT-28-PIN-WIREWRAP-IC-SOCKE",
-            "price": 1,
-            "stock": 100
-          },
-          {
-            "id": "32-pin",
-            "label": {
-              "en": "32 Pin Wirewrap IC Socket",
-              "ar": "32 Pin Wirewrap IC Socket"
-            },
-            "image": "/images/excel/row-19.png",
-            "sku": "VLT-32-PIN-WIREWRAP-IC-SOCKE",
-            "price": 1,
-            "stock": 175
-          },
-          {
-            "id": "40-pin",
-            "label": {
-              "en": "40 Pin Wirewrap IC Socket",
-              "ar": "40 Pin Wirewrap IC Socket"
-            },
-            "image": "/images/excel/row-3.png",
-            "sku": "VLT-40-PIN-WIREWRAP-IC-SOCKE",
-            "price": 1,
-            "stock": 35
-          }
-        ]
-      }
-    ]
+    "inStock": true
+  },
+  {
+    "id": "16-pin-wirewrap-ic-socket",
+    "type": "component",
+    "name": {
+      "en": "16 Pin Wirewrap IC Socket",
+      "ar": "قاعدة IC Wirewrap ذات 16 دبوساً"
+    },
+    "description": {
+      "en": "16 Pin Wirewrap IC Socket",
+      "ar": "قاعدة IC Wirewrap ذات 16 دبوساً"
+    },
+    "price": 3,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-16-PIN-WIREWRAP-IC-SOCKE",
+    "categoryId": "sockets",
+    "images": [
+      "/images/excel/row-21.png"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "20-pin-wirewrap-ic-socket",
+    "type": "component",
+    "name": {
+      "en": "20 Pin Wirewrap IC Socket",
+      "ar": "قاعدة IC Wirewrap ذات 20 دبوساً"
+    },
+    "description": {
+      "en": "20 Pin Wirewrap IC Socket",
+      "ar": "قاعدة IC Wirewrap ذات 20 دبوساً"
+    },
+    "price": 4,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-20-PIN-WIREWRAP-IC-SOCKE",
+    "categoryId": "sockets",
+    "images": [
+      "/images/excel/row-22.png"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "28-pin-wirewrap-ic-socket",
+    "type": "component",
+    "name": {
+      "en": "28 Pin Wirewrap IC Socket",
+      "ar": "قاعدة IC Wirewrap ذات 28 دبوساً"
+    },
+    "description": {
+      "en": "28 Pin Wirewrap IC Socket",
+      "ar": "قاعدة IC Wirewrap ذات 28 دبوساً"
+    },
+    "price": 5,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-28-PIN-WIREWRAP-IC-SOCKE",
+    "categoryId": "sockets",
+    "images": [
+      "/images/excel/row-20.png"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "32-pin-wirewrap-ic-socket",
+    "type": "component",
+    "name": {
+      "en": "32 Pin Wirewrap IC Socket",
+      "ar": "قاعدة IC Wirewrap ذات 32 دبوساً"
+    },
+    "description": {
+      "en": "32 Pin Wirewrap IC Socket",
+      "ar": "قاعدة IC Wirewrap ذات 32 دبوساً"
+    },
+    "price": 6,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-32-PIN-WIREWRAP-IC-SOCKE",
+    "categoryId": "sockets",
+    "images": [
+      "/images/excel/row-19.png"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "40-pin-wirewrap-ic-socket",
+    "type": "component",
+    "name": {
+      "en": "40 Pin Wirewrap IC Socket",
+      "ar": "قاعدة IC Wirewrap ذات 40 دبوساً"
+    },
+    "description": {
+      "en": "40 Pin Wirewrap IC Socket",
+      "ar": "قاعدة IC Wirewrap ذات 40 دبوساً"
+    },
+    "price": 7,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-40-PIN-WIREWRAP-IC-SOCKE",
+    "categoryId": "sockets",
+    "images": [
+      "/images/excel/row-3.png",
+      "/images/products/wirewrap-40-pin-1.jpg",
+      "/images/products/wirewrap-40-pin-2.jpg"
+    ],
+    "inStock": true
   },
   {
     "id": "usb-to-ttl-converter-ftdi-cp2102",
@@ -770,15 +748,17 @@
       "en": "USB To TTL Converter (FTDI) CP2102",
       "ar": "USB To TTL Converter (FTDI) CP2102"
     },
-    "price": 4,
+    "price": 18,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-USB-TO-TTL-CONVERTER-FTD",
     "categoryId": "converters",
     "images": [
-      "/images/excel/row-7.jpeg"
+      "/images/excel/row-7.jpeg",
+      "/images/products/usb-ttl-cp2102-1.jpeg",
+      "/images/products/usb-ttl-cp2102-2.jpeg"
     ],
-    "stock": 35
+    "inStock": true
   },
   {
     "id": "pic18f4620-i-p-microcontroller",
@@ -791,7 +771,7 @@
       "en": "PIC18F4620-I/P Microcontroller",
       "ar": "PIC18F4620-I/P Microcontroller"
     },
-    "price": 8,
+    "price": 33,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-PIC18F4620-I-P-MICROCONT",
@@ -799,7 +779,7 @@
     "images": [
       "/images/products/pic18f4620-ip.png"
     ],
-    "stock": 35
+    "inStock": true
   },
   {
     "id": "l7805-voltage-regulator-5v-1-5a",
@@ -812,7 +792,7 @@
       "en": "L7805 Voltage Regulator 5V 1.5A",
       "ar": "L7805 Voltage Regulator 5V 1.5A"
     },
-    "price": 1,
+    "price": 2,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-L7805-VOLTAGE-REGULATOR-",
@@ -820,7 +800,7 @@
     "images": [
       "/images/excel/row-5.png"
     ],
-    "stock": 40
+    "inStock": true
   },
   {
     "id": "4mhz-quartz-crystal-oscillator",
@@ -833,7 +813,7 @@
       "en": "4MHz Quartz Crystal Oscillator",
       "ar": "4MHz Quartz Crystal Oscillator"
     },
-    "price": 0.5,
+    "price": 2,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-4MHZ-QUARTZ-CRYSTAL-OSCI",
@@ -841,7 +821,7 @@
     "images": [
       "/images/excel/row-8.jpeg"
     ],
-    "stock": 100
+    "inStock": true
   },
   {
     "id": "10k-ohm-potentiometer-wh148-b10k-0-125w-3pin-15m",
@@ -854,7 +834,7 @@
       "en": "10K Ohm Potentiometer WH148 B10K 0.125W 3Pin 15mm",
       "ar": "10K Ohm Potentiometer WH148 B10K 0.125W 3Pin 15mm"
     },
-    "price": 1,
+    "price": 1.5,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-10K-OHM-POTENTIOMETER-WH",
@@ -862,7 +842,7 @@
     "images": [
       "/images/excel/row-13.jpeg"
     ],
-    "stock": 100
+    "inStock": true
   },
   {
     "id": "lm35-temperature-sensor",
@@ -883,7 +863,7 @@
     "images": [
       "/images/excel/row-14.jpeg"
     ],
-    "stock": 50
+    "inStock": true
   },
   {
     "id": "40-pin-long-centered-header-pin-male-2-54mm-pitc",
@@ -896,7 +876,7 @@
       "en": "40 Pin Long Centered Header Pin Male 2.54mm Pitch 20mm Length",
       "ar": "40 Pin Long Centered Header Pin Male 2.54mm Pitch 20mm Length"
     },
-    "price": 0.5,
+    "price": 3,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-40-PIN-LONG-CENTERED-HEA",
@@ -904,7 +884,7 @@
     "images": [
       "/images/excel/row-15.png"
     ],
-    "stock": 50
+    "inStock": true
   },
   {
     "id": "mini-push-button-tactile-switch-6x6x6-5mm-2pins",
@@ -917,15 +897,15 @@
       "en": "Mini Push Button Tactile Switch 6x6x6.5mm - 2pins",
       "ar": "Mini Push Button Tactile Switch 6x6x6.5mm - 2pins"
     },
-    "price": 0.1,
+    "price": 1,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-MINI-PUSH-BUTTON-TACTILE",
     "categoryId": "switches",
     "images": [
-      "/images/excel/row-17.png"
+      "/images/products/mini-push-button-6x6x6-5mm.avif"
     ],
-    "stock": 200
+    "inStock": true
   },
   {
     "id": "74ls374-dip-20-ic-octal-d-type-flip-flop-3-state",
@@ -946,7 +926,7 @@
     "images": [
       "/images/excel/row-24.jpeg"
     ],
-    "stock": 164
+    "inStock": true
   },
   {
     "id": "74ls157-dip-16-ic-quadruple-2-input-multiplexer",
@@ -965,9 +945,9 @@
     "sku": "VLT-74LS157-DIP-16-IC-QUADRU",
     "categoryId": "logic-ics",
     "images": [
-      "/images/excel/row-25.jpeg"
+      "/images/products/74ls157-multiplexer.webp"
     ],
-    "stock": 164
+    "inStock": true
   },
   {
     "id": "74ls74-dip-14-ic-dual-d-flip-flop",
@@ -980,15 +960,15 @@
       "en": "74LS74 DIP-14 IC Dual D Flip Flop",
       "ar": "74LS74 DIP-14 IC Dual D Flip Flop"
     },
-    "price": 1,
+    "price": 2,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-74LS74-DIP-14-IC-DUAL-D-",
     "categoryId": "logic-ics",
     "images": [
-      "/images/excel/row-26.png"
+      "/images/products/74ls74-dip-14.jpg"
     ],
-    "stock": 41
+    "inStock": true
   },
   {
     "id": "74ls193-sn74ls193n-dip-16-ic-4-bit-binary-counte",
@@ -1007,9 +987,9 @@
     "sku": "VLT-74LS193-SN74LS193N-DIP-1",
     "categoryId": "logic-ics",
     "images": [
-      "/images/excel/row-29.jpeg"
+      "/images/products/74ls193-counter.jpg"
     ],
-    "stock": 120
+    "inStock": true
   },
   {
     "id": "8-pin-long-single-row-female-header",
@@ -1022,7 +1002,7 @@
       "en": "8 Pin Long Single Row Female Header",
       "ar": "8 Pin Long Single Row Female Header"
     },
-    "price": 0.5,
+    "price": 1,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-8-PIN-LONG-SINGLE-ROW-FE",
@@ -1030,7 +1010,7 @@
     "images": [
       "/images/excel/row-30.jpeg"
     ],
-    "stock": 100
+    "inStock": true
   },
   {
     "id": "10-pin-long-single-row-female-header",
@@ -1043,7 +1023,7 @@
       "en": "10 Pin Long Single Row Female Header",
       "ar": "10 Pin Long Single Row Female Header"
     },
-    "price": 0.5,
+    "price": 1,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-10-PIN-LONG-SINGLE-ROW-F",
@@ -1051,7 +1031,7 @@
     "images": [
       "/images/excel/row-31.jpeg"
     ],
-    "stock": 100
+    "inStock": true
   },
   {
     "id": "40-pin-long-male-header-pin-2-54mm-pitch-20mm-le",
@@ -1064,7 +1044,7 @@
       "en": "40 Pin Long Male Header Pin 2.54mm Pitch 20mm Length",
       "ar": "40 Pin Long Male Header Pin 2.54mm Pitch 20mm Length"
     },
-    "price": 0.5,
+    "price": 3,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-40-PIN-LONG-MALE-HEADER-",
@@ -1072,6 +1052,111 @@
     "images": [
       "/images/excel/row-34.png"
     ],
-    "stock": 50
+    "inStock": true
+  },
+  {
+    "id": "5mm-green-led",
+    "type": "component",
+    "name": {
+      "en": "5mm Green LED",
+      "ar": "مصباح LED أخضر 5 مم"
+    },
+    "description": {
+      "en": "5mm green LED for indicators and electronics projects.",
+      "ar": "مصباح LED أخضر 5 مم للمؤشرات والمشاريع الإلكترونية."
+    },
+    "price": 1,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-5MM-GREEN-LED",
+    "categoryId": "components",
+    "images": [
+      "/images/excel/row-27.png"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "5mm-blue-led",
+    "type": "component",
+    "name": {
+      "en": "5mm Blue LED",
+      "ar": "مصباح LED أزرق 5 مم"
+    },
+    "description": {
+      "en": "5mm blue LED for indicators and electronics projects.",
+      "ar": "مصباح LED أزرق 5 مم للمؤشرات والمشاريع الإلكترونية."
+    },
+    "price": 1,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-5MM-BLUE-LED",
+    "categoryId": "components",
+    "images": [
+      "/images/excel/row-28.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "5mm-red-led",
+    "type": "component",
+    "name": {
+      "en": "5mm Red LED",
+      "ar": "مصباح LED أحمر 5 مم"
+    },
+    "description": {
+      "en": "5mm red LED for indicators and electronics projects.",
+      "ar": "مصباح LED أحمر 5 مم للمؤشرات والمشاريع الإلكترونية."
+    },
+    "price": 1,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-5MM-RED-LED",
+    "categoryId": "components",
+    "images": [
+      "/images/excel/row-32.png"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "220-ohm-carbon-film-resistor",
+    "type": "component",
+    "name": {
+      "en": "220 Ohm Carbon Film Resistor",
+      "ar": "مقاومة فيلم كربوني 220 أوم"
+    },
+    "description": {
+      "en": "220 ohm carbon film resistor for electronics projects.",
+      "ar": "مقاومة فيلم كربوني بقيمة 220 أوم للمشاريع الإلكترونية."
+    },
+    "price": 1,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-220-OHM-RESISTOR",
+    "categoryId": "components",
+    "images": [
+      "/images/products/carbon-film-resistor.webp"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "10k-ohm-carbon-film-resistor",
+    "type": "component",
+    "name": {
+      "en": "10K Ohm Carbon Film Resistor",
+      "ar": "مقاومة فيلم كربوني 10K أوم"
+    },
+    "description": {
+      "en": "10K ohm carbon film resistor for electronics projects.",
+      "ar": "مقاومة فيلم كربوني بقيمة 10K أوم للمشاريع الإلكترونية."
+    },
+    "price": 1,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-10K-OHM-RESISTOR",
+    "categoryId": "components",
+    "images": [
+      "/images/products/carbon-film-resistor.webp"
+    ],
+    "inStock": true
   }
 ]
