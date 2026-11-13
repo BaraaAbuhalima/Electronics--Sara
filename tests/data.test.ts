@@ -16,7 +16,9 @@ test("all bilingual sample data and references are valid", () => {
   assert.deepEqual(validateData(products, categories, store), []);
   for (const p of all.filter((p) => p.type !== "component"))
     assert.ok(
-      getKitComponents(p.id).every((c) => (c.product || c.name) && c.quantity > 0),
+      getKitComponents(p.id).every(
+        (c) => (c.product || c.name) && c.quantity > 0,
+      ),
     );
   assert.equal(getKitComponents("cpu-lab-kit").length, 21);
 });
@@ -66,17 +68,24 @@ test("cart rejects malformed data, removes missing/out-of-stock products, and me
   assert.deepEqual(sanitizeCart(null, all), []);
 });
 test("cart uses cents with exact quantity totals", () => {
+  // A fixed price fixture keeps arithmetic independent of catalog edits.
+  const fixture = all.map((p) =>
+    p.id === "cpu-lab-kit" ? { ...p, price: 80, discountPrice: null } : p,
+  );
   assert.equal(
-    cartTotalCents([{ productId: "cpu-lab-kit", quantity: 3 }], all),
+    cartTotalCents([{ productId: "cpu-lab-kit", quantity: 3 }], fixture),
     24000,
   );
 });
 test("WhatsApp URLs include store phone, SKU, names, unit/line totals and quantities in both languages", () => {
   const configured = { ...store, whatsapp: "15551234567" } as Store;
+  const fixture = all.map((p) =>
+    p.id === "cpu-lab-kit" ? { ...p, price: 80, discountPrice: null } : p,
+  );
   for (const lang of ["en", "ar"] as const) {
     const url = whatsappOrder(
       [{ productId: "cpu-lab-kit", quantity: 2 }],
-      all,
+      fixture,
       configured,
       lang,
     )!;
