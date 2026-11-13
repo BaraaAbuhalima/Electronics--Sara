@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import {
   ArrowUpRight,
+  CheckCircle2,
   ExternalLink,
   ShoppingBag,
   Sparkles,
@@ -13,6 +14,7 @@ import { sanitizeCart, whatsappOrder } from "@/services/cart";
 import type { CartItem, Language, Product } from "@/types";
 import type { TranslationKey } from "@/types/i18n";
 import ProductDetail from "./ProductDetail";
+import CartDrawer from "./CartDrawer";
 
 const allProducts = getAllProducts();
 const store = getStoreInfo();
@@ -21,6 +23,9 @@ export default function ProductPage({ product }: { product: Product }) {
   const [lang, setLang] = useState<Language>("en");
   const [hydrated, setHydrated] = useState(false);
   const [cart, setCart] = useState<CartItem[]>([]);
+  const [cartOpen, setCartOpen] = useState(false);
+  const [toast, setToast] = useState("");
+  const closeCart = useCallback(() => setCartOpen(false), []);
   const t = useCallback((key: TranslationKey) => dictionary[lang][key], [lang]);
   const money = useCallback(
     (amount: number) =>
@@ -55,28 +60,35 @@ export default function ProductPage({ product }: { product: Product }) {
     if (hydrated) {
       try {
         localStorage.setItem("volt-language", lang);
+        localStorage.setItem("volt-cart", JSON.stringify(cart));
       } catch {
-        /* Browsing still works without storage. */
+        setToast(dictionary[lang].storageWarning);
       }
     }
-  }, [lang, hydrated]);
+  }, [lang, cart, hydrated]);
+  useEffect(() => {
+    if (!toast) return;
+    const timer = setTimeout(() => setToast(""), 3000);
+    return () => clearTimeout(timer);
+  }, [toast]);
   const add = (item: Product, quantity: number, optionId?: string) => {
-    setCart((items) => {
-      const current = items.find((i) => i.productId === item.id)?.quantity ?? 0;
-      const next = sanitizeCart(
+    const option = item.optionGroups
+      ?.flatMap((group) => group.options)
+      .find((candidate) => candidate.id === optionId);
+    if (!item.inStock || (optionId && (!option || !option.inStock))) {
+      setToast(t("stockLimit"));
+      return;
+    }
+    setCart((items) =>
+      sanitizeCart(
         [
-          ...items.filter((i) => i.productId !== item.id),
-          {
-            productId: item.id,
-            quantity: current + quantity,
-            ...(optionId ? { optionId } : {}),
-          },
+          ...items,
+          { productId: item.id, quantity, ...(optionId ? { optionId } : {}) },
         ],
         allProducts,
-      );
-      localStorage.setItem("volt-cart", JSON.stringify(next));
-      return next;
-    });
+      ),
+    );
+    setToast(t("added"));
   };
   const order = (item: Product, quantity: number, optionId?: string) => {
     const url = whatsappOrder(
@@ -109,13 +121,18 @@ export default function ProductPage({ product }: { product: Product }) {
               <i />
               <span className={lang === "ar" ? "active" : ""}>عربي</span>
             </button>
-            <Link href="/" className="cart-button">
+            <button
+              type="button"
+              className="cart-button"
+              onClick={() => setCartOpen(true)}
+              aria-label={`${t("cart")} (${cart.reduce((n, i) => n + i.quantity, 0)})`}
+            >
               <ShoppingBag size={22} />
               <span className="cart-label">{t("cart")}</span>
               <span className="cart-count">
                 {cart.reduce((n, i) => n + i.quantity, 0)}
               </span>
-            </Link>
+            </button>
           </div>
         </div>
         <div className="navigation-wrap">
@@ -193,6 +210,24 @@ export default function ProductPage({ product }: { product: Product }) {
           </span>
         </div>
       </footer>
+      {cartOpen && (
+        <CartDrawer
+          cart={cart}
+          setCart={setCart}
+          lang={lang}
+          t={t}
+          money={money}
+          onClose={closeCart}
+          onExplore={() => window.location.assign("/#products")}
+          onOpenProduct={openProduct}
+        />
+      )}
+      {toast && (
+        <div className="toast" role="status">
+          <CheckCircle2 size={18} />
+          {toast}
+        </div>
+      )}
     </main>
   );
 }
