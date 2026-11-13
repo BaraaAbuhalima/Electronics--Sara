@@ -21,6 +21,12 @@ export default function Modal({
     document.body.style.overflow = "hidden";
     ref.current?.focus();
     const onKey = (event: KeyboardEvent) => {
+      // A gallery can be opened inside a product dialog. Only the top dialog
+      // should handle Escape or move keyboard focus.
+      const dialogs = document.querySelectorAll(
+        '[role="dialog"][aria-modal="true"]',
+      );
+      if (dialogs[dialogs.length - 1] !== ref.current) return;
       if (event.key === "Escape") onClose();
       if (event.key === "Tab") {
         const nodes = ref.current?.querySelectorAll<HTMLElement>(

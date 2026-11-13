@@ -1,12 +1,14 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, ExternalLink, ShoppingBag, Sparkles } from "lucide-react";
-import dictionary from "../../data/translations.json";
 import {
-  getAllProducts,
-  getStoreInfo,
-} from "@/services/catalog";
+  ArrowUpRight,
+  ExternalLink,
+  ShoppingBag,
+  Sparkles,
+} from "lucide-react";
+import dictionary from "../../data/translations.json";
+import { getAllProducts, getStoreInfo } from "@/services/catalog";
 import { sanitizeCart, whatsappOrder } from "@/services/cart";
 import type { CartItem, Language, Product } from "@/types";
 import type { TranslationKey } from "@/types/i18n";
@@ -17,11 +19,9 @@ const store = getStoreInfo();
 
 export default function ProductPage({ product }: { product: Product }) {
   const [lang, setLang] = useState<Language>("en");
+  const [hydrated, setHydrated] = useState(false);
   const [cart, setCart] = useState<CartItem[]>([]);
-  const t = useCallback(
-    (key: TranslationKey) => dictionary[lang][key],
-    [lang],
-  );
+  const t = useCallback((key: TranslationKey) => dictionary[lang][key], [lang]);
   const money = useCallback(
     (amount: number) =>
       new Intl.NumberFormat(lang === "ar" ? "ar-EG-u-nu-latn" : "en-US", {
@@ -34,8 +34,6 @@ export default function ProductPage({ product }: { product: Product }) {
     [lang],
   );
   useEffect(() => {
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
     try {
       const savedLanguage = localStorage.getItem("volt-language");
       if (savedLanguage === "ar" || savedLanguage === "en")
@@ -49,7 +47,19 @@ export default function ProductPage({ product }: { product: Product }) {
     } catch {
       setCart([]);
     }
+    setHydrated(true);
   }, []);
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    if (hydrated) {
+      try {
+        localStorage.setItem("volt-language", lang);
+      } catch {
+        /* Browsing still works without storage. */
+      }
+    }
+  }, [lang, hydrated]);
   const add = (item: Product, quantity: number, optionId?: string) => {
     setCart((items) => {
       const current = items.find((i) => i.productId === item.id)?.quantity ?? 0;
@@ -102,7 +112,9 @@ export default function ProductPage({ product }: { product: Product }) {
             <Link href="/" className="cart-button">
               <ShoppingBag size={22} />
               <span className="cart-label">{t("cart")}</span>
-              <span className="cart-count">{cart.reduce((n, i) => n + i.quantity, 0)}</span>
+              <span className="cart-count">
+                {cart.reduce((n, i) => n + i.quantity, 0)}
+              </span>
             </Link>
           </div>
         </div>
