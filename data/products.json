@@ -1,5 +1,189 @@
 [
   {
+    "id": "pic-kit",
+    "type": "kit",
+    "name": {
+      "en": "PIC Kit (High Quality Components)",
+      "ar": "PIC Kit (High Quality Components)"
+    },
+    "description": {
+      "en": "A complete kit for building PIC microcontroller projects.",
+      "ar": "طقم متكامل لبناء مشاريع المتحكم PIC."
+    },
+    "price": 95,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-PIC-KIT",
+    "categoryId": "kits",
+    "images": [
+      "/images/products/kit.svg"
+    ],
+    "featured": true,
+    "components": [
+      {
+        "name": {
+          "en": "PIC18F4620-I/P Microcontroller",
+          "ar": "متحكم PIC18F4620-I/P"
+        },
+        "quantity": 1,
+        "image": "/images/products/pic18f4620-ip.png"
+      },
+      {
+        "name": {
+          "en": "40 Pin Wirewrap IC Socket, 15.24mm Width",
+          "ar": "قاعدة IC Wirewrap ذات 40 دبوساً وعرض 15.24 مم"
+        },
+        "image": "/images/excel/row-3.png",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "LCD Module 16x2 1602",
+          "ar": "شاشة LCD 16x2 موديل 1602"
+        },
+        "image": "/images/excel/row-4.png",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "L7805 5V 1.5A Voltage Regulator",
+          "ar": "منظم جهد L7805 بجهد 5 فولت وتيار 1.5 أمبير"
+        },
+        "image": "/images/excel/row-5.png",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "10x22cm DIY Prototype PCB Board",
+          "ar": "لوحة PCB تجريبية DIY مقاس 10x22 سم"
+        },
+        "image": "/images/products/prototype-pcb-10x22cm.jpeg",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "USB to TTL CP2102 Converter",
+          "ar": "محول USB إلى TTL موديل CP2102"
+        },
+        "image": "/images/products/usb-ttl-cp2102-1.jpeg",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "4MHz Quartz Crystal Oscillator",
+          "ar": "بلورة كوارتز 4 ميجاهرتز"
+        },
+        "image": "/images/excel/row-8.jpeg",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "10uF 50V Electrolytic Capacitor",
+          "ar": "مكثف إلكتروليتي 10uF و50 فولت"
+        },
+        "image": "/images/excel/row-9.jpeg",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "15pF 50V Ceramic Capacitor",
+          "ar": "مكثف سيراميكي 15pF و50 فولت"
+        },
+        "image": "/images/excel/row-10.jpeg",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "100uF 25V Electrolytic Capacitor",
+          "ar": "مكثف إلكتروليتي 100uF و25 فولت"
+        },
+        "image": "/images/excel/row-11.jpeg",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "100nF 50V Ceramic Capacitor",
+          "ar": "مكثف سيراميكي 100nF و50 فولت"
+        },
+        "image": "/images/excel/row-12.jpeg",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "10K Ohm B10K Potentiometer",
+          "ar": "مقاومة متغيرة 10K أوم من نوع B10K"
+        },
+        "image": "/images/excel/row-13.jpeg",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "LM35 Temperature Sensor",
+          "ar": "حساس حرارة LM35"
+        },
+        "image": "/images/excel/row-14.jpeg",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "40 Pin Long Male Header",
+          "ar": "رأس توصيل ذكر طويل ذو 40 دبوساً"
+        },
+        "image": "/images/excel/row-34.png",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "10K Ohm Carbon Film Resistor",
+          "ar": "مقاومة فيلم كربوني 10K أوم"
+        },
+        "image": "/images/products/carbon-film-resistor.webp",
+        "quantity": 1
+      },
+      {
+        "name": {
+          "en": "6x6x6.5mm Mini Push Button",
+          "ar": "زر ضغط صغير 6x6x6.5 مم"
+        },
+        "image": "/images/products/mini-push-button-6x6x6-5mm.avif",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "1m 30AWG Black Wire Wrapping Wire",
+          "ar": "سلك لف 30AWG أسود بطول 1 متر"
+        },
+        "image": "/images/products/wire-wrapping-black.png",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "1m 30AWG Orange Wire Wrapping Wire",
+          "ar": "سلك لف 30AWG برتقالي بطول 1 متر"
+        },
+        "image": "/images/products/wire-wrapping-orange.jpg",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "1m 30AWG Green Wire Wrapping Wire",
+          "ar": "سلك لف 30AWG أخضر بطول 1 متر"
+        },
+        "image": "/images/products/wire-wrapping-green.png",
+        "quantity": 2
+      },
+      {
+        "name": {
+          "en": "1m 30AWG Blue Wire Wrapping Wire",
+          "ar": "سلك لف 30AWG أزرق بطول 1 متر"
+        },
+        "image": "/images/products/wire-wrapping-blue.png",
+        "quantity": 2
+      }
+    ],
+    "inStock": true
+  },
+  {
     "id": "cpu-lab-kit",
     "type": "kit",
     "name": {
@@ -192,186 +376,44 @@
     "inStock": true
   },
   {
-    "id": "pic-kit",
-    "type": "kit",
+    "id": "5vdc-1-channel-relay-module-active-low",
+    "type": "component",
     "name": {
-      "en": "PIC Kit (High Quality Components)",
-      "ar": "PIC Kit (High Quality Components)"
+      "en": "5VDC 1-Channel Relay Module Active Low",
+      "ar": "5VDC 1-Channel Relay Module Active Low"
     },
     "description": {
-      "en": "A complete kit for building PIC microcontroller projects.",
-      "ar": "طقم متكامل لبناء مشاريع المتحكم PIC."
+      "en": "5VDC 1-Channel Relay Module Active Low",
+      "ar": "5VDC 1-Channel Relay Module Active Low"
     },
-    "price": 95,
+    "price": 7,
     "discountPrice": null,
     "currency": "NIS",
-    "sku": "VLT-PIC-KIT",
-    "categoryId": "kits",
+    "sku": "VLT-5VDC-1-CHANNEL-RELAY-MOD",
+    "categoryId": "relays",
     "images": [
-      "/images/products/kit.svg"
+      "/images/excel/row-43.jpeg"
     ],
-    "featured": true,
-    "components": [
-      {
-        "name": {
-          "en": "PIC18F4620-I/P Microcontroller",
-          "ar": "متحكم PIC18F4620-I/P"
-        },
-        "quantity": 1,
-        "image": "/images/products/pic18f4620-ip.png"
-      },
-      {
-        "name": {
-          "en": "40 Pin Wirewrap IC Socket, 15.24mm Width",
-          "ar": "قاعدة IC Wirewrap ذات 40 دبوساً وعرض 15.24 مم"
-        },
-        "image": "/images/excel/row-3.png",
-        "quantity": 1
-      },
-      {
-        "name": {
-          "en": "LCD Module 16x2 1602",
-          "ar": "شاشة LCD 16x2 موديل 1602"
-        },
-        "image": "/images/excel/row-4.png",
-        "quantity": 1
-      },
-      {
-        "name": {
-          "en": "L7805 5V 1.5A Voltage Regulator",
-          "ar": "منظم جهد L7805 بجهد 5 فولت وتيار 1.5 أمبير"
-        },
-        "image": "/images/excel/row-5.png",
-        "quantity": 1
-      },
-      {
-        "name": {
-          "en": "10x22cm DIY Prototype PCB Board",
-          "ar": "لوحة PCB تجريبية DIY مقاس 10x22 سم"
-        },
-        "image": "/images/products/prototype-pcb-10x22cm.jpeg",
-        "quantity": 1
-      },
-      {
-        "name": {
-          "en": "USB to TTL CP2102 Converter",
-          "ar": "محول USB إلى TTL موديل CP2102"
-        },
-        "image": "/images/products/usb-ttl-cp2102-1.jpeg",
-        "quantity": 1
-      },
-      {
-        "name": {
-          "en": "4MHz Quartz Crystal Oscillator",
-          "ar": "بلورة كوارتز 4 ميجاهرتز"
-        },
-        "image": "/images/excel/row-8.jpeg",
-        "quantity": 1
-      },
-      {
-        "name": {
-          "en": "10uF 50V Electrolytic Capacitor",
-          "ar": "مكثف إلكتروليتي 10uF و50 فولت"
-        },
-        "image": "/images/excel/row-9.jpeg",
-        "quantity": 1
-      },
-      {
-        "name": {
-          "en": "15pF 50V Ceramic Capacitor",
-          "ar": "مكثف سيراميكي 15pF و50 فولت"
-        },
-        "image": "/images/excel/row-10.jpeg",
-        "quantity": 2
-      },
-      {
-        "name": {
-          "en": "100uF 25V Electrolytic Capacitor",
-          "ar": "مكثف إلكتروليتي 100uF و25 فولت"
-        },
-        "image": "/images/excel/row-11.jpeg",
-        "quantity": 1
-      },
-      {
-        "name": {
-          "en": "100nF 50V Ceramic Capacitor",
-          "ar": "مكثف سيراميكي 100nF و50 فولت"
-        },
-        "image": "/images/excel/row-12.jpeg",
-        "quantity": 1
-      },
-      {
-        "name": {
-          "en": "10K Ohm B10K Potentiometer",
-          "ar": "مقاومة متغيرة 10K أوم من نوع B10K"
-        },
-        "image": "/images/excel/row-13.jpeg",
-        "quantity": 2
-      },
-      {
-        "name": {
-          "en": "LM35 Temperature Sensor",
-          "ar": "حساس حرارة LM35"
-        },
-        "image": "/images/excel/row-14.jpeg",
-        "quantity": 1
-      },
-      {
-        "name": {
-          "en": "40 Pin Long Male Header",
-          "ar": "رأس توصيل ذكر طويل ذو 40 دبوساً"
-        },
-        "image": "/images/excel/row-34.png",
-        "quantity": 1
-      },
-      {
-        "name": {
-          "en": "10K Ohm Carbon Film Resistor",
-          "ar": "مقاومة فيلم كربوني 10K أوم"
-        },
-        "image": "/images/products/carbon-film-resistor.webp",
-        "quantity": 1
-      },
-      {
-        "name": {
-          "en": "6x6x6.5mm Mini Push Button",
-          "ar": "زر ضغط صغير 6x6x6.5 مم"
-        },
-        "image": "/images/products/mini-push-button-6x6x6-5mm.avif",
-        "quantity": 2
-      },
-      {
-        "name": {
-          "en": "1m 30AWG Black Wire Wrapping Wire",
-          "ar": "سلك لف 30AWG أسود بطول 1 متر"
-        },
-        "image": "/images/products/wire-wrapping-black.png",
-        "quantity": 2
-      },
-      {
-        "name": {
-          "en": "1m 30AWG Orange Wire Wrapping Wire",
-          "ar": "سلك لف 30AWG برتقالي بطول 1 متر"
-        },
-        "image": "/images/products/wire-wrapping-orange.jpg",
-        "quantity": 2
-      },
-      {
-        "name": {
-          "en": "1m 30AWG Green Wire Wrapping Wire",
-          "ar": "سلك لف 30AWG أخضر بطول 1 متر"
-        },
-        "image": "/images/products/wire-wrapping-green.png",
-        "quantity": 2
-      },
-      {
-        "name": {
-          "en": "1m 30AWG Blue Wire Wrapping Wire",
-          "ar": "سلك لف 30AWG أزرق بطول 1 متر"
-        },
-        "image": "/images/products/wire-wrapping-blue.png",
-        "quantity": 2
-      }
+    "inStock": true
+  },
+  {
+    "id": "12vdc-1-channel-relay-module-active-low",
+    "type": "component",
+    "name": {
+      "en": "12VDC 1-Channel Relay Module Active Low",
+      "ar": "12VDC 1-Channel Relay Module Active Low"
+    },
+    "description": {
+      "en": "12VDC 1-Channel Relay Module Active Low",
+      "ar": "12VDC 1-Channel Relay Module Active Low"
+    },
+    "price": 7,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-12VDC-1-CHANNEL-RELAY-MO",
+    "categoryId": "relays",
+    "images": [
+      "/images/excel/row-43.jpeg"
     ],
     "inStock": true
   },
@@ -398,28 +440,6 @@
     "inStock": true
   },
   {
-    "id": "13kg-270-degree-high-torque-digital-servo-motor-",
-    "type": "component",
-    "name": {
-      "en": "DS3225 25kg metal gear high torque waterproof digital servo 270°",
-      "ar": "DS3225 25kg metal gear high torque waterproof digital servo 270°"
-    },
-    "description": {
-      "en": "13kg 270 Degree High Torque Digital Servo Motor DS3218 PRO 4.8-6.8V",
-      "ar": "13kg 270 Degree High Torque Digital Servo Motor DS3218 PRO 4.8-6.8V"
-    },
-    "price": 100,
-    "discountPrice": null,
-    "currency": "NIS",
-    "sku": "VLT-13KG-270-DEGREE-HIGH-TOR",
-    "categoryId": "motors",
-    "images": [
-      "/images/products/ds3225-servo-2.jpg",
-      "/images/products/ds3225-servo-3.avif"
-    ],
-    "inStock": true
-  },
-  {
     "id": "mg996r-servo-motor-13kg",
     "type": "component",
     "name": {
@@ -437,27 +457,6 @@
     "categoryId": "motors",
     "images": [
       "/images/products/mg996r-servo-motor-13kg.png"
-    ],
-    "inStock": true
-  },
-  {
-    "id": "37mm-dc-gear-motor-12vdc-100rpm-all-steel-gear-6",
-    "type": "component",
-    "name": {
-      "en": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft",
-      "ar": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft"
-    },
-    "description": {
-      "en": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft",
-      "ar": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft"
-    },
-    "price": 60,
-    "discountPrice": null,
-    "currency": "NIS",
-    "sku": "VLT-37MM-DC-GEAR-MOTOR-12VDC",
-    "categoryId": "motors",
-    "images": [
-      "/images/excel/row-45.jpeg"
     ],
     "inStock": true
   },
@@ -483,48 +482,6 @@
     "inStock": true
   },
   {
-    "id": "12vdc-1-channel-relay-module-active-low",
-    "type": "component",
-    "name": {
-      "en": "12VDC 1-Channel Relay Module Active Low",
-      "ar": "12VDC 1-Channel Relay Module Active Low"
-    },
-    "description": {
-      "en": "12VDC 1-Channel Relay Module Active Low",
-      "ar": "12VDC 1-Channel Relay Module Active Low"
-    },
-    "price": 7,
-    "discountPrice": null,
-    "currency": "NIS",
-    "sku": "VLT-12VDC-1-CHANNEL-RELAY-MO",
-    "categoryId": "relays",
-    "images": [
-      "/images/excel/row-43.jpeg"
-    ],
-    "inStock": true
-  },
-  {
-    "id": "5vdc-1-channel-relay-module-active-low",
-    "type": "component",
-    "name": {
-      "en": "5VDC 1-Channel Relay Module Active Low",
-      "ar": "5VDC 1-Channel Relay Module Active Low"
-    },
-    "description": {
-      "en": "5VDC 1-Channel Relay Module Active Low",
-      "ar": "5VDC 1-Channel Relay Module Active Low"
-    },
-    "price": 7,
-    "discountPrice": null,
-    "currency": "NIS",
-    "sku": "VLT-5VDC-1-CHANNEL-RELAY-MOD",
-    "categoryId": "relays",
-    "images": [
-      "/images/excel/row-43.jpeg"
-    ],
-    "inStock": true
-  },
-  {
     "id": "ultrasonic-sensor-module-hc-sr04-4-6v",
     "type": "component",
     "name": {
@@ -542,6 +499,69 @@
     "categoryId": "sensors",
     "images": [
       "/images/excel/row-42.png"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "jumper-wires-female-female-20cm",
+    "type": "component",
+    "name": {
+      "en": "20cm Female-to-Female Jumper Wires (7 pcs)",
+      "ar": "أسلاك توصيل أنثى إلى أنثى 20 سم (7 قطع)"
+    },
+    "description": {
+      "en": "20cm female-to-female jumper wires, 7 pieces per pack.",
+      "ar": "أسلاك توصيل أنثى إلى أنثى بطول 20 سم، 7 قطع في العبوة."
+    },
+    "price": 1,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-JUMPER-WIRES-F-F-20CM-7PC",
+    "categoryId": "components",
+    "images": [
+      "/images/products/jumper-wires-female-female-20cm.jpg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "jumper-wires-male-female-20cm",
+    "type": "component",
+    "name": {
+      "en": "20cm Male-to-Female Jumper Wires (7 pcs)",
+      "ar": "أسلاك توصيل ذكر إلى أنثى 20 سم (7 قطع)"
+    },
+    "description": {
+      "en": "20cm male-to-female jumper wires, 7 pieces per pack.",
+      "ar": "أسلاك توصيل ذكر إلى أنثى بطول 20 سم، 7 قطع في العبوة."
+    },
+    "price": 1,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-JUMPER-WIRES-M-F-20CM-7PC",
+    "categoryId": "components",
+    "images": [
+      "/images/products/jumper-wires-male-female-20cm.jpg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "jumper-wires-male-male-20cm",
+    "type": "component",
+    "name": {
+      "en": "20cm Male-to-Male Jumper Wires (7 pcs)",
+      "ar": "أسلاك توصيل ذكر إلى ذكر 20 سم (7 قطع)"
+    },
+    "description": {
+      "en": "20cm male-to-male jumper wires, 7 pieces per pack.",
+      "ar": "أسلاك توصيل ذكر إلى ذكر بطول 20 سم، 7 قطع في العبوة."
+    },
+    "price": 1,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-JUMPER-WIRES-M-M-20CM-7PC",
+    "categoryId": "components",
+    "images": [
+      "/images/products/jumper-wires-male-male-20cm.jpg"
     ],
     "inStock": true
   },
@@ -564,6 +584,93 @@
     "images": [
       "/images/excel/row-4.png",
       "/images/products/lcd-module-16x2-2.png"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "37mm-dc-gear-motor-12vdc-100rpm-all-steel-gear-6",
+    "type": "component",
+    "name": {
+      "en": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft",
+      "ar": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft"
+    },
+    "description": {
+      "en": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft",
+      "ar": "37mm DC Gear Motor 12VDC 100RPM All Steel Gear 6mm Shaft"
+    },
+    "price": 60,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-37MM-DC-GEAR-MOTOR-12VDC",
+    "categoryId": "motors",
+    "images": [
+      "/images/excel/row-45.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "13kg-270-degree-high-torque-digital-servo-motor-",
+    "type": "component",
+    "name": {
+      "en": "DS3225 25kg metal gear high torque waterproof digital servo 270°",
+      "ar": "DS3225 25kg metal gear high torque waterproof digital servo 270°"
+    },
+    "description": {
+      "en": "13kg 270 Degree High Torque Digital Servo Motor DS3218 PRO 4.8-6.8V",
+      "ar": "13kg 270 Degree High Torque Digital Servo Motor DS3218 PRO 4.8-6.8V"
+    },
+    "price": 100,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-13KG-270-DEGREE-HIGH-TOR",
+    "categoryId": "motors",
+    "images": [
+      "/images/products/ds3225-servo-2.jpg",
+      "/images/products/ds3225-servo-3.avif"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "usb-to-ttl-converter-ftdi-cp2102",
+    "type": "component",
+    "name": {
+      "en": "USB To TTL Converter (FTDI) CP2102",
+      "ar": "USB To TTL Converter (FTDI) CP2102"
+    },
+    "description": {
+      "en": "USB To TTL Converter (FTDI) CP2102",
+      "ar": "USB To TTL Converter (FTDI) CP2102"
+    },
+    "price": 18,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-USB-TO-TTL-CONVERTER-FTD",
+    "categoryId": "converters",
+    "images": [
+      "/images/excel/row-7.jpeg",
+      "/images/products/usb-ttl-cp2102-1.jpeg",
+      "/images/products/usb-ttl-cp2102-2.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "pic18f4620-i-p-microcontroller",
+    "type": "component",
+    "name": {
+      "en": "PIC18F4620-I/P Microcontroller",
+      "ar": "PIC18F4620-I/P Microcontroller"
+    },
+    "description": {
+      "en": "PIC18F4620-I/P Microcontroller",
+      "ar": "PIC18F4620-I/P Microcontroller"
+    },
+    "price": 33,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-PIC18F4620-I-P-MICROCONT",
+    "categoryId": "microcontrollers",
+    "images": [
+      "/images/products/pic18f4620-ip.png"
     ],
     "inStock": true
   },
@@ -734,50 +841,6 @@
       "/images/excel/row-3.png",
       "/images/products/wirewrap-40-pin-1.jpg",
       "/images/products/wirewrap-40-pin-2.jpg"
-    ],
-    "inStock": true
-  },
-  {
-    "id": "usb-to-ttl-converter-ftdi-cp2102",
-    "type": "component",
-    "name": {
-      "en": "USB To TTL Converter (FTDI) CP2102",
-      "ar": "USB To TTL Converter (FTDI) CP2102"
-    },
-    "description": {
-      "en": "USB To TTL Converter (FTDI) CP2102",
-      "ar": "USB To TTL Converter (FTDI) CP2102"
-    },
-    "price": 18,
-    "discountPrice": null,
-    "currency": "NIS",
-    "sku": "VLT-USB-TO-TTL-CONVERTER-FTD",
-    "categoryId": "converters",
-    "images": [
-      "/images/excel/row-7.jpeg",
-      "/images/products/usb-ttl-cp2102-1.jpeg",
-      "/images/products/usb-ttl-cp2102-2.jpeg"
-    ],
-    "inStock": true
-  },
-  {
-    "id": "pic18f4620-i-p-microcontroller",
-    "type": "component",
-    "name": {
-      "en": "PIC18F4620-I/P Microcontroller",
-      "ar": "PIC18F4620-I/P Microcontroller"
-    },
-    "description": {
-      "en": "PIC18F4620-I/P Microcontroller",
-      "ar": "PIC18F4620-I/P Microcontroller"
-    },
-    "price": 33,
-    "discountPrice": null,
-    "currency": "NIS",
-    "sku": "VLT-PIC18F4620-I-P-MICROCONT",
-    "categoryId": "microcontrollers",
-    "images": [
-      "/images/products/pic18f4620-ip.png"
     ],
     "inStock": true
   },
