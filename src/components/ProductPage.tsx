@@ -149,7 +149,11 @@ export default function ProductPage({ product }: { product: Product }) {
         </div>
       </header>
       <div className="container product-page-content">
-        <Link href="/" className="text-link product-back-link">
+        <Link
+          href="/#products"
+          scroll={false}
+          className="text-link product-back-link"
+        >
           {t("back")}
         </Link>
         <ProductDetail
