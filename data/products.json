@@ -1,5 +1,123 @@
 [
   {
+    "id": "pic-kit-middle-quality",
+    "type": "kit",
+    "name": {
+      "en": "PIC Kit (Middle Quality Components)",
+      "ar": "طقم PIC (مكونات متوسطة الجودة)"
+    },
+    "description": {
+      "en": "A complete middle-quality kit for building PIC microcontroller projects.",
+      "ar": "طقم متكامل متوسط الجودة لبناء مشاريع المتحكم PIC."
+    },
+    "price": 79,
+    "discountPrice": null,
+    "currency": "NIS",
+    "sku": "VLT-PIC-KIT-MIDDLE",
+    "categoryId": "kits",
+    "images": ["/images/products/kit.svg"],
+    "featured": false,
+    "components": [
+      {
+        "name": {
+          "en": "PIC18F4620-I/P Microcontroller",
+          "ar": "متحكم PIC18F4620-I/P"
+        },
+        "quantity": 1,
+        "image": "/images/products/pic18f4620-ip.png"
+      },
+      {
+        "name": {
+          "en": "40 Pin Wirewrap IC Socket, 15.24mm Width, 17.8mm Pin Length",
+          "ar": "قاعدة IC Wirewrap ذات 40 دبوساً، عرض 15.24 مم وطول دبوس 17.8 مم"
+        },
+        "quantity": 1,
+        "image": "/images/excel/row-3.png"
+      },
+      {
+        "name": {
+          "en": "LCD Module 16x2 1602 with Soldered Headers",
+          "ar": "شاشة LCD 16x2 موديل 1602 مع رؤوس توصيل ملحومة"
+        },
+        "quantity": 1,
+        "image": "/images/excel/row-4.png"
+      },
+      {
+        "name": {
+          "en": "10x22cm DIY Prototype PCB Board",
+          "ar": "لوحة PCB تجريبية DIY مقاس 10x22 سم"
+        },
+        "quantity": 1,
+        "image": "/images/products/prototype-pcb-10x22cm.jpeg"
+      },
+      {
+        "name": {
+          "en": "USB to TTL CP2102 Converter (FTDI)",
+          "ar": "محول USB إلى TTL موديل CP2102 (FTDI)"
+        },
+        "quantity": 1,
+        "image": "/images/products/usb-ttl-cp2102-1.jpeg"
+      },
+      {
+        "name": {
+          "en": "4MHz Quartz Crystal Oscillator",
+          "ar": "بلورة كوارتز 4 ميجاهرتز"
+        },
+        "quantity": 1,
+        "image": "/images/excel/row-8.jpeg"
+      },
+      {
+        "name": {
+          "en": "10uF 50V Electrolytic Capacitor, 5x11.5mm",
+          "ar": "مكثف إلكتروليتي 10uF و50 فولت، 5x11.5 مم"
+        },
+        "quantity": 1,
+        "image": "/images/excel/row-9.jpeg"
+      },
+      {
+        "name": {
+          "en": "15pF 50V Ceramic Capacitor",
+          "ar": "مكثف سيراميكي 15pF و50 فولت"
+        },
+        "quantity": 2,
+        "image": "/images/excel/row-10.jpeg"
+      },
+      {
+        "name": {
+          "en": "10K Ohm WH148 B10K Potentiometer, 0.125W, 3-Pin, 15mm",
+          "ar": "مقاومة متغيرة 10K أوم WH148 B10K، قدرة 0.125 واط، 3 دبابيس، 15 مم"
+        },
+        "quantity": 1,
+        "image": "/images/excel/row-13.jpeg"
+      },
+      {
+        "name": {
+          "en": "40 Long Male Header Pins, 2.54mm Pitch, 17mm Length",
+          "ar": "40 دبوس رأس توصيل ذكر طويل، مسافة 2.54 مم، طول 17 مم"
+        },
+        "quantity": 1,
+        "image": "/images/excel/row-34.png"
+      },
+      {
+        "name": {
+          "en": "10K Ohm Carbon Film Resistor, 1/8W, ±1%",
+          "ar": "مقاومة فيلم كربوني 10K أوم، 1/8 واط، ±1%"
+        },
+        "quantity": 1,
+        "image": "/images/products/carbon-film-resistor.webp"
+      },
+      {
+        "name": {
+          "en": "Mini Push Button Tactile Switch 6x6x6.5mm, 2-Pin",
+          "ar": "مفتاح ضغط صغير ملمسي 6x6x6.5 مم، دبوسان"
+        },
+        "quantity": 2,
+        "image": "/images/products/mini-push-button-6x6x6-5mm.avif"
+      }
+    ],
+    "inStock": true
+  },
+  {
     "id": "pic-kit",
     "type": "kit",
     "name": {
@@ -10,7 +128,7 @@
       "en": "A complete kit for building PIC microcontroller projects.",
       "ar": "طقم متكامل لبناء مشاريع المتحكم PIC."
     },
-    "price": 79,
+    "price": 99,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-PIC-KIT",
