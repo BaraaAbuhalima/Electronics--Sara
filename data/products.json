@@ -10,14 +10,12 @@
       "en": "A complete kit for building PIC microcontroller projects.",
       "ar": "طقم متكامل لبناء مشاريع المتحكم PIC."
     },
-    "price": 95,
+    "price": 79,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-PIC-KIT",
     "categoryId": "kits",
-    "images": [
-      "/images/products/kit.svg"
-    ],
+    "images": ["/images/products/kit.svg"],
     "featured": true,
     "components": [
       {
@@ -194,14 +192,12 @@
       "en": "A kit for building and testing a simple CPU.",
       "ar": "طقم لبناء واختبار معالج بسيط."
     },
-    "price": 110,
+    "price": 109,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-CPU-LAB-KIT",
     "categoryId": "kits",
-    "images": [
-      "/images/products/cpu-kit.svg"
-    ],
+    "images": ["/images/products/cpu-kit.svg"],
     "featured": true,
     "components": [
       {
@@ -391,9 +387,7 @@
     "currency": "NIS",
     "sku": "VLT-5VDC-1-CHANNEL-RELAY-MOD",
     "categoryId": "relays",
-    "images": [
-      "/images/excel/row-43.jpeg"
-    ],
+    "images": ["/images/excel/row-43.jpeg"],
     "inStock": true
   },
   {
@@ -412,9 +406,7 @@
     "currency": "NIS",
     "sku": "VLT-12VDC-1-CHANNEL-RELAY-MO",
     "categoryId": "relays",
-    "images": [
-      "/images/excel/row-43.jpeg"
-    ],
+    "images": ["/images/excel/row-43.jpeg"],
     "inStock": true
   },
   {
@@ -455,9 +447,7 @@
     "currency": "NIS",
     "sku": "VLT-MG996R-SERVO-13KG",
     "categoryId": "motors",
-    "images": [
-      "/images/products/mg996r-servo-motor-13kg.png"
-    ],
+    "images": ["/images/products/mg996r-servo-motor-13kg.png"],
     "inStock": true
   },
   {
@@ -476,9 +466,7 @@
     "currency": "NIS",
     "sku": "VLT-STEPPER-MOTOR-TB6600-UPG",
     "categoryId": "motors",
-    "images": [
-      "/images/products/stepper-tb6600.jpg"
-    ],
+    "images": ["/images/products/stepper-tb6600.jpg"],
     "inStock": true
   },
   {
@@ -497,9 +485,7 @@
     "currency": "NIS",
     "sku": "VLT-ULTRASONIC-SENSOR-MODULE",
     "categoryId": "sensors",
-    "images": [
-      "/images/excel/row-42.png"
-    ],
+    "images": ["/images/excel/row-42.png"],
     "inStock": true
   },
   {
@@ -518,9 +504,7 @@
     "currency": "NIS",
     "sku": "VLT-JUMPER-WIRES-F-F-20CM-7PC",
     "categoryId": "components",
-    "images": [
-      "/images/products/jumper-wires-female-female-20cm.jpg"
-    ],
+    "images": ["/images/products/jumper-wires-female-female-20cm.jpg"],
     "inStock": true
   },
   {
@@ -539,9 +523,7 @@
     "currency": "NIS",
     "sku": "VLT-JUMPER-WIRES-M-F-20CM-7PC",
     "categoryId": "components",
-    "images": [
-      "/images/products/jumper-wires-male-female-20cm.jpg"
-    ],
+    "images": ["/images/products/jumper-wires-male-female-20cm.jpg"],
     "inStock": true
   },
   {
@@ -560,9 +542,7 @@
     "currency": "NIS",
     "sku": "VLT-JUMPER-WIRES-M-M-20CM-7PC",
     "categoryId": "components",
-    "images": [
-      "/images/products/jumper-wires-male-male-20cm.jpg"
-    ],
+    "images": ["/images/products/jumper-wires-male-male-20cm.jpg"],
     "inStock": true
   },
   {
@@ -576,7 +556,7 @@
       "en": "LCD Module 16x2 1602 With Soldered Headers",
       "ar": "LCD Module 16x2 1602 With Soldered Headers"
     },
-    "price": 19,
+    "price": 17,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-LCD-MODULE-16X2-1602-WIT",
@@ -603,9 +583,7 @@
     "currency": "NIS",
     "sku": "VLT-37MM-DC-GEAR-MOTOR-12VDC",
     "categoryId": "motors",
-    "images": [
-      "/images/excel/row-45.jpeg"
-    ],
+    "images": ["/images/excel/row-45.jpeg"],
     "inStock": true
   },
   {
@@ -664,14 +642,12 @@
       "en": "PIC18F4620-I/P Microcontroller",
       "ar": "PIC18F4620-I/P Microcontroller"
     },
-    "price": 33,
+    "price": 37,
     "discountPrice": null,
     "currency": "NIS",
     "sku": "VLT-PIC18F4620-I-P-MICROCONT",
     "categoryId": "microcontrollers",
-    "images": [
-      "/images/products/pic18f4620-ip.png"
-    ],
+    "images": ["/images/products/pic18f4620-ip.png"],
     "inStock": true
   },
   {
@@ -690,9 +666,7 @@
     "currency": "NIS",
     "sku": "VLT-10X22CM-DIY-PROTOTYPE-PC",
     "categoryId": "boards",
-    "images": [
-      "/images/products/prototype-pcb-10x22cm.jpeg"
-    ],
+    "images": ["/images/products/prototype-pcb-10x22cm.jpeg"],
     "inStock": true
   },
   {
@@ -711,9 +685,7 @@
     "currency": "NIS",
     "sku": "VLT-13X25CM-DIY-PROTOTYPE-PC",
     "categoryId": "boards",
-    "images": [
-      "/images/excel/row-18.png"
-    ],
+    "images": ["/images/excel/row-18.png"],
     "inStock": true
   },
   {
@@ -732,9 +704,7 @@
     "currency": "NIS",
     "sku": "VLT-14-PIN-WIREWRAP-IC-SOCKE",
     "categoryId": "sockets",
-    "images": [
-      "/images/excel/row-23.png"
-    ],
+    "images": ["/images/excel/row-23.png"],
     "inStock": true
   },
   {
@@ -753,9 +723,7 @@
     "currency": "NIS",
     "sku": "VLT-16-PIN-WIREWRAP-IC-SOCKE",
     "categoryId": "sockets",
-    "images": [
-      "/images/excel/row-21.png"
-    ],
+    "images": ["/images/excel/row-21.png"],
     "inStock": true
   },
   {
@@ -774,9 +742,7 @@
     "currency": "NIS",
     "sku": "VLT-20-PIN-WIREWRAP-IC-SOCKE",
     "categoryId": "sockets",
-    "images": [
-      "/images/excel/row-22.png"
-    ],
+    "images": ["/images/excel/row-22.png"],
     "inStock": true
   },
   {
@@ -795,9 +761,7 @@
     "currency": "NIS",
     "sku": "VLT-28-PIN-WIREWRAP-IC-SOCKE",
     "categoryId": "sockets",
-    "images": [
-      "/images/excel/row-20.png"
-    ],
+    "images": ["/images/excel/row-20.png"],
     "inStock": true
   },
   {
@@ -816,9 +780,7 @@
     "currency": "NIS",
     "sku": "VLT-32-PIN-WIREWRAP-IC-SOCKE",
     "categoryId": "sockets",
-    "images": [
-      "/images/excel/row-19.png"
-    ],
+    "images": ["/images/excel/row-19.png"],
     "inStock": true
   },
   {
@@ -860,9 +822,7 @@
     "currency": "NIS",
     "sku": "VLT-L7805-VOLTAGE-REGULATOR-",
     "categoryId": "power",
-    "images": [
-      "/images/excel/row-5.png"
-    ],
+    "images": ["/images/excel/row-5.png"],
     "inStock": true
   },
   {
@@ -881,9 +841,7 @@
     "currency": "NIS",
     "sku": "VLT-4MHZ-QUARTZ-CRYSTAL-OSCI",
     "categoryId": "components",
-    "images": [
-      "/images/excel/row-8.jpeg"
-    ],
+    "images": ["/images/excel/row-8.jpeg"],
     "inStock": true
   },
   {
@@ -902,9 +860,7 @@
     "currency": "NIS",
     "sku": "VLT-10K-OHM-POTENTIOMETER-WH",
     "categoryId": "potentiometers",
-    "images": [
-      "/images/excel/row-13.jpeg"
-    ],
+    "images": ["/images/excel/row-13.jpeg"],
     "inStock": true
   },
   {
@@ -923,9 +879,7 @@
     "currency": "NIS",
     "sku": "VLT-LM35-TEMPERATURE-SENSOR",
     "categoryId": "sensors",
-    "images": [
-      "/images/excel/row-14.jpeg"
-    ],
+    "images": ["/images/excel/row-14.jpeg"],
     "inStock": true
   },
   {
@@ -944,9 +898,7 @@
     "currency": "NIS",
     "sku": "VLT-40-PIN-LONG-CENTERED-HEA",
     "categoryId": "headers",
-    "images": [
-      "/images/excel/row-15.png"
-    ],
+    "images": ["/images/excel/row-15.png"],
     "inStock": true
   },
   {
@@ -965,9 +917,7 @@
     "currency": "NIS",
     "sku": "VLT-MINI-PUSH-BUTTON-TACTILE",
     "categoryId": "switches",
-    "images": [
-      "/images/products/mini-push-button-6x6x6-5mm.avif"
-    ],
+    "images": ["/images/products/mini-push-button-6x6x6-5mm.avif"],
     "inStock": true
   },
   {
@@ -986,9 +936,7 @@
     "currency": "NIS",
     "sku": "VLT-74LS374-DIP-20-IC-OCTAL-",
     "categoryId": "logic-ics",
-    "images": [
-      "/images/excel/row-24.jpeg"
-    ],
+    "images": ["/images/excel/row-24.jpeg"],
     "inStock": true
   },
   {
@@ -1007,9 +955,7 @@
     "currency": "NIS",
     "sku": "VLT-74LS157-DIP-16-IC-QUADRU",
     "categoryId": "logic-ics",
-    "images": [
-      "/images/products/74ls157-multiplexer.webp"
-    ],
+    "images": ["/images/products/74ls157-multiplexer.webp"],
     "inStock": true
   },
   {
@@ -1028,9 +974,7 @@
     "currency": "NIS",
     "sku": "VLT-74LS74-DIP-14-IC-DUAL-D-",
     "categoryId": "logic-ics",
-    "images": [
-      "/images/products/74ls74-dip-14.jpg"
-    ],
+    "images": ["/images/products/74ls74-dip-14.jpg"],
     "inStock": true
   },
   {
@@ -1049,9 +993,7 @@
     "currency": "NIS",
     "sku": "VLT-74LS193-SN74LS193N-DIP-1",
     "categoryId": "logic-ics",
-    "images": [
-      "/images/products/74ls193-counter.jpg"
-    ],
+    "images": ["/images/products/74ls193-counter.jpg"],
     "inStock": true
   },
   {
@@ -1070,9 +1012,7 @@
     "currency": "NIS",
     "sku": "VLT-8-PIN-LONG-SINGLE-ROW-FE",
     "categoryId": "headers",
-    "images": [
-      "/images/excel/row-30.jpeg"
-    ],
+    "images": ["/images/excel/row-30.jpeg"],
     "inStock": true
   },
   {
@@ -1091,9 +1031,7 @@
     "currency": "NIS",
     "sku": "VLT-10-PIN-LONG-SINGLE-ROW-F",
     "categoryId": "headers",
-    "images": [
-      "/images/excel/row-31.jpeg"
-    ],
+    "images": ["/images/excel/row-31.jpeg"],
     "inStock": true
   },
   {
@@ -1112,9 +1050,7 @@
     "currency": "NIS",
     "sku": "VLT-40-PIN-LONG-MALE-HEADER-",
     "categoryId": "headers",
-    "images": [
-      "/images/excel/row-34.png"
-    ],
+    "images": ["/images/excel/row-34.png"],
     "inStock": true
   },
   {
@@ -1133,9 +1069,7 @@
     "currency": "NIS",
     "sku": "VLT-5MM-GREEN-LED",
     "categoryId": "components",
-    "images": [
-      "/images/excel/row-27.png"
-    ],
+    "images": ["/images/excel/row-27.png"],
     "inStock": true
   },
   {
@@ -1154,9 +1088,7 @@
     "currency": "NIS",
     "sku": "VLT-5MM-BLUE-LED",
     "categoryId": "components",
-    "images": [
-      "/images/excel/row-28.jpeg"
-    ],
+    "images": ["/images/excel/row-28.jpeg"],
     "inStock": true
   },
   {
@@ -1175,9 +1107,7 @@
     "currency": "NIS",
     "sku": "VLT-5MM-RED-LED",
     "categoryId": "components",
-    "images": [
-      "/images/excel/row-32.png"
-    ],
+    "images": ["/images/excel/row-32.png"],
     "inStock": true
   },
   {
@@ -1196,9 +1126,7 @@
     "currency": "NIS",
     "sku": "VLT-220-OHM-RESISTOR",
     "categoryId": "components",
-    "images": [
-      "/images/products/carbon-film-resistor.webp"
-    ],
+    "images": ["/images/products/carbon-film-resistor.webp"],
     "inStock": true
   },
   {
@@ -1217,9 +1145,7 @@
     "currency": "NIS",
     "sku": "VLT-10K-OHM-RESISTOR",
     "categoryId": "components",
-    "images": [
-      "/images/products/carbon-film-resistor.webp"
-    ],
+    "images": ["/images/products/carbon-film-resistor.webp"],
     "inStock": true
   }
 ]
