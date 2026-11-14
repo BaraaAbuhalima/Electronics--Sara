@@ -123,6 +123,13 @@ export default function Storefront() {
     window.addEventListener("hashchange", sync);
     return () => window.removeEventListener("hashchange", sync);
   }, []);
+  useEffect(() => {
+    // The catalog is selected from the URL after the storefront mounts. Reset
+    // after that render so a return from a product cannot retain its scroll.
+    if (view === "catalog" && readHash() === "products") {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }
+  }, [view]);
   const navigate = useCallback((target: string) => {
     setMobileOpen(false);
     setSelectedId(null);
