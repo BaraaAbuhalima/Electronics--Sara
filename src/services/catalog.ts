@@ -2,7 +2,7 @@ import productsJSON from "../../data/products.json";
 import categoriesJSON from "../../data/categories.json";
 import storeJSON from "../../data/store.json";
 import { isProduct, isCategory, validateData } from "./validation";
-import type { Product, Store } from "@/types";
+import type { KitComponent, Product, Store } from "@/types";
 export const dataErrors = validateData(productsJSON, categoriesJSON, storeJSON);
 const products: Product[] = (productsJSON as unknown[])
   .filter(isProduct)
@@ -35,10 +35,37 @@ export const getProductsByCategory = (id: string) =>
 export const getFeaturedProducts = () => products.filter((p) => p.featured);
 export const getAllCategories = () => categoriesJSON.filter(isCategory);
 export const getStoreInfo = () => storeJSON as Store;
+const normalizeComponentName = (name: string) =>
+  name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .split(/\s+/);
+const componentProducts = products.filter((p) => p.type === "component");
+const findComponentProduct = (component: KitComponent) => {
+  if (component.productId) return getProductById(component.productId);
+  if (!component.name?.en) return undefined;
+  const componentTokens = new Set(normalizeComponentName(component.name.en));
+  const bestMatch = componentProducts
+    .map((product) => {
+      const productTokens = normalizeComponentName(product.name.en);
+      const overlap = productTokens.filter((token) =>
+        componentTokens.has(token),
+      ).length;
+      return {
+        product,
+        score: overlap / Math.max(componentTokens.size, productTokens.length),
+      };
+    })
+    .sort((a, b) => b.score - a.score)[0];
+  return bestMatch && bestMatch.score >= 0.45
+    ? bestMatch.product
+    : undefined;
+};
 export const getKitComponents = (id: string) =>
   (getProductById(id)?.components ?? []).map((c) => ({
     ...c,
-    product: c.productId ? getProductById(c.productId) : undefined,
+    product: findComponentProduct(c),
   }));
 export const unitPrice = (p: Product) =>
   p.discountPrice != null && p.discountPrice >= 0 && p.discountPrice <= p.price

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight, MessageCircle, ShoppingBag } from "lucide-react";
 import {
   getAllCategories,
@@ -240,21 +241,38 @@ export default function ProductDetail({
                   <tr key={`${c.productId ?? c.name?.en}-${i}`}>
                     <td>{i + 1}</td>
                     <td>
-                      <div className="component-name">
-                        {c.image && (
-                          <SafeImage
-                            src={c.image}
-                            alt=""
-                            className="component-image"
-                            loading="lazy"
-                          />
-                        )}
-                        <span>
-                          {c.product?.name[lang] ??
-                            c.name?.[lang] ??
-                            t("missingComponent")}
-                        </span>
-                      </div>
+                      {c.product ? (
+                        <Link
+                          className="component-link"
+                          href={`/product/${encodeURIComponent(c.product.id)}`}
+                        >
+                          <div className="component-name">
+                            {c.image && (
+                              <SafeImage
+                                src={c.image}
+                                alt=""
+                                className="component-image"
+                                loading="lazy"
+                              />
+                            )}
+                            <span>{c.product.name[lang]}</span>
+                          </div>
+                        </Link>
+                      ) : (
+                        <div className="component-name">
+                          {c.image && (
+                            <SafeImage
+                              src={c.image}
+                              alt=""
+                              className="component-image"
+                              loading="lazy"
+                            />
+                          )}
+                          <span>
+                            {c.name?.[lang] ?? t("missingComponent")}
+                          </span>
+                        </div>
+                      )}
                     </td>
                     <td>
                       <bdi>× {c.quantity}</bdi>
